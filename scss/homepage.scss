@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Marcellus&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import "./variables";
+
+.h6-text {
+  font-family: $font-family;
+  font-weight: 300;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+}
+
+// <!-- START BANNER -->
+#fhm-banner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1600/687;
+  margin-bottom: 115px;
+
+  .banner-content {
+    position: absolute;
+    top: 89px;
+
+    h6 {
+      @extend .h6-text;
+      font-size: 14px;
+      color: $text-color-white;
+    }
+    h1 {
+      color: $text-color-white;
+      font-family: $font-family2;
+      font-size: 60px;
+      font-weight: 400;
+      line-height: 70px;
+    }
+    p {
+      color: $text-color-white;
+      font-family: $font-family;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0.48px;
+      margin-top: 8px;
+    }
+    .banner-content-button {
+      margin-top: 24px;
+      a {
+        color: $text-color-white;
+        font-family: $font-family;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        padding: 20px 50px;
+        background-color: transparent;
+        border: 1px solid $border-color;
+      }
+    }
+  }
+}
+// <!-- END BANNER -->
+
+// <!-- START INTRO -->
+#fhm-intro {
+  position: relative;
+  .intro-bg {
+    right: 0;
+    top: -79px;
+    img {
+      border-top-left-radius: 200px;
+    }
+  }
+  .intro-content {
+    margin-top: 194px;
+    margin-bottom: 471px;
+    h6 {
+      @extend .h6-text;
+      color: $text-blur-white;
+      font-size: 12px;
+      margin-bottom: 7px;
+    }
+    h2 {
+      color: $text-color-white;
+      font-family: $font-family2;
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 50px;
+      letter-spacing: 0.09px;
+    }
+    p {
+      margin: 3px 0 26px;
+      color: $tetx-dark-white;
+      font-family: $font-family;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px; /* 171.429% */
+      letter-spacing: 0.07px;
+    }
+    a {
+      background-color: $bg-main-btn;
+      padding: 18px 35px;
+      color: $text-color-white;
+      font-family: $font-family;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 2.8px;
+      text-transform: uppercase;
+    }
+  }
+}
+// <!-- END INTRO -->
+
+// <!-- START SERVICES -->
+#fhm-services {
+  margin-bottom: 78px;
+  .services-heading {
+    h6 {
+      @extend .h6-text;
+      color: $text-blur-white;
+      text-align: center;
+    }
+    h3 {
+      color: $text-color-white;
+      text-align: center;
+      font-family: $font-family2;
+      font-size: 34px;
+      font-weight: 400;
+      line-height: 50px;
+      letter-spacing: 0.085px;
+      margin: 8px 0 40px;
+    }
+  }
+  .services-item {
+    gap: 46px;
+    margin-bottom: 40px;
+    // background-color: $highlight-color;
+    &:nth-child(2) {
+      .service-item-wrap {
+        border-top-right-radius: 100px;
+      }
+    }
+    .service-item-wrap {
+      background-color: $bg-element-gray;
+      padding: 43px 35px 45px;
+      .services-item-content {
+        h5 {
+          margin: 55px 0 11px;
+          color: $text-color-white;
+          font-family: $font-family;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 24px; /* 133.333% */
+          letter-spacing: 0.09px;
+        }
+        p {
+          color: $tetx-dark-white;
+          font-family: $font-family;
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 24px; /* 171.429% */
+          letter-spacing: 0.07px;
+        }
+      }
+    }
+  }
+}
+// <!-- END SERVICES -->

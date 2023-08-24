@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Marcellus&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import "./variables";
+// START RESET
+* {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $text-color-white;
+  font-family: $font-family;
+  background-color: $bg-body;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: $main-color;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+.des-16 {
+  font-size: 16px;
+}
+.des-14 {
+  font-size: 14px;
+}
+h3 {
+  font-size: 24px;
+  color: #000;
+  line-height: 24px;
+}
+p {
+  margin-bottom: 0;
+}
+button {
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.container {
+  max-width: 1160px;
+}
+// END REST
+
+.text-styles {
+  color: $text-color-white;
+  font-family: $font-family;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+// <!-- START HEADER -->
+#fhm-header {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  .header-item {
+    gap: 60px;
+    .header-logo {
+      color: $text-color-white;
+      font-family: $font-family;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+    .header-navbar {
+      .navbar-item {
+        @extend .text-styles;
+        font-weight: 400;
+      }
+    }
+    .header-search {
+      gap: 30px;
+      .header-search-button {
+        @extend .text-styles;
+        font-weight: 500;
+        padding: 10px 15px;
+        background-color: $bg-main-btn;
+      }
+    }
+  }
+}
+// <!-- END HEADER -->
