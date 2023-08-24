@@ -41,6 +41,7 @@
   margin-top: 24px;
 }
 #fhm-banner .banner-content .banner-content-button a {
+  display: inline-block;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 20px;
@@ -88,7 +89,8 @@
   line-height: 24px; /* 171.429% */
   letter-spacing: 0.07px;
 }
-#fhm-intro .intro-content a {
+#fhm-intro .intro-content .intro-content-button {
+  display: inline-block;
   background-color: #c78410;
   padding: 18px 35px;
   color: #ffffff;
@@ -98,7 +100,6 @@
   letter-spacing: 2.8px;
   text-transform: uppercase;
 }
-
 #fhm-services {
   margin-bottom: 78px;
 }
@@ -122,6 +123,9 @@
 }
 #fhm-services .services-item:nth-child(2) .service-item-wrap {
   border-top-right-radius: 100px;
+}
+#fhm-services .services-item .services-item-bg {
+  background-color: #c78410;
 }
 #fhm-services .services-item .service-item-wrap {
   background-color: #202020;
