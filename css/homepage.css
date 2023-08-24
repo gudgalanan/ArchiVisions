@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Marcellus&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Marcellus&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-.h6-text, #fhm-services .services-heading h6, #fhm-intro .intro-content h6, #fhm-banner .banner-content h6 {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.h6-text, #fhm-discover .discover-container .container .discover-container-wrap .discover-container-content h6, #fhm-discover .discover-banner .discover-banner-content-wrap h6, #fhm-services .services-heading h6, #fhm-intro .intro-content h6, #fhm-banner .banner-content h6 {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   letter-spacing: 2.8px;
@@ -149,4 +151,88 @@
   font-weight: 300;
   line-height: 24px; /* 171.429% */
   letter-spacing: 0.07px;
+}
+
+#fhm-firgures {
+  height: 250px;
+  background-color: rgba(199, 132, 16, 0.3019607843);
+}
+#fhm-firgures .firgures-number {
+  color: #bfbfbf;
+  font-feature-settings: "liga" off;
+  font-family: "Poppins", sans-serif;
+  font-size: 60px;
+  font-weight: 275;
+  line-height: 72px;
+}
+#fhm-firgures .firgures-info {
+  color: #bfbfbf;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 1.2px;
+}
+
+#fhm-discover .discover-banner img {
+  opacity: 0.4;
+}
+#fhm-discover .discover-banner .discover-banner-content-wrap {
+  top: 244px;
+}
+#fhm-discover .discover-banner .discover-banner-content-wrap h6 {
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+}
+#fhm-discover .discover-banner .discover-banner-content-wrap h2 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Marcellus", serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 52px; /* 108.333% */
+  margin: 14px 0 46px;
+}
+#fhm-discover .discover-banner .discover-banner-content-wrap a {
+  display: inline-block;
+  padding: 22px 42px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+}
+#fhm-discover .discover-container .container {
+  padding: 97px 121px;
+  background-color: #000;
+}
+#fhm-discover .discover-container .container .discover-container-wrap {
+  bottom: 100px;
+}
+#fhm-discover .discover-container .container .discover-container-wrap .discover-container-content h6 {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 8px;
+}
+#fhm-discover .discover-container .container .discover-container-wrap .discover-container-content h3 {
+  color: #ffffff;
+  font-family: "Marcellus", serif;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 40px; /* 117.647% */
+  text-transform: capitalize;
+}
+#fhm-discover .discover-container .container .discover-container-wrap .discover-container-content p {
+  color: #bfbfbf;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: 0.07px;
+  margin: 8px 0 26px;
 }

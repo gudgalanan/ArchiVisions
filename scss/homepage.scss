@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Marcellus&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "./variables";
 
 .h6-text {
@@ -170,3 +171,101 @@
   }
 }
 // <!-- END SERVICES -->
+
+// <!-- START FIRGURES -->
+#fhm-firgures {
+  height: 250px;
+  background-color: $bg-element-brown;
+  .firgures-number {
+    color: $tetx-dark-white;
+    font-feature-settings: "liga" off;
+    font-family: $font-family;
+    font-size: 60px;
+    font-weight: 275;
+    line-height: 72px;
+  }
+  .firgures-info {
+    color: $tetx-dark-white;
+    font-family: $font-family3;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1.2px;
+  }
+}
+// <!-- END FIRGURES -->
+
+// <!-- START DISCOVER -->
+#fhm-discover {
+  .discover-banner {
+    img {
+      opacity: 0.4;
+    }
+    .discover-banner-content-wrap {
+      top: 244px;
+      h6 {
+        @extend .h6-text;
+        color: $text-color-white;
+        font-size: 12px;
+        text-align: center;
+      }
+      h2 {
+        color: $text-color-white;
+        text-align: center;
+        font-family: $font-family2;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 52px; /* 108.333% */
+        margin: 14px 0 46px;
+      }
+      a {
+        display: inline-block;
+        padding: 22px 42px;
+        background-color: transparent;
+        border: 1px solid $border-color;
+        color: $text-color-white;
+        text-align: center;
+        font-family: $font-family;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .discover-container {
+    .container {
+      padding: 97px 121px;
+      background-color: $bg-body;
+      .discover-container-wrap {
+        bottom: 100px;
+        .discover-container-content {
+          h6 {
+            @extend .h6-text;
+            font-size: 12px;
+            color: $text-blur-white;
+            margin-bottom: 8px;
+          }
+          h3 {
+            color: $text-color-white;
+            font-family: $font-family2;
+            font-size: 34px;
+            font-weight: 400;
+            line-height: 40px; /* 117.647% */
+            text-transform: capitalize;
+          }
+          p {
+            color: $tetx-dark-white;
+            font-family: $font-family;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px; /* 171.429% */
+            letter-spacing: 0.07px;
+            margin: 8px 0 26px;
+          }
+        }
+      }
+    }
+  }
+}
+// <!-- END DISCOVER -->
