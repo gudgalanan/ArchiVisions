@@ -57,6 +57,7 @@
   position: relative;
 }
 #fhm-intro .intro-bg {
+  max-width: 810px;
   right: 0;
   top: -79px;
 }
@@ -100,6 +101,7 @@
   letter-spacing: 2.8px;
   text-transform: uppercase;
 }
+
 #fhm-services {
   margin-bottom: 78px;
 }
