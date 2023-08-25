@@ -417,8 +417,188 @@
   text-transform: uppercase;
 }
 
+#fhm-body-banner {
+  margin-bottom: 100px;
+}
 #fhm-body-banner img {
   width: 100%;
   height: auto;
-  aspect-ratio: 4/3;
+  aspect-ratio: 401/190;
+}
+
+#fhm-feedback {
+  margin-bottom: 100px;
+}
+#fhm-feedback .feedback-heading {
+  margin-bottom: 49px;
+}
+#fhm-feedback .feedback-heading h6 {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+#fhm-feedback .feedback-heading h3 {
+  text-align: center;
+  color: #ffffff;
+  font-family: "Marcellus", serif;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 40px; /* 117.647% */
+  letter-spacing: 0.085px;
+  text-transform: capitalize;
+}
+#fhm-feedback .feedback-list {
+  gap: 43px;
+}
+#fhm-feedback .feedback-list .feedback-item {
+  background-color: #202020;
+  padding: 42px;
+}
+#fhm-feedback .feedback-list .feedback-item .feedback-item-info {
+  gap: 12px;
+}
+#fhm-feedback .feedback-list .feedback-item .feedback-item-info .feedback-item-info-avt img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+#fhm-feedback .feedback-list .feedback-item .feedback-item-rating {
+  margin: 21px 0 15px;
+}
+#fhm-feedback .feedback-list .feedback-item .feedback-item-content h5 {
+  margin-bottom: 11px;
+  color: #ffffff;
+  font-family: "Marcellus", serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+#fhm-feedback .feedback-list .feedback-item .feedback-item-content p {
+  text-align: justify;
+  color: #bfbfbf;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 24px; /* 184.615% */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+#fhm-gallery {
+  /* ==========================================================================
+    Swiper modifications
+  ========================================================================== */
+  /* doubleing up specificity to win over on transform */
+  /* now move prev button more to the left */
+  /* ==========================================================================
+    content in swiper
+  ========================================================================== */
+}
+#fhm-gallery .lunchbox {
+  position: relative;
+}
+#fhm-gallery .swiper-container {
+  margin-top: 2em; /* minor cosmetic */
+}
+#fhm-gallery .swiper-wrapper {
+  /* now pagination is below slides */
+  margin-bottom: 3em;
+  /* just enough width so slides handing off screen are partially visible */
+  width: 73.8%;
+}
+@media (min-width: 37.5em) {
+  #fhm-gallery .swiper-wrapper {
+    width: 100%;
+  }
+}
+#fhm-gallery .swiper-slide.swiper-slide {
+  /* a single column layout */
+  width: 100%;
+}
+@media (min-width: 37.5em) {
+  #fhm-gallery .swiper-slide.swiper-slide {
+    /* going for a 2 column layout here */
+    width: 50%;
+    /* centeredSlides set to true */
+    /* reposition so first slide appears on left */
+    transform: translateX(-50%);
+  }
+}
+@media (min-width: 43.75em) {
+  #fhm-gallery .swiper-slide.swiper-slide {
+    /* upping it to a 3 column layout */
+    width: 33.3333333333%;
+    /* centeredSlides set to true */
+    /* reposition so first slide appears on left */
+    transform: translateX(-100%);
+  }
+}
+@media (min-width: 53em) {
+  #fhm-gallery .swiper-slide.swiper-slide {
+    /* and finally the 4 column layout */
+    width: 25%;
+    /* centeredSlides set to true */
+    /* reposition so first slide appears on left */
+    transform: translateX(-150%);
+  }
+}
+#fhm-gallery .swiper-pagination {
+  /* show on small viewports */
+  display: block;
+}
+@media (min-width: 37.5em) {
+  #fhm-gallery .swiper-pagination {
+    /* hide on larger viewports per stakeholder recommendation */
+    display: none;
+  }
+}
+#fhm-gallery .swiper-button-prev {
+  /* but first hide on small viewports */
+  display: none;
+  left: 0;
+  top: 0;
+  margin-top: 0;
+  /* subtract .swiper-wrapper bottom-margin to vertically center arrow */
+  height: calc(100% - 3em);
+}
+@media (min-width: 37.5em) {
+  #fhm-gallery .swiper-button-prev {
+    /* show on larger viewports */
+    display: block;
+  }
+}
+#fhm-gallery .swiper-button-next {
+  /* hide on small viewports */
+  display: none;
+  right: 0;
+  top: 0;
+  margin-top: 0;
+  /* subtract .swiper-wrapper bottom-margin to vertically center arrow */
+  height: calc(100% - 3em);
+}
+@media (min-width: 37.5em) {
+  #fhm-gallery .swiper-button-next {
+    /* show on larger viewports */
+    display: block;
+  }
+}
+#fhm-gallery .product {
+  /* odds are you will use flexbox */
+  /* center it */
+  margin-left: auto;
+  margin-right: auto;
+  /* adjust the width to add or remove whitespace  */
+  width: 82%;
+}
+#fhm-gallery .photograph {
+  /* if parent is flex it will stretch this image */
+  display: block;
+  height: auto;
+  width: 100%;
 }
