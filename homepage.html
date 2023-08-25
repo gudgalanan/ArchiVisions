@@ -10,13 +10,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    /> -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.0/css/swiper.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"
     />
     <link rel="stylesheet" href="./css/homepage.css" />
     <link rel="stylesheet" href="./css/main.css" />
@@ -692,90 +692,57 @@
     <!-- END FEEDBACK-->
 
     <section id="fhm-gallery">
-      <div class="lunchbox">
-        <!-- slider main container -->
-        <div id="swiper1" class="swiper-container">
-          <!-- additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- slides -->
-            <div class="swiper-slide">
-              <div class="product">
-                <img class="photograph" src="./assets/img/slide1.png" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product">
-                <img class="photograph" src="./assets/img/slide2.png" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product">
-                <img class="photograph" src="./assets/img/slide3.png" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product">
-                <img class="photograph" src="./assets/img/slide4.png" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product">
-                <img class="photograph" src="./assets/img/slide1.png" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product">
-                <img class="photograph" src="./assets/img/slide2.png" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product">
-                <img class="photograph" src="./assets/img/slide3.png" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="product">
-                <img class="photograph" src="./assets/img/slide4.png" alt="" />
-              </div>
-            </div>
-          </div>
-
-          <!-- pagination -->
-          <div class="swiper-pagination"></div>
+      <div class="container">
+        <div class="gallery-heading">
+          <h6>Gallery</h6>
+          <h3>a new design style</h3>
         </div>
-
-        <!-- navigation buttons -->
-        <div id="js-prev1" class="swiper-button-prev"></div>
-        <div id="js-next1" class="swiper-button-next"></div>
+        <div class="slick-list gallery-list">
+          <div><img src="./assets/img/slide1.png" alt="" /></div>
+          <div><img src="./assets/img/slide2.png" alt="" /></div>
+          <div><img src="./assets/img/slide3.png" alt="" /></div>
+          <div><img src="./assets/img/slide4.png" alt="" /></div>
+          <div><img src="./assets/img/slide1.png" alt="" /></div>
+          <div><img src="./assets/img/slide2.png" alt="" /></div>
+          <div><img src="./assets/img/slide3.png" alt="" /></div>
+          <div><img src="./assets/img/slide4.png" alt="" /></div>
+        </div>
       </div>
     </section>
 
     <!-- START JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
-      (function () {
-        "use strict";
-
-        const mySwiper = new Swiper("#swiper1", {
-          loop: true,
-
-          slidesPerView: "auto",
-          centeredSlides: true,
-
-          a11y: true,
-          keyboardControl: true,
-          grabCursor: true,
-
-          // pagination
-          pagination: ".swiper-pagination",
-          paginationClickable: true,
-
-          // navigation arrows
-          prevButton: "#js-prev1",
-          nextButton: "#js-next1",
+      $(document).ready(function () {
+        $(".slick-list").slick({
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          arrows: true,
+          infinite: false,
+          autoplay: false,
         });
-      })(); /* IIFE end */
+        $(".prev-btn").click(function () {
+          $(".slick-list").slick("slickPrev");
+        });
+
+        $(".next-btn").click(function () {
+          $(".slick-list").slick("slickNext");
+        });
+        $(".prev-btn").addClass("slick-disabled");
+        $(".slick-list").on("afterChange", function () {
+          if ($(".slick-prev").hasClass("slick-disabled")) {
+            $(".prev-btn").addClass("slick-disabled");
+          } else {
+            $(".prev-btn").removeClass("slick-disabled");
+          }
+          if ($(".slick-next").hasClass("slick-disabled")) {
+            $(".next-btn").addClass("slick-disabled");
+          } else {
+            $(".next-btn").removeClass("slick-disabled");
+          }
+        });
+      });
     </script>
   </body>
 </html>

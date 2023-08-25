@@ -522,149 +522,80 @@
     }
   }
 }
+// <!-- END FEEDBACK-->
 
 #fhm-gallery {
-  .lunchbox {
-    position: relative;
+  .gallery-heading {
+    h6 {
+      @extend .h6-text;
+      color: $text-blur-white;
+      font-size: 12px;
+    }
+    h3 {
+      color: $text-color-white;
+      font-family: $font-family2;
+      font-size: 34px;
+      font-weight: 400;
+      line-height: 40px; /* 117.647% */
+      letter-spacing: 0.085px;
+      text-transform: capitalize;
+    }
   }
+  .slick-list {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 30px 0;
 
-  /* ==========================================================================
-   Swiper modifications
- ========================================================================== */
-
-  .swiper-container {
-    margin-top: 2em; /* minor cosmetic */
-  }
-
-  .swiper-wrapper {
-    /* now pagination is below slides */
-    margin-bottom: 3em;
-
-    /* just enough width so slides handing off screen are partially visible */
-    width: 73.8%;
-  }
-
-  @media (min-width: 37.5em) {
-    .swiper-wrapper {
-      width: 100%;
+    gap: 33px;
+    .slick-track {
+      display: flex;
+      .slick-slide {
+        font-size: 30px;
+        text-align: center;
+        padding: 40px 20px;
+        line-height: 2;
+        font-weight: 700;
+        img {
+          aspect-ratio: 181/225;
+          width: 362px;
+          width: 100%;
+          height: auto;
+        }
+      }
     }
   }
 
-  /* doubleing up specificity to win over on transform */
-  .swiper-slide.swiper-slide {
-    /* a single column layout */
-    width: 100%;
+  .slick-arrow {
+    z-index: 1;
+    width: 40px;
+    height: 40px;
   }
 
-  @media (min-width: 37.5em) {
-    .swiper-slide.swiper-slide {
-      /* going for a 2 column layout here */
-      width: 50%;
-
-      /* centeredSlides set to true */
-      /* reposition so first slide appears on left */
-      transform: translateX(-50%);
-    }
+  .slick-arrow:before {
+    font-size: 30px;
   }
-
-  @media (min-width: 43.75em) {
-    .swiper-slide.swiper-slide {
-      /* upping it to a 3 column layout */
-      width: 33.33333333333%;
-
-      /* centeredSlides set to true */
-      /* reposition so first slide appears on left */
-      transform: translateX(-100%);
-    }
-  }
-
-  @media (min-width: 53em) {
-    .swiper-slide.swiper-slide {
-      /* and finally the 4 column layout */
-      width: 25%;
-
-      /* centeredSlides set to true */
-      /* reposition so first slide appears on left */
-      transform: translateX(-150%);
-    }
-  }
-
-  .swiper-pagination {
-    /* show on small viewports */
-    display: block;
-  }
-
-  @media (min-width: 37.5em) {
-    .swiper-pagination {
-      /* hide on larger viewports per stakeholder recommendation */
-      display: none;
-    }
-  }
-
-  /* now move prev button more to the left */
-  .swiper-button-prev {
-    /* but first hide on small viewports */
-    display: none;
-
-    left: 0;
-    top: 0;
-
-    margin-top: 0;
-
-    /* subtract .swiper-wrapper bottom-margin to vertically center arrow */
-    height: calc(100% - 3em);
-  }
-
-  @media (min-width: 37.5em) {
-    .swiper-button-prev {
-      /* show on larger viewports */
-      display: block;
-    }
-  }
-
-  .swiper-button-next {
-    /* hide on small viewports */
-    display: none;
-
+  .slick-next {
     right: 0;
-    top: 0;
-
-    margin-top: 0;
-
-    /* subtract .swiper-wrapper bottom-margin to vertically center arrow */
-    height: calc(100% - 3em);
+  }
+  .slick-prev {
+    left: 0;
   }
 
-  @media (min-width: 37.5em) {
-    .swiper-button-next {
-      /* show on larger viewports */
-      display: block;
-    }
+  .slick-next:before,
+  .slick-prev:before {
+    color: $highlight-color;
   }
-
-  /* ==========================================================================
-   content in swiper
- ========================================================================== */
-
-  .product {
-    /* odds are you will use flexbox */
-    // display: flex;
-
-    /* center it */
-    margin-left: auto;
-    margin-right: auto;
-
-    /* adjust the width to add or remove whitespace  */
-    width: 82%;
+  button {
+    // background-color: #ddd;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.5s;
   }
-
-  .photograph {
-    /* if parent is flex it will stretch this image */
-    // align-self: center;
-    display: block;
-
-    height: auto;
-    width: 100%;
+  button.slick-disabled {
+    opacity: 0.6;
   }
 }
-// <!-- END FEEDBACK-->

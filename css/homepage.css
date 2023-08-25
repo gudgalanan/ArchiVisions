@@ -34,7 +34,7 @@
     background-color: rgba(0, 0, 0, 0.8);
   }
 }
-.h6-text, #fhm-project .project-heading h6, #fhm-discover .discover-container .container .discover-container-wrap .discover-container-content h6, #fhm-discover .discover-banner .discover-banner-content-wrap h6, #fhm-services .services-heading h6, #fhm-intro .intro-content h6, #fhm-banner .banner-content h6 {
+.h6-text, #fhm-gallery .gallery-heading h6, #fhm-project .project-heading h6, #fhm-discover .discover-container .container .discover-container-wrap .discover-container-content h6, #fhm-discover .discover-banner .discover-banner-content-wrap h6, #fhm-services .services-heading h6, #fhm-intro .intro-content h6, #fhm-banner .banner-content h6 {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   letter-spacing: 2.8px;
@@ -490,115 +490,68 @@
   -webkit-box-orient: vertical;
 }
 
-#fhm-gallery {
-  /* ==========================================================================
-    Swiper modifications
-  ========================================================================== */
-  /* doubleing up specificity to win over on transform */
-  /* now move prev button more to the left */
-  /* ==========================================================================
-    content in swiper
-  ========================================================================== */
+#fhm-gallery .gallery-heading h6 {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
 }
-#fhm-gallery .lunchbox {
-  position: relative;
+#fhm-gallery .gallery-heading h3 {
+  color: #ffffff;
+  font-family: "Marcellus", serif;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 40px; /* 117.647% */
+  letter-spacing: 0.085px;
+  text-transform: capitalize;
 }
-#fhm-gallery .swiper-container {
-  margin-top: 2em; /* minor cosmetic */
+#fhm-gallery .slick-list {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 30px 0;
+  gap: 33px;
 }
-#fhm-gallery .swiper-wrapper {
-  /* now pagination is below slides */
-  margin-bottom: 3em;
-  /* just enough width so slides handing off screen are partially visible */
-  width: 73.8%;
+#fhm-gallery .slick-list .slick-track {
+  display: flex;
 }
-@media (min-width: 37.5em) {
-  #fhm-gallery .swiper-wrapper {
-    width: 100%;
-  }
+#fhm-gallery .slick-list .slick-track .slick-slide {
+  font-size: 30px;
+  text-align: center;
+  padding: 40px 20px;
+  line-height: 2;
+  font-weight: 700;
 }
-#fhm-gallery .swiper-slide.swiper-slide {
-  /* a single column layout */
+#fhm-gallery .slick-list .slick-track .slick-slide img {
+  aspect-ratio: 181/225;
+  width: 362px;
   width: 100%;
-}
-@media (min-width: 37.5em) {
-  #fhm-gallery .swiper-slide.swiper-slide {
-    /* going for a 2 column layout here */
-    width: 50%;
-    /* centeredSlides set to true */
-    /* reposition so first slide appears on left */
-    transform: translateX(-50%);
-  }
-}
-@media (min-width: 43.75em) {
-  #fhm-gallery .swiper-slide.swiper-slide {
-    /* upping it to a 3 column layout */
-    width: 33.3333333333%;
-    /* centeredSlides set to true */
-    /* reposition so first slide appears on left */
-    transform: translateX(-100%);
-  }
-}
-@media (min-width: 53em) {
-  #fhm-gallery .swiper-slide.swiper-slide {
-    /* and finally the 4 column layout */
-    width: 25%;
-    /* centeredSlides set to true */
-    /* reposition so first slide appears on left */
-    transform: translateX(-150%);
-  }
-}
-#fhm-gallery .swiper-pagination {
-  /* show on small viewports */
-  display: block;
-}
-@media (min-width: 37.5em) {
-  #fhm-gallery .swiper-pagination {
-    /* hide on larger viewports per stakeholder recommendation */
-    display: none;
-  }
-}
-#fhm-gallery .swiper-button-prev {
-  /* but first hide on small viewports */
-  display: none;
-  left: 0;
-  top: 0;
-  margin-top: 0;
-  /* subtract .swiper-wrapper bottom-margin to vertically center arrow */
-  height: calc(100% - 3em);
-}
-@media (min-width: 37.5em) {
-  #fhm-gallery .swiper-button-prev {
-    /* show on larger viewports */
-    display: block;
-  }
-}
-#fhm-gallery .swiper-button-next {
-  /* hide on small viewports */
-  display: none;
-  right: 0;
-  top: 0;
-  margin-top: 0;
-  /* subtract .swiper-wrapper bottom-margin to vertically center arrow */
-  height: calc(100% - 3em);
-}
-@media (min-width: 37.5em) {
-  #fhm-gallery .swiper-button-next {
-    /* show on larger viewports */
-    display: block;
-  }
-}
-#fhm-gallery .product {
-  /* odds are you will use flexbox */
-  /* center it */
-  margin-left: auto;
-  margin-right: auto;
-  /* adjust the width to add or remove whitespace  */
-  width: 82%;
-}
-#fhm-gallery .photograph {
-  /* if parent is flex it will stretch this image */
-  display: block;
   height: auto;
-  width: 100%;
+}
+#fhm-gallery .slick-arrow {
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+}
+#fhm-gallery .slick-arrow:before {
+  font-size: 30px;
+}
+#fhm-gallery .slick-next {
+  right: 0;
+}
+#fhm-gallery .slick-prev {
+  left: 0;
+}
+#fhm-gallery .slick-next:before,
+#fhm-gallery .slick-prev:before {
+  color: #c78410;
+}
+#fhm-gallery button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+#fhm-gallery button.slick-disabled {
+  opacity: 0.6;
 }
