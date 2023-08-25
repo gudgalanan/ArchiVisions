@@ -91,7 +91,7 @@
     }
     p {
       margin: 3px 0 26px;
-      color: $tetx-dark-white;
+      color: $text-dark-white;
       font-family: $font-family;
       font-size: 14px;
       font-weight: 400;
@@ -159,7 +159,7 @@
           letter-spacing: 0.09px;
         }
         p {
-          color: $tetx-dark-white;
+          color: $text-dark-white;
           font-family: $font-family;
           font-size: 14px;
           font-weight: 300;
@@ -177,7 +177,7 @@
   height: 250px;
   background-color: $bg-element-brown;
   .firgures-number {
-    color: $tetx-dark-white;
+    color: $text-dark-white;
     font-feature-settings: "liga" off;
     font-family: $font-family;
     font-size: 60px;
@@ -185,7 +185,7 @@
     line-height: 72px;
   }
   .firgures-info {
-    color: $tetx-dark-white;
+    color: $text-dark-white;
     font-family: $font-family3;
     font-size: 12px;
     font-weight: 400;
@@ -239,7 +239,6 @@
       background-color: $bg-body;
       .discover-container-wrap {
         background-color: $bg-body;
-
         bottom: 100px;
         .discover-container-content {
           h6 {
@@ -257,13 +256,82 @@
             text-transform: capitalize;
           }
           p {
-            color: $tetx-dark-white;
+            color: $text-dark-white;
             font-family: $font-family;
             font-size: 14px;
             font-weight: 400;
             line-height: 24px; /* 171.429% */
             letter-spacing: 0.07px;
             margin: 8px 0 26px;
+          }
+        }
+        .discover-container-img {
+          position: relative;
+          &:first-child {
+            img {
+              aspect-ratio: 356/441;
+            }
+          }
+          .discover-container-img-content {
+            position: absolute;
+            padding: 25px 36px 18px;
+            // bottom: -100%;
+            left: 0;
+            z-index: 3;
+            background-color: $bg-body;
+            opacity: 0.8;
+            span {
+              color: $text-dark-white;
+              font-family: $font-family;
+              font-size: 11px;
+              font-weight: 400;
+              line-height: 14px; /* 127.273% */
+              letter-spacing: 0.55px;
+            }
+            .discover-container-img-content-detail {
+              display: block;
+              opacity: 0;
+              position: relative;
+              top: 100px;
+              transition-property: top, opacity;
+              transition-duration: 0.3s;
+              transition-delay: 0s;
+            }
+
+            .title {
+              line-height: 1;
+              font-weight: 600;
+              font-size: 18px;
+            }
+
+            .info {
+              line-height: 1.2;
+              margin-top: 5px;
+              font-size: 12px;
+            }
+          }
+
+          &:focus,
+          &:hover {
+            &:before,
+            // .discover-container-img-content {
+            // }
+
+            &:before {
+              top: 50%;
+            }
+
+            .discover-container-img-content-detail {
+              top: 0;
+            }
+
+            .title {
+              transition-delay: 0.15s;
+            }
+
+            .info {
+              transition-delay: 0.25s;
+            }
           }
         }
       }
