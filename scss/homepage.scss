@@ -1,12 +1,5 @@
 @import "./variables";
 
-.h6-text {
-  font-family: $font-family;
-  font-weight: 300;
-  letter-spacing: 2.8px;
-  text-transform: uppercase;
-}
-
 // <!-- START BANNER -->
 #fhm-banner {
   position: relative;
@@ -486,6 +479,9 @@
       line-height: 40px; /* 117.647% */
       letter-spacing: 0.085px;
       text-transform: capitalize;
+      &:hover {
+        @extend .hover-link;
+      }
     }
   }
   .feedback-list {

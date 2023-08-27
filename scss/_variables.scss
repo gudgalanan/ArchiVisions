@@ -21,6 +21,13 @@ $border-line: #8a8a8a;
 
 $easeInOut: cubic-bezier(0.42, 0, 0.58, 1);
 
+.h6-text {
+  font-family: $font-family;
+  font-weight: 300;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+}
+
 .hover-button {
   position: relative;
   transition: all 0.5s $easeInOut;
