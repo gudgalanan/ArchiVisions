@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Marcellus&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "./variables";
 
 .h6-text {
@@ -23,17 +21,17 @@
     h6 {
       @extend .h6-text;
       font-size: 14px;
-      color: $text-color-white;
+      color: $text-white;
     }
     h1 {
-      color: $text-color-white;
+      color: $text-white;
       font-family: $font-family2;
       font-size: 60px;
       font-weight: 400;
       line-height: 70px;
     }
     p {
-      color: $text-color-white;
+      color: $text-white;
       font-family: $font-family;
       font-size: 16px;
       font-weight: 400;
@@ -45,8 +43,7 @@
       margin-top: 24px;
       a {
         display: inline-block;
-
-        color: $text-color-white;
+        color: $text-white;
         font-family: $font-family;
         font-size: 20px;
         font-weight: 500;
@@ -55,6 +52,8 @@
         padding: 20px 50px;
         background-color: transparent;
         border: 1px solid $border-color;
+
+        @extend .hover-button2;
       }
     }
   }
@@ -82,12 +81,13 @@
       margin-bottom: 7px;
     }
     h2 {
-      color: $text-color-white;
+      color: $text-white;
       font-family: $font-family2;
       font-size: 36px;
       font-weight: 400;
       line-height: 50px;
       letter-spacing: 0.09px;
+      @extend .hover-link;
     }
     p {
       margin: 3px 0 26px;
@@ -100,14 +100,15 @@
     }
     .intro-content-button {
       display: inline-block;
-      background-color: $bg-main-btn;
+      background-color: #c78410;
       padding: 18px 35px;
-      color: $text-color-white;
+      color: $text-white;
       font-family: $font-family;
       font-size: 14px;
       font-weight: 500;
       letter-spacing: 2.8px;
       text-transform: uppercase;
+      @extend .hover-button;
     }
   }
 }
@@ -123,7 +124,7 @@
       text-align: center;
     }
     h3 {
-      color: $text-color-white;
+      color: $text-white;
       text-align: center;
       font-family: $font-family2;
       font-size: 34px;
@@ -131,6 +132,7 @@
       line-height: 50px;
       letter-spacing: 0.085px;
       margin: 8px 0 40px;
+      @extend .hover-link;
     }
   }
   .services-item {
@@ -146,12 +148,14 @@
       background-color: $highlight-color;
     }
     .service-item-wrap {
+      display: block;
+
       background-color: $bg-element-gray;
       padding: 43px 35px 45px;
       .services-item-content {
         h5 {
           margin: 55px 0 11px;
-          color: $text-color-white;
+          color: $text-white;
           font-family: $font-family;
           font-size: 18px;
           font-weight: 600;
@@ -206,12 +210,12 @@
       top: 244px;
       h6 {
         @extend .h6-text;
-        color: $text-color-white;
+        color: $text-white;
         font-size: 12px;
         text-align: center;
       }
       h2 {
-        color: $text-color-white;
+        color: $text-white;
         text-align: center;
         font-family: $font-family2;
         font-size: 48px;
@@ -224,138 +228,140 @@
         padding: 22px 42px;
         background-color: transparent;
         border: 1px solid $border-color;
-        color: $text-color-white;
+        color: $text-white;
         text-align: center;
         font-family: $font-family;
         font-size: 14px;
         font-weight: 500;
         letter-spacing: 2.8px;
         text-transform: uppercase;
+
+        @extend .hover-button2;
       }
     }
   }
   .discover-container {
-    .container {
-      max-width: 100%;
-      display: flex;
-      justify-content: center;
-      .discover-container-wrap {
-        position: absolute;
-        max-width: 1400px;
-        padding: 97px 121px;
-        top: 808px;
-        border-top-left-radius: 100px;
-        background-color: $bg-body;
-        .discover-container-content {
-          h6 {
-            @extend .h6-text;
-            font-size: 12px;
-            color: $text-blur-white;
-            margin-bottom: 8px;
-          }
-          h3 {
-            color: $text-color-white;
-            font-family: $font-family2;
-            font-size: 34px;
-            font-weight: 400;
-            line-height: 40px; /* 117.647% */
-            text-transform: capitalize;
-          }
-          p {
-            color: $text-dark-white;
-            font-family: $font-family;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 24px; /* 171.429% */
-            letter-spacing: 0.07px;
-            margin: 8px 0 26px;
-          }
-          a {
-            padding: 18px 35px;
-            background-color: $bg-main-btn;
-            display: inline-block;
-            color: $text-color-white;
-            font-family: $font-family;
-            font-size: 14px;
-            font-weight: 500;
-            letter-spacing: 2.8px;
-            text-transform: uppercase;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    .discover-container-wrap {
+      position: absolute;
+      max-width: 1400px;
+      padding: 97px 121px;
+      top: -144px;
+      border-top-left-radius: 100px;
+      background-color: $bg-body;
+      .discover-container-content {
+        h6 {
+          @extend .h6-text;
+          font-size: 12px;
+          color: $text-blur-white;
+          margin-bottom: 8px;
+        }
+        h3 {
+          color: $text-white;
+          font-family: $font-family2;
+          font-size: 34px;
+          font-weight: 400;
+          line-height: 40px; /* 117.647% */
+          text-transform: capitalize;
+          @extend .hover-link;
+        }
+        p {
+          color: $text-dark-white;
+          font-family: $font-family;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px; /* 171.429% */
+          letter-spacing: 0.07px;
+          margin: 8px 0 26px;
+        }
+        .discover-link {
+          padding: 18px 35px;
+          background-color: $bg-main-btn;
+          display: inline-block;
+          color: $text-white;
+          font-family: $font-family;
+          font-size: 14px;
+          font-weight: 500;
+          letter-spacing: 2.8px;
+          text-transform: uppercase;
+          @extend .hover-button;
+        }
+      }
+      .discover-container-img {
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+
+        img {
+          transition: all 300ms ease-out;
+
+          height: 100%;
+          &:first-child {
+            aspect-ratio: 356/411;
           }
         }
-        .discover-container-img {
-          cursor: pointer;
-          position: relative;
-          overflow: hidden;
 
-          img {
-            transition: all 300ms ease-out;
+        .discover-container-img-content {
+          background-color: $bg-body;
+          // opacity: 0;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: 2;
+          transition: all 300ms ease-out;
+          opacity: 0;
+          width: 100%;
+          height: 86px;
+          padding: 25px 36px 18px;
 
-            height: 100%;
-            &:first-child {
-              aspect-ratio: 356/411;
-            }
+          span {
+            transition-delay: 0.1s;
+            transition-duration: 0.2s;
+            color: $text-dark-white;
+            font-family: $font-family;
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 14px; /* 127.273% */
+            letter-spacing: 0.55px;
+            margin-bottom: 5px;
           }
-
-          .discover-container-img-content {
-            background-color: $bg-body;
-            // opacity: 0;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            z-index: 2;
+          .overtext {
             transition: all 300ms ease-out;
-            opacity: 0;
-            width: 100%;
-            height: 86px;
-            padding: 25px 36px 18px;
+            transform: translateY(40px);
 
-            span {
-              transition-delay: 0.1s;
+            .discover-container-img-content-detail {
+              // opacity: 0;
+              transition-delay: 0.2s;
               transition-duration: 0.2s;
-              color: $text-dark-white;
-              font-family: $font-family;
-              font-size: 11px;
-              font-weight: 400;
-              line-height: 14px; /* 127.273% */
-              letter-spacing: 0.55px;
-              margin-bottom: 5px;
-            }
-            .overtext {
-              transition: all 300ms ease-out;
-              transform: translateY(40px);
-
-              .discover-container-img-content-detail {
-                // opacity: 0;
-                transition-delay: 0.2s;
-                transition-duration: 0.2s;
-                h5 {
-                  color: $text-color-white;
-                  font-family: $font-family;
-                  font-size: 14px;
-                  font-weight: 400;
-                  line-height: 24px; /* 171.429% */
-                  letter-spacing: 0.07px;
-                }
+              h5 {
+                color: $text-white;
+                font-family: $font-family;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 24px; /* 171.429% */
+                letter-spacing: 0.07px;
               }
             }
           }
+        }
 
-          &:hover,
-          &:focus {
-            .discover-container-img-content {
-              opacity: 0.8;
+        &:hover,
+        &:focus {
+          .discover-container-img-content {
+            opacity: 0.8;
 
-              .overtext {
-                transform: translateY(0px);
+            .overtext {
+              transform: translateY(0px);
 
-                &span {
-                  opacity: 0.8;
-                }
+              &span {
+                opacity: 0.8;
+              }
 
-                &.discover-container-img-content-detail {
-                  opacity: 0.8;
-                  transform: translateX(0px);
-                }
+              &.discover-container-img-content-detail {
+                opacity: 0.8;
+                transform: translateX(0px);
               }
             }
           }
@@ -380,13 +386,14 @@
     }
     .project-heading-main {
       h4 {
-        color: $text-color-white;
+        color: $text-white;
         font-family: $font-family2;
         font-size: 34px;
         font-weight: 400;
         line-height: 40px; /* 117.647% */
         letter-spacing: 0.085px;
         text-transform: capitalize;
+        @extend .hover-link;
       }
       .project-heading-link {
         gap: 10px;
@@ -398,6 +405,9 @@
           line-height: 24px; /* 171.429% */
           letter-spacing: 0.07px;
           text-transform: uppercase;
+          &:hover {
+            opacity: 0.9;
+          }
         }
       }
     }
@@ -406,13 +416,14 @@
     .project-item {
       position: relative;
       margin-bottom: 33px;
-      cursor: pointer;
-      &:hover {
-        .project-item-info {
-          animation: overlay 0.1s linear forwards;
-          text-align: center;
-          background-color: transparent;
-        }
+      display: block; /* Make the entire .project-item clickable */
+      text-decoration: none; /* Remove underlines or default link styling */
+      color: inherit; /* Inherit text color from parent */
+
+      &:hover .project-item-info {
+        animation: overlay 0.1s linear forwards;
+        text-align: center;
+        background-color: transparent;
       }
 
       .project-item-info {
@@ -420,20 +431,18 @@
         left: 10.5px;
         left: 0;
         bottom: 0;
-
         padding: 10px 30px;
         background-color: $main-color;
         border-top-right-radius: 10px;
-
         display: flex;
         align-items: center;
         justify-content: center;
         h5 {
-          color: $text-color-white;
+          color: $text-white;
           font-family: $font-family;
           font-size: 14px;
           font-weight: 400;
-          line-height: 24px; /* 171.429% */
+          line-height: 24px;
           letter-spacing: 0.7px;
           text-transform: uppercase;
         }
@@ -470,7 +479,7 @@
     }
     h3 {
       text-align: center;
-      color: $text-color-white;
+      color: $text-white;
       font-family: $font-family2;
       font-size: 34px;
       font-weight: 400;
@@ -500,7 +509,7 @@
       .feedback-item-content {
         h5 {
           margin-bottom: 11px;
-          color: $text-color-white;
+          color: $text-white;
           font-family: $font-family2;
           font-size: 20px;
           font-weight: 400;
@@ -524,7 +533,9 @@
 }
 // <!-- END FEEDBACK-->
 
+// <!-- START GALLERY-->
 #fhm-gallery {
+  margin-bottom: 60px;
   .gallery-heading {
     h6 {
       @extend .h6-text;
@@ -532,70 +543,179 @@
       font-size: 12px;
     }
     h3 {
-      color: $text-color-white;
+      color: $text-white;
       font-family: $font-family2;
       font-size: 34px;
       font-weight: 400;
       line-height: 40px; /* 117.647% */
       letter-spacing: 0.085px;
       text-transform: capitalize;
+      @extend .hover-link;
     }
   }
-  .slick-list {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 30px 0;
+  .gallery-container {
+    // width: 100%;
+    margin-left: calc(((100% - 1160px) / 2));
 
-    gap: 33px;
-    .slick-track {
-      display: flex;
-      .slick-slide {
-        font-size: 30px;
-        text-align: center;
-        padding: 40px 20px;
-        line-height: 2;
-        font-weight: 700;
-        img {
-          aspect-ratio: 181/225;
-          width: 362px;
-          width: 100%;
-          height: auto;
+    .slick-list {
+      // max-width: calc(100% - (((100% - 1160px) / 2) - 10px));
+      margin: 0;
+      padding: 0;
+
+      gap: 33px;
+      .slick-track {
+        display: flex;
+        .slick-slide {
+          font-size: 30px;
+          text-align: center;
+          padding: 40px 20px;
+          line-height: 2;
+          font-weight: 700;
+          img {
+            aspect-ratio: 181/225;
+            width: 362px;
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .slick-arrow {
+      z-index: 1;
+      // width: 40px;
+      // height: 40px;
+    }
+
+    .slick-arrow:before {
+      font-size: 30px;
+    }
+
+    .slick-next {
+      display: none !important;
+      right: 16px;
+    }
+
+    .slick-prev {
+      top: calc(50% - 25px);
+      left: -30px;
+    }
+
+    .slick-next:before,
+    .slick-prev:before {
+      color: $highlight-color;
+      font-size: 50px;
+      opacity: 1;
+    }
+
+    button {
+      // background-color: #ddd;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      transition: all 0.5s;
+    }
+
+    button.slick-disabled {
+      opacity: 0.6;
+    }
+  }
+}
+// <!-- END GALLERY-->
+
+// <!-- START BLOGS-->
+#fhm-blog {
+  margin-bottom: 100px;
+  .blog-heading {
+    margin-bottom: 50px;
+    h6 {
+      @extend .h6-text;
+      color: $text-blur-white;
+      font-size: 12px;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    h3 {
+      text-align: center;
+      color: $text-white;
+      font-family: $font-family2;
+      font-size: 34px;
+      font-weight: 400;
+      line-height: 40px;
+      letter-spacing: 0.085px;
+      text-transform: capitalize;
+      @extend .hover-link;
+    }
+  }
+
+  .blog-list {
+    .blog-item {
+      .blog-item-img {
+        &:hover {
+          img {
+            opacity: 1;
+            -webkit-animation: flash 1.5s;
+            animation: flash 1.5s;
+          }
+        }
+        display: block;
+        .blog-item-img-date {
+          background-color: $bg-body;
+          padding: 5px 6px;
+          top: 12px;
+          right: 22.5px;
+          text-align: center;
+          h6 {
+            color: $text-white;
+            font-family: $font-family;
+            font-size: 10px;
+            font-weight: 300;
+            line-height: 13px;
+            letter-spacing: 0.025px;
+            margin: 0;
+            width: 32px;
+          }
+        }
+      }
+      .blog-item-content {
+        margin: 20px 0;
+        h4 {
+          color: $text-white;
+          font-family: $font-family2;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 28px; /* 140% */
+          letter-spacing: 0.03px;
+          @extend .hover-link;
+        }
+        p {
+          color: $text-dark-white;
+          font-family: $font-family;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0.07px;
+        }
+      }
+      .blog-item-link {
+        a {
+          color: $highlight-color;
+          text-align: center;
+          font-family: $font-family;
+          font-size: 14px;
+          font-weight: 500;
+          letter-spacing: 2.8px;
+          text-decoration-line: underline;
+          text-transform: uppercase;
+          &:hover {
+            opacity: 0.9;
+          }
         }
       }
     }
   }
-
-  .slick-arrow {
-    z-index: 1;
-    width: 40px;
-    height: 40px;
-  }
-
-  .slick-arrow:before {
-    font-size: 30px;
-  }
-  .slick-next {
-    right: 0;
-  }
-  .slick-prev {
-    left: 0;
-  }
-
-  .slick-next:before,
-  .slick-prev:before {
-    color: $highlight-color;
-  }
-  button {
-    // background-color: #ddd;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin: 10px;
-    font-size: 18px;
-    font-weight: 600;
-    transition: all 0.5s;
-  }
-  button.slick-disabled {
-    opacity: 0.6;
-  }
 }
+// <!-- END BLOGS-->

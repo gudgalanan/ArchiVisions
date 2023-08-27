@@ -1,7 +1,79 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Marcellus&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Marcellus&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.hover-button, #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-submit, #fhm-header .header-item .header-search .header-search-button {
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+}
+.hover-button:before, #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-submit:before, #fhm-header .header-item .header-search .header-search-button:before, .hover-button:after, #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-submit:after, #fhm-header .header-item .header-search .header-search-button:after {
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+}
+.hover-button:before, #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-submit:before, #fhm-header .header-item .header-search .header-search-button:before {
+  left: 0;
+  width: 0;
+  color: white;
+  border: 1px solid white;
+  opacity: 0;
+}
+.hover-button:after, #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-submit:after, #fhm-header .header-item .header-search .header-search-button:after {
+  left: 100%;
+  width: 0;
+  color: white;
+  border: 1px solid white;
+  opacity: 0;
+}
+.hover-button:hover:before, #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-submit:hover:before, #fhm-header .header-item .header-search .header-search-button:hover:before {
+  width: 100%;
+  opacity: 1;
+}
+.hover-button:hover:after, #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-submit:hover:after, #fhm-header .header-item .header-search .header-search-button:hover:after {
+  width: 100%;
+  left: 0;
+  opacity: 1;
+}
+
+.hover-button2 {
+  position: sticky;
+  overflow: hidden;
+  transition: all 0.35s;
+}
+.hover-button2:before, .hover-button2:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  background: #c78410;
+  z-index: -1;
+  transition: all 0.35s;
+}
+.hover-button2:before {
+  opacity: 0.5;
+}
+.hover-button2:after {
+  transition-delay: 0.2s;
+}
+.hover-button2:hover:before, .hover-button2:hover:after {
+  border-color: #c78410;
+  top: 0;
+}
+
+.hover-link:hover, #fhm-footer .footer-list .footer-item a:hover, #fhm-footer .footer-list .footer-logo h3:hover, #fhm-header .header-item .header-logo h3:hover {
+  color: #c78410;
+}
+.hover-link:hover svg path, #fhm-footer .footer-list .footer-item a:hover svg path, #fhm-footer .footer-list .footer-logo h3:hover svg path, #fhm-header .header-item .header-logo h3:hover svg path {
+  fill: #c78410;
+}
+
 @keyframes borderRadius {
   0% {
     border-top-right-radius: 0px;
@@ -32,6 +104,14 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
   }
 }
 * {
@@ -97,7 +177,14 @@ button:focus-visible {
   max-width: 1160px;
 }
 
-.text-styles, #fhm-header .header-item .header-search .header-search-button, #fhm-header .header-item .header-navbar .navbar-item {
+.h6-text, #fhm-register .register-banner .register-banner-heading h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+}
+
+.text-styles, #fhm-header .header-item .header-search .header-search-button {
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 12px;
@@ -113,7 +200,7 @@ button:focus-visible {
 #fhm-header .header-item {
   gap: 60px;
 }
-#fhm-header .header-item .header-logo {
+#fhm-header .header-item .header-logo h3 {
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 20px;
@@ -122,13 +209,292 @@ button:focus-visible {
   text-transform: uppercase;
 }
 #fhm-header .header-item .header-navbar .navbar-item {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
   font-weight: 400;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+#fhm-header .header-item .header-navbar .navbar-item:after {
+  content: "";
+  height: 1px;
+  left: 0;
+  width: 1px;
+  position: absolute;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  right: 0;
+  margin: 0 auto;
+  bottom: -3px;
+}
+#fhm-header .header-item .header-navbar .navbar-item:hover {
+  color: #c78410;
+  transition: color 0.3s ease;
+}
+#fhm-header .header-item .header-navbar .navbar-item:hover:after, #fhm-header .header-item .header-navbar .navbar-item:focus:after {
+  width: 100%;
+  background-color: #c78410;
 }
 #fhm-header .header-item .header-search {
   gap: 30px;
+}
+#fhm-header .header-item .header-search a:hover svg path {
+  fill: #c78410;
 }
 #fhm-header .header-item .header-search .header-search-button {
   font-weight: 500;
   padding: 10px 15px;
   background-color: #c78410;
+}
+
+#fhm-register {
+  margin-top: 100px;
+  position: relative;
+}
+#fhm-register .register-banner .register-banner-bg {
+  position: relative; /* Ensure proper stacking context */
+}
+#fhm-register .register-banner .register-banner-bg::after {
+  content: ""; /* Create a pseudo-element to overlay with color */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(199, 132, 16, 0.8); /* Semi-transparent color */
+  z-index: 1; /* Ensure it's above the image */
+}
+#fhm-register .register-banner .register-banner-heading {
+  position: absolute;
+  top: 85px;
+  z-index: 2;
+}
+#fhm-register .register-banner .register-banner-heading h6 {
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+}
+#fhm-register .register-banner .register-banner-heading h3 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Marcellus", serif;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 60px; /* 176.471% */
+  letter-spacing: 0.085px;
+  text-transform: capitalize;
+}
+#fhm-register .register-content .register-content-wrap {
+  z-index: 1;
+  top: -150px;
+}
+#fhm-register .register-content .register-content-wrap .video-wrapper .video-container {
+  position: relative;
+}
+#fhm-register .register-content .register-content-wrap .video-wrapper .video-container video {
+  width: 100%;
+  aspect-ratio: 277/273;
+}
+#fhm-register .register-content .register-content-wrap .video-wrapper .video-container .play-button-wrapper {
+  position: absolute;
+  top: 47.5%;
+  left: 50%;
+  margin: auto;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  opacity: 0.8;
+  border: 9px solid rgba(255, 255, 255, 0.4);
+}
+#fhm-register .register-content .register-content-wrap .video-wrapper .video-container .play-button-wrapper:hover {
+  opacity: 1;
+}
+#fhm-register .register-content .register-content-wrap .video-wrapper .video-container .play-button-wrapper .play-gif {
+  background-color: #c78410;
+  border-radius: 50%;
+  width: 69px;
+  height: 68px;
+}
+#fhm-register .register-content .register-content-wrap .video-wrapper .video-container .play-button-wrapper .play-gif svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  transform: translate(-50%, -50%);
+}
+#fhm-register .register-content .register-content-wrap .register-content-detail {
+  position: relative;
+}
+#fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-bg img {
+  width: 100%;
+  aspect-ratio: 277/273;
+}
+#fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-bg img:nth-child(2) {
+  top: 0;
+  left: 0;
+  mix-blend-mode: soft-light;
+}
+#fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content {
+  position: absolute;
+  top: -10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 80px;
+}
+#fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-heading {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px 28px;
+  background-color: #c78410;
+  border-radius: 0px 0px 29px 29px;
+}
+#fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-heading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -8px;
+  background-color: #c78410, rgba(0, 0, 0, 0.5);
+  border-top: 10px solid transparent;
+  border-right: 8px solid rgba(0, 0, 0, 0.5);
+}
+#fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -8px;
+  background-color: #c78410, rgba(0, 0, 0, 0.5);
+  border-top: 10px solid transparent;
+  border-left: 8px solid rgba(0, 0, 0, 0.5);
+}
+#fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-heading h3 {
+  color: #ffffff;
+  font-family: "Marcellus", serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.027px;
+}
+#fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-heading {
+  margin-top: 29px;
+  gap: 32px;
+}
+#fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-heading h4 {
+  position: relative;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px; /* 100% */
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+}
+#fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-heading h4::after {
+  content: "";
+  width: 0.5px;
+  height: 27px;
+  background-color: #8a8a8a;
+  position: absolute;
+  right: -16px;
+}
+#fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-heading p {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px; /* 166.667% */
+  letter-spacing: 0.06px;
+}
+#fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-form {
+  margin-top: 31px;
+}
+#fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-form .form-control {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #8a8a8a;
+  padding: 0px 0 2px;
+}
+#fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-form .form-control::-moz-placeholder {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.035px;
+}
+#fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-form .form-control::placeholder {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.035px;
+}
+#fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-form .form-control:focus {
+  border-color: inherit;
+  box-shadow: none;
+}
+#fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-form .form-control-msg {
+  height: 79px;
+}
+#fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-submit {
+  margin-top: 10px;
+  background-color: #c78410;
+  text-align: center;
+  padding: 10px 0;
+}
+#fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-submit a {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: 0.07px;
+}
+
+#fhm-footer {
+  margin-bottom: 100px;
+}
+#fhm-footer .footer-list {
+  margin-bottom: 40px;
+}
+#fhm-footer .footer-list .footer-logo h3 {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+#fhm-footer .footer-list .footer-item a {
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px; /* 171.429% */
+  margin-bottom: 10px;
+}
+#fhm-footer .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+#fhm-footer .footer-bottom span {
+  margin-top: 36px;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px; /* 171.429% */
 }
