@@ -18,18 +18,21 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"
     />
+    <script src="./bootstrap//js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="./css/homepage.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <title>Homepage _ ArchiVisions</title>
   </head>
   <body>
     <!-- START HEADER -->
-    <section id="fhm-header">
+    <!-- <section id="fhm-header">
       <div class="container">
         <div class="row justify-content-between align-items-center">
           <div class="header-item col-2">
             <a href="" class="header-logo"><h3>ArchiVisions</h3></a>
           </div>
+
           <div class="header-item col-8 d-flex">
             <div
               class="header-navbar d-flex justify-content-between align-items-center flex-fill"
@@ -61,6 +64,87 @@
               </a>
               <a href="#" class="header-search-button"> Submit a Quote </a>
             </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <section id="fhm-header">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a
+          href="#"
+          class="header-logo d-flex justify-content-center align-items-center"
+        >
+          <h3>ArchiVisions</h3>
+        </a>
+        <div class="header-content">
+          <div class="header-nav">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarToggler"
+                aria-controls="navbarToggler"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#fhm-services" title="Service"
+                      >Service</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#fhm-project" title="Projects"
+                      >Projects</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#fhm-intro" title="About"
+                      >About</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#fhm-gallery" title="Gallery"
+                      >Gallery</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#fhm-footer" title="Contact"
+                      >Contact</a
+                    >
+                  </li>
+                  <li>
+                    <div class="header-select d-flex align-items-center">
+                      <a href="#" class="header-search-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                        >
+                          <path
+                            d="M15.3433 15.9997C15.214 15.8986 15.0741 15.8088 14.9577 15.6946C13.6784 14.4411 12.4029 13.1842 11.1274 11.927C11.0795 11.8798 11.0413 11.8225 10.9988 11.7703C10.7302 11.9493 10.4905 12.1217 10.2385 12.2744C9.42404 12.7689 8.54261 13.071 7.59546 13.1911C6.19162 13.3692 4.8507 13.1555 3.60681 12.4876C1.68871 11.4576 0.472674 9.87929 0.102387 7.71447C-0.218445 5.83947 0.216322 4.12815 1.38415 2.6237C2.45933 1.23881 3.87412 0.394105 5.60567 0.102417C7.08807 -0.147333 8.51319 0.0567229 9.84284 0.759341C11.6943 1.73737 12.9041 3.2462 13.3247 5.30711C13.7514 7.39649 13.2283 9.27181 11.8564 10.9074C11.8229 10.9471 11.7894 10.9872 11.7569 11.0276C11.7506 11.0354 11.7481 11.046 11.7375 11.0698C11.7672 11.1021 11.7998 11.1406 11.8354 11.1756C13.1041 12.4247 14.3742 13.6725 15.6407 14.924C15.7712 15.053 15.8807 15.2032 16 15.3437V15.6248C15.9224 15.7972 15.7953 15.9199 15.625 15.9997H15.3439H15.3433ZM12.4255 6.57839C12.4117 6.39468 12.4036 6.16558 12.376 5.93868C12.2665 5.0342 11.9519 4.20295 11.4238 3.46309C10.5052 2.17584 9.26034 1.39091 7.69937 1.11519C6.96256 0.984992 6.22762 1.0069 5.498 1.16432C4.82159 1.31048 4.18932 1.5715 3.60963 1.9505C2.78799 2.48756 2.13944 3.18642 1.68276 4.05773C1.20887 4.96221 1.00416 5.92366 1.05956 6.94488C1.09556 7.60712 1.24204 8.2412 1.50998 8.84336C2.01173 9.97099 2.79957 10.8498 3.87287 11.4629C5.12521 12.1784 6.46894 12.3855 7.8781 12.1104C8.93106 11.9051 9.85943 11.4291 10.6423 10.6896C11.8101 9.58697 12.3954 8.22618 12.4248 6.57808L12.4255 6.57839Z"
+                            fill="white"
+                          />
+                          <path
+                            d="M15.6248 15.9999C15.795 15.9204 15.9221 15.7974 15.9997 15.625V15.9999H15.6248Z"
+                            fill="black"
+                          />
+                        </svg>
+                      </a>
+                      <a href="#" class="header-search-button">
+                        Submit a Quote
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </nav>
           </div>
         </div>
       </div>
@@ -1049,58 +1133,6 @@
     <!-- START JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
-      // SLIDE
-      $(document).ready(function () {
-        $(".slick-list").slick({
-          slidesToShow: 3.5,
-          slidesToScroll: 1,
-          arrows: true,
-          infinite: false,
-          autoplay: false,
-        });
-        $(".prev-btn").click(function () {
-          $(".slick-list").slick("slickPrev");
-        });
-
-        $(".next-btn").click(function () {
-          $(".slick-list").slick("slickNext");
-        });
-        $(".prev-btn").addClass("slick-disabled");
-        $(".slick-list").on("afterChange", function () {
-          if ($(".slick-prev").hasClass("slick-disabled")) {
-            $(".prev-btn").addClass("slick-disabled");
-          } else {
-            $(".prev-btn").removeClass("slick-disabled");
-          }
-          if ($(".slick-next").hasClass("slick-disabled")) {
-            $(".next-btn").addClass("slick-disabled");
-          } else {
-            $(".next-btn").removeClass("slick-disabled");
-          }
-        });
-      });
-
-      // VIDEO
-      // Get the video element and play button element
-      const video = document.getElementById("video");
-      const circlePlayButton = document.getElementById("circle-play-b");
-
-      function togglePlay() {
-        if (video.paused || video.ended) {
-          video.play();
-        } else {
-          video.pause();
-        }
-      }
-
-      circlePlayButton.addEventListener("click", togglePlay);
-      video.addEventListener("playing", function () {
-        circlePlayButton.style.opacity = 0;
-      });
-      video.addEventListener("pause", function () {
-        circlePlayButton.style.opacity = 1;
-      });
-    </script>
+    <script src="./JS/archivisions.js"></script>
   </body>
 </html>
