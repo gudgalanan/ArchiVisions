@@ -18,7 +18,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"
     />
-    <script src="./bootstrap//js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="./css/homepage.css" />
     <link rel="stylesheet" href="./css/main.css" />
@@ -217,7 +220,7 @@
               </a>
             </div>
           </div>
-          <div class="col-sm-6 col-12 services-item">
+          <div class="col-sm-6 col-12 col-lg-4 services-item">
             <div class="services-item-bg">
               <a href="#" class="service-item-wrap">
                 <div class="services-item-icon">
@@ -243,7 +246,7 @@
               </a>
             </div>
           </div>
-          <div class="col-sm-6 col-12 services-item">
+          <div class="col-sm-6 col-12 col-lg-4 services-item">
             <div class="services-item-bg">
               <a href="#" class="service-item-wrap">
                 <div class="services-item-icon">
@@ -269,7 +272,7 @@
               </a>
             </div>
           </div>
-          <div class="col-sm-6 col-12 services-item">
+          <div class="col-sm-6 col-12 col-lg-4 services-item">
             <div class="services-item-bg">
               <a href="#" class="service-item-wrap">
                 <div class="services-item-icon">
@@ -295,7 +298,7 @@
               </a>
             </div>
           </div>
-          <div class="col-sm-6 col-12 services-item">
+          <div class="col-sm-6 col-12 col-lg-4 services-item">
             <div class="services-item-bg">
               <a href="#" class="service-item-wrap">
                 <div class="services-item-icon">
@@ -582,7 +585,7 @@
           <h3>What's Customer Saying?</h3>
         </div>
         <div class="feedback-list row justify-content-between">
-          <div class="feedback-item col-sm-4 col-12">
+          <div class="feedback-item col-sm col-12">
             <div class="feedback-item-info d-flex align-items-center">
               <div class="feedback-item-info-avt">
                 <img src="./assets/img/homepage/avt1.jpeg" alt="" />
@@ -635,7 +638,7 @@
               </p>
             </div>
           </div>
-          <div class="feedback-item col-sm-4 col-12">
+          <div class="feedback-item col-sm col-12">
             <div class="feedback-item-info d-flex align-items-center">
               <div class="feedback-item-info-avt">
                 <img src="./assets/img/homepage/avt2.jpeg" alt="" />
@@ -687,7 +690,7 @@
               </p>
             </div>
           </div>
-          <div class="feedback-item col-sm-4 col-12">
+          <div class="feedback-item col-sm col-12">
             <div class="feedback-item-info d-flex align-items-center">
               <div class="feedback-item-info-avt">
                 <img src="./assets/img/homepage/avt1.jpeg" alt="" />
@@ -753,16 +756,29 @@
           <h3>a new design style</h3>
         </div>
       </div>
-      <div class="gallery-container">
-        <div class="slick-list gallery-list" id="galleryList">
-          <a href=""><img src="./assets/img/homepage/slide1.png" alt="" /></a>
-          <a href=""><img src="./assets/img/homepage/slide2.png" alt="" /></a>
-          <a href=""><img src="./assets/img/homepage/slide3.png" alt="" /></a>
-          <a href=""><img src="./assets/img/homepage/slide4.png" alt="" /></a>
-          <a href=""><img src="./assets/img/homepage/slide1.png" alt="" /></a>
-          <a href=""><img src="./assets/img/homepage/slide2.png" alt="" /></a>
-          <a href=""><img src="./assets/img/homepage/slide3.png" alt="" /></a>
-          <a href=""><img src="./assets/img/homepage/slide4.png" alt="" /></a>
+      <div class="container-fluild">
+        <div class="gallery-container">
+          <div class="slick-list gallery-list" id="galleryList">
+            <a><img src="./assets/img/homepage/slide1.png" alt="" /></a>
+            <a><img src="./assets/img/homepage/slide2.png" alt="" /></a>
+            <a><img src="./assets/img/homepage/slide3.png" alt="" /></a>
+            <a><img src="./assets/img/homepage/slide4.png" alt="" /></a>
+            <a><img src="./assets/img/homepage/slide1.png" alt="" /></a>
+            <a><img src="./assets/img/homepage/slide2.png" alt="" /></a>
+            <a><img src="./assets/img/homepage/slide3.png" alt="" /></a>
+            <a><img src="./assets/img/homepage/slide4.png" alt="" /></a>
+          </div>
+          <div class="slick-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="12"
+              height="18"
+              viewBox="0 0 12 18"
+              fill="none"
+            >
+              <path d="M11 1L2 10L11 17.2" stroke="white" stroke-width="2" />
+            </svg>
+          </div>
         </div>
       </div>
     </section>
@@ -871,17 +887,20 @@
             class="row position-relative register-content-wrap align-items-start"
           >
             <div class="video-wrapper col-sm-6 col-12 position-relative">
-              <div class="video-container" id="video-container">
-                <video
-                  controls
-                  id="video"
-                  preload="metadata"
-                  poster="./assets/img/homepage/video.png"
-                >
-                  <source src="./assets/video/video.mp4" type="video/mp4" />
-                </video>
+              <div
+                class="video-container tutorial-item-image"
+                id="video-container"
+              >
+                <img src="./assets/img/homepage/video.png" alt="" />
 
-                <div class="play-button-wrapper" id="circle-play-b">
+                <div
+                  class="play-button-wrapper button-video"
+                  data-bs-toggle="modal"
+                  data-bs-target="#videoModal"
+                  data-bs-whatever="@mdo3"
+                  data-src="https://youtu.be/phWxA89Dy94?si=UeDZTK1R86EIHxbg"
+                  id="circle-play-b"
+                >
                   <div title="Play video" class="play-gif">
                     <!-- SVG Play Button -->
                     <svg
@@ -900,6 +919,45 @@
                 </div>
               </div>
             </div>
+
+            <!-- Add a Bootstrap modal for displaying the video -->
+            <div
+              class="modal fade"
+              id="videoModal"
+              tabindex="-1"
+              aria-labelledby="videoModalLabel"
+              aria-hidden="true"
+              data-backdrop="static"
+            >
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel">
+                      Video Title
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <!-- Add an iframe for embedding the YouTube video -->
+                    <iframe
+                      id="videoIframe"
+                      width="100%"
+                      height="450"
+                      frameborder="0"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="register-content-detail col-sm-6 col-12">
               <div class="register-detail-bg position-relative">
                 <img src="./assets/img/homepage/register.png" alt="" />
@@ -1088,8 +1146,7 @@
     <!-- END FOOTER-->
 
     <!-- START JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
     <script src="./JS/archivisions.js"></script>
   </body>
 </html>

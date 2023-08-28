@@ -1,51 +1,76 @@
-// SLIDE
+// // SLIDE
 $(document).ready(function () {
-  $(".slick-list").slick({
-    slidesToShow: 3.5,
-    slidesToScroll: 1,
-    arrows: true,
-    infinite: false,
-    autoplay: false,
+  const galleryList = $("#galleryList");
+  const slideWidth = 362 + 37; // Width of each slide plus the gap
+  const slidesToShow = 4; // Number of slides to show at once, adjust as needed
+
+  // Initialize a variable to keep track of the current slide index
+  let currentSlide = 0;
+
+  // Handle click on .slick-btn (previous button)
+  $(".slick-btn").on("click", function () {
+    // Calculate the new slide index
+    currentSlide--;
+    if (currentSlide < 0) {
+      currentSlide = galleryList.children().length - slidesToShow;
+      // If you want to loop to the end instead of stopping at the beginning,
+      // you can set currentSlide to (galleryList.children().length - slidesToShow)
+    }
+
+    // Calculate the new scroll position based on the current slide
+    const scrollPosition = currentSlide * slideWidth;
+
+    // Animate the scroll
+    galleryList.animate({ scrollLeft: scrollPosition }, 400, function () {
+      // After the animation is complete, adjust the scroll position
+      galleryList.scrollLeft(scrollPosition);
+    });
   });
-  $(".prev-btn").click(function () {
-    $(".slick-list").slick("slickPrev");
+});
+
+// DRAGGABLE
+document.addEventListener("DOMContentLoaded", function () {
+  const galleryList = document.getElementById("galleryList");
+  let isDragging = false;
+  let startX, scrollLeft;
+
+  // Handle mouse down event to start dragging
+  galleryList.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startX = e.pageX - galleryList.offsetLeft;
+    scrollLeft = galleryList.scrollLeft;
   });
 
-  $(".next-btn").click(function () {
-    $(".slick-list").slick("slickNext");
+  // Handle mouse up event to stop dragging
+  galleryList.addEventListener("mouseup", () => {
+    isDragging = false;
   });
-  $(".prev-btn").addClass("slick-disabled");
-  $(".slick-list").on("afterChange", function () {
-    if ($(".slick-prev").hasClass("slick-disabled")) {
-      $(".prev-btn").addClass("slick-disabled");
-    } else {
-      $(".prev-btn").removeClass("slick-disabled");
-    }
-    if ($(".slick-next").hasClass("slick-disabled")) {
-      $(".next-btn").addClass("slick-disabled");
-    } else {
-      $(".next-btn").removeClass("slick-disabled");
-    }
+
+  // Handle mouse move event to drag the slick list
+  galleryList.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - galleryList.offsetLeft;
+    const walk = (x - startX) * 1; // Adjust the sensitivity by multiplying
+    galleryList.scrollLeft = scrollLeft - walk;
   });
 });
 
 // VIDEO
-// Get the video element and play button element
-const video = document.getElementById("video");
-const circlePlayButton = document.getElementById("circle-play-b");
+document.addEventListener("DOMContentLoaded", function () {
+  $(".play-button-wrapper").on("click", function () {
+    const videoSrc = $(this).data("src");
 
-function togglePlay() {
-  if (video.paused || video.ended) {
-    video.play();
-  } else {
-    video.pause();
-  }
-}
+    // Set the source of the iframe to load the YouTube video
+    $("#videoIframe").attr("src", videoSrc);
 
-circlePlayButton.addEventListener("click", togglePlay);
-video.addEventListener("playing", function () {
-  circlePlayButton.style.opacity = 0;
-});
-video.addEventListener("pause", function () {
-  circlePlayButton.style.opacity = 1;
+    // Show the modal
+    $("#videoModal").modal("show");
+  });
+
+  // Handle modal close event to stop video playback
+  $("#videoModal").on("hidden.bs.modal", function () {
+    // Clear the source of the iframe to stop video playback
+    $("#videoIframe").attr("src", "");
+  });
 });
