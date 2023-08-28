@@ -74,10 +74,10 @@
   top: 0;
 }
 
-.hover-link:hover, #fhm-blog .blog-list .blog-item .blog-item-content h4:hover, #fhm-blog .blog-heading h3:hover, #fhm-gallery .gallery-heading h3:hover, #fhm-feedback .feedback-heading h3:hover, #fhm-project .project-heading .project-heading-main h3:hover, #fhm-discover .discover-container .discover-container-wrap .discover-container-content h3:hover, #fhm-services .services-heading h3:hover, #fhm-intro .intro-content h2:hover {
+.hover-link:hover, #fhm-blog .blog-list .blog-item .blog-item-content h4:hover {
   color: #c78410;
 }
-.hover-link:hover svg path, #fhm-blog .blog-list .blog-item .blog-item-content h4:hover svg path, #fhm-blog .blog-heading h3:hover svg path, #fhm-gallery .gallery-heading h3:hover svg path, #fhm-feedback .feedback-heading h3:hover svg path, #fhm-project .project-heading .project-heading-main h3:hover svg path, #fhm-discover .discover-container .discover-container-wrap .discover-container-content h3:hover svg path, #fhm-services .services-heading h3:hover svg path, #fhm-intro .intro-content h2:hover svg path {
+.hover-link:hover svg path, #fhm-blog .blog-list .blog-item .blog-item-content h4:hover svg path {
   fill: #c78410;
 }
 
@@ -238,8 +238,10 @@
   gap: 46px;
   margin-bottom: 40px;
 }
+#fhm-services .services-item .service-item-wrap {
+  transition: all ease 0.3s;
+}
 #fhm-services .services-item:hover .service-item-wrap {
-  animation: borderRadius 0.1s linear;
   border-top-right-radius: 100px;
 }
 #fhm-services .services-item .services-item-bg {
@@ -335,9 +337,10 @@
   justify-content: center;
 }
 #fhm-discover .discover-container .discover-container-wrap {
+  width: 100%;
   position: absolute;
   max-width: 1400px;
-  padding: 97px 121px;
+  padding-top: 97px;
   top: -144px;
   border-top-left-radius: 100px;
   background-color: #000;
@@ -383,10 +386,7 @@
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img img {
   transition: all 300ms ease-out;
-  height: 100%;
-}
-#fhm-discover .discover-container .discover-container-wrap .discover-container-img img:first-child {
-  aspect-ratio: 356/411;
+  height: 441px;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img .discover-container-img-content {
   background-color: #000;
@@ -394,11 +394,11 @@
   bottom: 0;
   left: 0;
   z-index: 2;
-  transition: all 300ms ease-out;
   opacity: 0;
   width: 100%;
   height: 86px;
   padding: 25px 36px 18px;
+  transition: all 0.7s ease-in;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img .discover-container-img-content span {
   transition-delay: 0.1s;
@@ -412,7 +412,7 @@
   margin-bottom: 5px;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img .discover-container-img-content .overtext {
-  transition: all 300ms ease-out;
+  transition: all 300ms ease-in;
   transform: translateY(40px);
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img .discover-container-img-content .discover-container-img-content-detail {
@@ -426,6 +426,9 @@
   font-weight: 400;
   line-height: 24px; /* 171.429% */
   letter-spacing: 0.07px;
+}
+#fhm-discover .discover-container .discover-container-wrap .discover-container-img:hover, #fhm-discover .discover-container .discover-container-wrap .discover-container-img:focus {
+  width: 33.3333333%;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img:hover .discover-container-img-content, #fhm-discover .discover-container .discover-container-wrap .discover-container-img:focus .discover-container-img-content {
   opacity: 0.8;
@@ -475,24 +478,24 @@
   text-transform: uppercase;
 }
 #fhm-project .project-heading .project-heading-main .project-heading-link a:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 #fhm-project .project-list .project-item {
-  position: relative;
   margin-bottom: 33px;
+  position: relative;
   display: block; /* Make the entire .project-item clickable */
   text-decoration: none; /* Remove underlines or default link styling */
   color: inherit; /* Inherit text color from parent */
 }
-#fhm-project .project-list .project-item:hover .project-item-info {
-  animation: overlay 0.1s linear forwards;
-  text-align: center;
-  background-color: transparent;
-  left: 0;
+#fhm-project .project-list .project-item .project-item-img {
+  overflow: hidden;
+  transition: transform 0.4s ease-in-out;
+}
+#fhm-project .project-list .project-item .project-item-img:hover img {
+  transform: scale(1.2);
 }
 #fhm-project .project-list .project-item .project-item-info {
   position: absolute;
-  left: 10.5px;
   bottom: 0;
   padding: 10px 30px;
   background-color: #000;
@@ -559,6 +562,22 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+#fhm-feedback .feedback-list .feedback-item .feedback-item-info .feedback-item-info-detail span {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px; /* 175% */
+  letter-spacing: 0.024px;
+}
+#fhm-feedback .feedback-list .feedback-item .feedback-item-info .feedback-item-info-detail p {
+  color: #bfbfbf;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px; /* 116.667% */
+  letter-spacing: 0.03px;
 }
 #fhm-feedback .feedback-list .feedback-item .feedback-item-rating {
   margin: 21px 0 15px;
@@ -732,7 +751,7 @@
   text-transform: uppercase;
 }
 #fhm-blog .blog-list .blog-item .blog-item-link a:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 @media only screen and (max-width: 1366px) {
@@ -768,6 +787,9 @@
   #fhm-banner .banner-content h1 {
     font-size: 30px;
   }
+  #fhm-intro .intro-bg img {
+    border-top-left-radius: 150px;
+  }
   #fhm-intro .intro-content {
     margin-bottom: 200px;
   }
@@ -790,9 +812,9 @@
   }
   .p-ipad, #fhm-blog .blog-list .blog-item .blog-item-content p, #fhm-project .project-heading .project-heading-main .project-heading-link a, #fhm-discover .discover-container .discover-container-wrap .discover-container-content p, #fhm-intro .intro-content p, #fhm-banner .banner-content p {
     font-size: 10px;
-    line-height: 20px;
+    line-height: 16px;
   }
-  .h3-ipad, #fhm-blog .blog-heading h3, #fhm-gallery .gallery-heading h3, #fhm-feedback .feedback-heading h3, #fhm-project .project-heading .project-heading-main h3, #fhm-discover .discover-container .discover-container-wrap .discover-container-content h3, #fhm-discover .discover-banner .discover-banner-content-wrap h2, #fhm-services .services-heading h3, #fhm-intro .intro-content h2 {
+  .h3-ipad, #fhm-blog .blog-heading h3, #fhm-gallery .gallery-heading h3, #fhm-feedback .feedback-heading h3, #fhm-project .project-heading .project-heading-main h3, #fhm-discover .discover-container .discover-container-wrap .discover-container-content h3, #fhm-discover .discover-banner .discover-banner-content-wrap h2, #fhm-services .services-heading h3 {
     font-size: 30px;
     line-height: 35px;
   }
@@ -808,14 +830,24 @@
     font-size: 45px;
     line-height: 50px;
   }
+  #fhm-intro .intro-bg img {
+    border-top-left-radius: 100px;
+  }
   #fhm-intro .intro-content {
     margin-bottom: 200px;
+  }
+  #fhm-intro .intro-content h2 {
+    font-size: 29px;
+    line-height: 35px;
   }
   #fhm-services .services-item {
     padding: 0 10px;
   }
   #fhm-services .services-item .service-item-wrap {
     padding: 25px;
+  }
+  #fhm-services .services-item .service-item-wrap .services-item-content h5 {
+    margin: 35px 0 10px;
   }
   #fhm-firgures {
     height: 200px;
@@ -832,6 +864,10 @@
   }
   #fhm-discover .discover-container .discover-container-wrap {
     top: -200px;
+    border-top-left-radius: 80px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-img img {
+    height: 300px;
   }
   #fhm-discover .discover-container .discover-container-wrap .discover-container-img .discover-container-img-content {
     padding: 25px;
@@ -858,12 +894,12 @@
     letter-spacing: 1.5;
   }
 }
-@media (max-width: 769px) {
-  .h3-ipad-mini, #fhm-services .services-heading h3, #fhm-intro .intro-content h2 {
+@media (min-width: 767px) and (max-width: 819px) {
+  .h3-ipad-mini, #fhm-blog .blog-heading h3, #fhm-gallery .gallery-heading h3, #fhm-feedback .feedback-heading h3, #fhm-project .project-heading .project-heading-main h3, #fhm-discover .discover-container .discover-container-wrap .discover-container-content h3, #fhm-discover .discover-banner .discover-banner-content-wrap h2, #fhm-services .services-heading h3, #fhm-intro .intro-content h2 {
     font-size: 25px;
     line-height: 30px;
   }
-  .button-ipad-mini, #fhm-intro .intro-content .intro-content-button, #fhm-banner .banner-content .banner-content-button a {
+  .button-ipad-mini, #fhm-discover .discover-container .discover-container-wrap .discover-container-content .discover-link, #fhm-discover .discover-banner .discover-banner-content-wrap a, #fhm-intro .intro-content .intro-content-button, #fhm-banner .banner-content .banner-content-button a {
     padding: 5px 20px;
     font-size: 9px;
     letter-spacing: 2px;
@@ -881,7 +917,41 @@
   #fhm-services .services-item .service-item-wrap {
     padding: 15px;
   }
-  #fhm-services .services-item .service-item-wrap .service-item-content h5 {
+  #fhm-services .services-item .service-item-wrap .services-item-content h5 {
     margin: 25px 0 8px;
+  }
+  #fhm-firgures .firgures-number {
+    font-size: 45px;
+    line-height: 55px;
+  }
+  #fhm-discover .discover-banner .discover-banner-content-wrap {
+    top: 50px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap {
+    border-top-left-radius: 40px;
+    padding-top: 60px;
+    top: -250px;
+  }
+  #fhm-project {
+    margin-top: 190px;
+  }
+  #fhm-feedback .feedback-list {
+    gap: 15px;
+  }
+  #fhm-feedback .feedback-list .feedback-item {
+    padding: 20px;
+  }
+  #fhm-feedback .feedback-list .feedback-item .feedback-item-info .feedback-item-info-detail span {
+    font-size: 14px;
+  }
+  #fhm-feedback .feedback-list .feedback-item .feedback-item-info .feedback-item-info-detail p {
+    font-size: 10px;
+  }
+  #fhm-feedback .feedback-list .feedback-item .feedback-item-content h5 {
+    font-size: 16px;
+  }
+  #fhm-feedback .feedback-list .feedback-item .feedback-item-content p {
+    font-size: 10px;
+    line-height: 16px;
   }
 }

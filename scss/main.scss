@@ -504,9 +504,10 @@ button {
   margin-bottom: 100px;
   .footer-list {
     margin-bottom: 40px;
-
+    justify-content: space-between;
     .footer-logo {
       h3 {
+        text-align: center;
         color: $text-white;
         font-family: $font-family;
         font-size: 20px;
@@ -517,6 +518,9 @@ button {
       }
     }
     .footer-item {
+      &:last-child {
+        justify-content: space-between;
+      }
       a {
         color: $text-white;
         font-family: $font-family4;
@@ -677,17 +681,7 @@ button {
     }
     .register-content {
       .register-content-wrap {
-        // .video-wrapper {
-        //   .video-container {
-        //     video {
-        //     }
-        //   }
-        // }
         .register-content-detail {
-          // .register-detail-bg {
-          //   img {
-          //   }
-          // }
           .register-detail-content {
             padding: 0 20px;
             .register-detail-info {
@@ -709,6 +703,101 @@ button {
               .register-detail-info-submit {
                 a {
                   padding: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #fhm-footer {
+    .footer-list {
+      justify-content: center;
+      .footer-logo {
+        h3 {
+          text-align: start;
+        }
+      }
+      .footer-item {
+        &:nth-child(2) {
+          a {
+            margin-bottom: 0;
+            margin-left: 50px;
+          }
+        }
+        &:nth-child(3) {
+          a {
+          }
+        }
+        &:last-child {
+          margin-top: 40px;
+          justify-content: space-between;
+          gap: 35px;
+          a {
+            margin-left: 50px;
+            svg {
+              path {
+                fill: $highlight-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 767px) and (max-width: 819px) {
+  .h3-ipad-mini {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .button-ipad-mini {
+    padding: 5px 20px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 400;
+  }
+  #fhm-register {
+    .register-banner {
+      .register-banner-heading {
+        h3 {
+          @extend .h3-ipad-mini;
+        }
+      }
+    }
+    .register-content {
+      .register-content-wrap {
+        .register-content-detail {
+          .register-detail-content {
+            .register-detail-heading {
+              padding: 10px 28px;
+              border-radius: 0px 0px 20px 20px;
+              h3 {
+                font-size: 13px;
+                line-height: 11px;
+                margin: 0;
+              }
+            }
+            .register-detail-info {
+              .register-detail-info-heading {
+                margin-top: 15px;
+                h4 {
+                  font-size: 20px;
+                }
+                p {
+                  font-size: 10px;
+                  line-height: 12px;
+                }
+              }
+              .register-detail-info-form {
+                margin-top: 15px;
+              }
+              .register-detail-info-submit {
+                padding: 5px;
+                a {
+                  font-weight: 400;
                 }
               }
             }

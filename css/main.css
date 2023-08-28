@@ -494,14 +494,19 @@ button:focus-visible {
 }
 #fhm-footer .footer-list {
   margin-bottom: 40px;
+  justify-content: space-between;
 }
 #fhm-footer .footer-list .footer-logo h3 {
+  text-align: center;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 4px;
   text-transform: uppercase;
+}
+#fhm-footer .footer-list .footer-item:last-child {
+  justify-content: space-between;
 }
 #fhm-footer .footer-list .footer-item a {
   color: #ffffff;
@@ -634,6 +639,67 @@ button:focus-visible {
   }
   #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-submit a {
     padding: 5px;
+  }
+  #fhm-footer .footer-list {
+    justify-content: center;
+  }
+  #fhm-footer .footer-list .footer-logo h3 {
+    text-align: start;
+  }
+  #fhm-footer .footer-list .footer-item:nth-child(2) a {
+    margin-bottom: 0;
+    margin-left: 50px;
+  }
+  #fhm-footer .footer-list .footer-item:last-child {
+    margin-top: 40px;
+    justify-content: space-between;
+    gap: 35px;
+  }
+  #fhm-footer .footer-list .footer-item:last-child a {
+    margin-left: 50px;
+  }
+  #fhm-footer .footer-list .footer-item:last-child a svg path {
+    fill: #c78410;
+  }
+}
+@media (min-width: 767px) and (max-width: 819px) {
+  .h3-ipad-mini, #fhm-register .register-banner .register-banner-heading h3 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .button-ipad-mini {
+    padding: 5px 20px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 400;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-heading {
+    padding: 10px 28px;
+    border-radius: 0px 0px 20px 20px;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-heading h3 {
+    font-size: 13px;
+    line-height: 11px;
+    margin: 0;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-heading {
+    margin-top: 15px;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-heading h4 {
+    font-size: 20px;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-heading p {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-form {
+    margin-top: 15px;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-submit {
+    padding: 5px;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-submit a {
+    font-weight: 400;
   }
 }
 @media (max-width: 767px) {
