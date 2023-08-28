@@ -715,3 +715,14 @@
   }
 }
 // <!-- END BLOGS-->
+
+// <!-- RESPONSIVE-->
+@media only screen and (max-width: 1199px) {
+  .fhm-banner {
+    .banner-content {
+      h1 {
+        font-size: 40px;
+      }
+    }
+  }
+}
