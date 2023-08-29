@@ -85,6 +85,8 @@ button {
   .header-logo {
     //   display: block;
     h3 {
+      margin: 0;
+
       color: $text-white;
       font-family: $font-family;
       font-size: 20px;
@@ -216,6 +218,7 @@ button {
         color: $text-white;
         font-size: 12px;
         text-align: center;
+        letter-spacing: 2.4px;
       }
       h3 {
         color: $text-white;
@@ -233,7 +236,8 @@ button {
     .register-content-wrap {
       position: relative;
       z-index: 1;
-      top: -150px;
+      top: -176px;
+      gap: 41px;
       .video-wrapper {
         .video-container {
           position: relative;
@@ -618,6 +622,7 @@ button {
     }
   }
   #fhm-footer {
+    margin-bottom: 50px;
     .footer-list {
       justify-content: center;
       .footer-logo {
@@ -860,7 +865,7 @@ button {
     }
   }
   #fhm-footer {
-    margin-top: 50px;
+    margin: 50px 0 20px;
     .footer-list {
       .footer-logo {
         display: flex;

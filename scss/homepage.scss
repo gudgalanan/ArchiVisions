@@ -204,8 +204,9 @@
 #fhm-discover {
   .discover-banner {
     img {
-      opacity: 0.4;
+      opacity: 0.55;
       aspect-ratio: 200/119;
+      object-position: bottom;
     }
     .discover-banner-content-wrap {
       top: 244px;
@@ -214,6 +215,7 @@
         color: $text-white;
         font-size: 12px;
         text-align: center;
+        letter-spacing: 2.4px;
       }
       h2 {
         color: $text-white;
@@ -226,7 +228,7 @@
       }
       a {
         display: inline-block;
-        padding: 22px 42px;
+        padding: 22px 42px 16px;
         background-color: transparent;
         border: 1px solid $border-color;
         color: $text-white;
@@ -382,6 +384,7 @@
       color: $text-blur-white;
       font-size: 12px;
       margin-bottom: 13px;
+      letter-spacing: 2.4px;
     }
     .project-heading-main {
       h3 {
@@ -494,7 +497,7 @@
     overflow-x: scroll;
     flex-wrap: nowrap;
     .feedback-item {
-      background-color: $bg-element-gray;
+      background-color: $bg-feedback;
       padding: 42px;
       max-width: 358px;
       .feedback-item-info {
@@ -557,8 +560,9 @@
 
 // <!-- START GALLERY-->
 #fhm-gallery {
-  margin-bottom: 60px;
+  margin-bottom: 100px;
   .gallery-heading {
+    margin-bottom: 47px;
     h6 {
       @extend .h6-text;
       color: $text-blur-white;
@@ -596,20 +600,20 @@
       }
     }
     .slick-btn {
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
       background-color: $highlight-color;
-      border: 1px solid $bg-body;
+      border: 3px solid $bg-body;
 
       position: absolute;
-      left: -21px;
+      left: -25px;
       top: 50%;
       transform: translateY(-50%);
 
       svg {
         position: absolute;
-        left: 12px;
+        left: 15px;
         top: 50%;
         transform: translateY(-50%);
       }
@@ -689,7 +693,7 @@
 #fhm-blog {
   margin: 100px 0;
   .blog-heading {
-    margin-bottom: 50px;
+    margin-bottom: 57px;
     h6 {
       @extend .h6-text;
       color: $text-blur-white;
