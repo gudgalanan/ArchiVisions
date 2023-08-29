@@ -558,6 +558,7 @@ button:focus-visible {
     top: 50px;
   }
   #fhm-register .register-content .register-content-wrap {
+    gap: 0;
     top: -100px;
   }
   #fhm-register .register-content .register-content-wrap .video-wrapper .video-container img {
@@ -611,7 +612,7 @@ button:focus-visible {
     z-index: 1000;
   }
   #fhm-header .header-nav .navbar-nav {
-    height: calc(100vh - 65px);
+    height: calc(100vh - 60px);
     background-color: #000;
     width: 28vi;
     padding: 15px 0;
@@ -682,6 +683,9 @@ button:focus-visible {
     letter-spacing: 2px;
     font-weight: 400;
   }
+  #fhm-register .register-content .register-content-wrap {
+    gap: 0px;
+  }
   #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-heading {
     padding: 10px 28px;
     border-radius: 0px 0px 20px 20px;
@@ -704,7 +708,11 @@ button:focus-visible {
   #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-form {
     margin-top: 15px;
   }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-form .form-control-msg {
+    margin-bottom: 10px;
+  }
   #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-submit {
+    margin: 0;
     padding: 5px;
   }
   #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-submit a {
@@ -838,6 +846,7 @@ button:focus-visible {
     text-align: center;
   }
   #fhm-footer .footer-list .footer-item:nth-child(2) a {
+    text-align: center;
     margin-left: 0px;
   }
   #fhm-footer .footer-list .footer-item:last-child {

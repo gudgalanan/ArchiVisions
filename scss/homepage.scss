@@ -947,7 +947,9 @@
 
     .gallery-container {
       margin-left: 0;
-
+      .slick-list a img {
+        width: 290px;
+      }
       .slick-btn {
         display: none;
       }

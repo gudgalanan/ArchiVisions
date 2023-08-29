@@ -802,6 +802,9 @@
   #fhm-gallery .gallery-container {
     margin-left: 0;
   }
+  #fhm-gallery .gallery-container .slick-list a img {
+    width: 290px;
+  }
   #fhm-gallery .gallery-container .slick-btn {
     display: none;
   }

@@ -498,6 +498,7 @@ button {
     }
     .register-content {
       .register-content-wrap {
+        gap: 0;
         .video-wrapper {
           .video-container {
             img {
@@ -519,6 +520,9 @@ button {
       }
     }
   }
+  // #fhm-header .header-content .navbar .navbar-nav {
+  //   height: calc(100vh - 60px);
+  // }
 }
 
 @media only screen and (max-width: 991px) {
@@ -563,7 +567,7 @@ button {
         z-index: 1000;
       }
       .navbar-nav {
-        height: calc(100vh - 65px);
+        height: calc(100vh - 60px);
         background-color: $main-color;
         width: 28vi;
         padding: 15px 0;
@@ -677,6 +681,7 @@ button {
     }
     .register-content {
       .register-content-wrap {
+        gap: 0px;
         .register-content-detail {
           .register-detail-content {
             .register-detail-heading {
@@ -701,8 +706,12 @@ button {
               }
               .register-detail-info-form {
                 margin-top: 15px;
+                .form-control-msg {
+                  margin-bottom: 10px;
+                }
               }
               .register-detail-info-submit {
+                margin: 0;
                 padding: 5px;
                 a {
                   font-weight: 400;
@@ -879,6 +888,7 @@ button {
           text-align: center;
         }
         &:nth-child(2) a {
+          text-align: center;
           margin-left: 0px;
         }
         &:last-child {

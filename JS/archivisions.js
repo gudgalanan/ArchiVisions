@@ -98,3 +98,23 @@ document.addEventListener("DOMContentLoaded", function () {
     $("#videoIframe").attr("src", "");
   });
 });
+
+// NAVBAR CLOSING
+document.addEventListener("DOMContentLoaded", function () {
+  // Select the navigation menu and the button that toggles it
+  const navMenu = document.querySelector(".navbar-collapse");
+  const navButton = document.querySelector(".navbar-toggler");
+
+  // Add a click event listener to the entire document
+  document.addEventListener("click", function (event) {
+    // Check if the navigation menu is open and if the click did not originate from the menu or the button
+    if (
+      navMenu.classList.contains("show") &&
+      !navMenu.contains(event.target) &&
+      event.target !== navButton
+    ) {
+      // Close the navigation menu by removing the "show" class
+      navMenu.classList.remove("show");
+    }
+  });
+});
