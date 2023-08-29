@@ -550,11 +550,14 @@
   text-transform: capitalize;
 }
 #fhm-feedback .feedback-list {
-  gap: 43px;
+  gap: 57px;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
 }
 #fhm-feedback .feedback-list .feedback-item {
   background-color: #202020;
   padding: 42px;
+  max-width: 358px;
 }
 #fhm-feedback .feedback-list .feedback-item .feedback-item-info {
   gap: 12px;
@@ -621,7 +624,7 @@
   text-transform: capitalize;
 }
 #fhm-gallery .gallery-container {
-  margin-left: calc((100% - 1160px) / 2);
+  margin-left: calc((100% - 1160px) / 2 - 10.5px);
   position: relative;
 }
 #fhm-gallery .gallery-container .slick-list {
@@ -654,7 +657,8 @@
 #fhm-gallery .gallery-container .slick-btn svg {
   position: absolute;
   left: 12px;
-  top: 8px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #fhm-blog {
@@ -787,6 +791,12 @@
   }
   #fhm-feedback .feedback-list .feedback-item {
     padding: 45px 25px;
+  }
+  #fhm-gallery .gallery-container {
+    margin-left: 0;
+  }
+  #fhm-gallery .gallery-container .slick-btn {
+    display: none;
   }
 }
 @media only screen and (max-width: 991px) {
@@ -1047,10 +1057,12 @@
     margin-top: 360px;
     margin-bottom: 17px;
   }
+  #fhm-project .project-list .project-item {
+    margin-bottom: 20px;
+    padding: 0 5px;
+  }
   #fhm-project .project-list .project-item .project-item-info {
-    width: 100%;
     padding: 3px 15px;
-    opacity: 0.6;
   }
   #fhm-project .project-list .project-item .project-item-info h5 {
     font-size: 10px;
@@ -1066,6 +1078,20 @@
   }
   #fhm-feedback .feedback-list .feedback-item {
     padding: 17px 15px;
+  }
+  #fhm-feedback .feedback-list .feedback-item .feedback-item-info .feedback-item-info-avt img {
+    width: 40px;
+    height: 40px;
+  }
+  #fhm-feedback .feedback-list .feedback-item .feedback-item-info .feedback-item-info-detail span {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  #fhm-feedback .feedback-list .feedback-item .feedback-item-info .feedback-item-info-detail p {
+    font-size: 10px;
+  }
+  #fhm-feedback .feedback-list .feedback-item .feedback-item-rating {
+    margin: 10px 0 8px;
   }
   #fhm-feedback .feedback-list .feedback-item .feedback-item-content h5 {
     font-size: 14px;
@@ -1089,5 +1115,63 @@
   }
   #fhm-blog .blog-list .blog-item .blog-item-content {
     margin: 10px 0;
+  }
+}
+@media (max-width: 424px) {
+  .h3-xs, #fhm-blog .blog-heading h3, #fhm-gallery .gallery-heading h3, #fhm-feedback .feedback-heading h3, #fhm-project .project-heading .project-heading-main h3, #fhm-discover .discover-container .discover-container-wrap .discover-container-content h3, #fhm-discover .discover-banner .discover-banner-content-wrap h2, #fhm-services .services-heading h3, #fhm-intro h2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  #fhm-banner .banner-content {
+    min-width: 320px;
+    left: 0;
+    top: 10px;
+  }
+  #fhm-banner .banner-content h1 {
+    font-size: 25px;
+    line-height: 25px;
+  }
+  #fhm-services .services-item .service-item-wrap {
+    padding: 15px;
+  }
+  #fhm-services .services-item .service-item-wrap .services-item-content h5 {
+    font-size: 14px;
+    margin: 10px 0 5px;
+  }
+  #fhm-services .services-item .service-item-wrap .services-item-content p {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  #fhm-discover .discover-banner .discover-banner-content-wrap {
+    top: 10px;
+  }
+  #fhm-discover .discover-banner .discover-banner-content-wrap h2 {
+    margin-bottom: 10px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap {
+    border-top-left-radius: 40px;
+    padding-top: 30px;
+    top: -30px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-content {
+    margin-bottom: 30px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-content p {
+    margin-bottom: 20px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-img {
+    padding: 0 5px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-img img {
+    height: 200px;
+  }
+  #fhm-project {
+    margin-top: 400px;
+  }
+  #fhm-project .project-list .project-item .project-item-info {
+    padding: 3px 7px;
+  }
+  #fhm-project .project-list .project-item .project-item-info h5 {
+    font-size: 9px;
   }
 }

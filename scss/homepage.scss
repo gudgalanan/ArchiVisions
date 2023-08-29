@@ -490,10 +490,13 @@
     }
   }
   .feedback-list {
-    gap: 43px;
+    gap: 57px;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
     .feedback-item {
       background-color: $bg-element-gray;
       padding: 42px;
+      max-width: 358px;
       .feedback-item-info {
         gap: 12px;
         .feedback-item-info-avt {
@@ -572,7 +575,7 @@
     }
   }
   .gallery-container {
-    margin-left: calc(((100% - 1160px) / 2));
+    margin-left: calc(((100% - 1160px) / 2) - 10.5px);
     position: relative;
     .slick-list {
       display: flex;
@@ -607,7 +610,8 @@
       svg {
         position: absolute;
         left: 12px;
-        top: 8px;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
 
@@ -934,6 +938,14 @@
       }
       h3 {
         @extend .h3;
+      }
+    }
+
+    .gallery-container {
+      margin-left: 0;
+
+      .slick-btn {
+        display: none;
       }
     }
   }
@@ -1513,10 +1525,10 @@
     }
     .project-list {
       .project-item {
+        margin-bottom: 20px;
+        padding: 0 5px;
         .project-item-info {
-          width: 100%;
           padding: 3px 15px;
-          opacity: 0.6;
           h5 {
             font-size: 10px;
           }
@@ -1538,7 +1550,24 @@
     .feedback-list {
       .feedback-item {
         padding: 17px 15px;
-
+        .feedback-item-info {
+          .feedback-item-info-avt img {
+            width: 40px;
+            height: 40px;
+          }
+          .feedback-item-info-detail {
+            span {
+              font-size: 14px;
+              line-height: 20px;
+            }
+            p {
+              font-size: 10px;
+            }
+          }
+        }
+        .feedback-item-rating {
+          margin: 10px 0 8px;
+        }
         .feedback-item-content {
           h5 {
             font-size: 14px;
@@ -1559,8 +1588,11 @@
         @extend .h3-s;
       }
     }
-    .gallery-container .slick-list a img {
-      width: 200px;
+    .gallery-container {
+      // margin-left: 0;
+      .slick-list a img {
+        width: 200px;
+      }
     }
   }
   #fhm-blog {
@@ -1574,6 +1606,128 @@
       margin-bottom: 25px;
       .blog-item-content {
         margin: 10px 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 424px) {
+  .h3-xs {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  #fhm-banner {
+    .banner-content {
+      min-width: 320px;
+      left: 0;
+      top: 10px;
+      h1 {
+        font-size: 25px;
+        line-height: 25px;
+      }
+    }
+  }
+  #fhm-intro {
+    h2 {
+      @extend .h3-xs;
+    }
+  }
+  #fhm-services {
+    .services-heading {
+      h3 {
+        @extend .h3-xs;
+      }
+    }
+    .services-item {
+      .service-item-wrap {
+        padding: 15px;
+        .services-item-content {
+          h5 {
+            font-size: 14px;
+            margin: 10px 0 5px;
+          }
+          p {
+            font-size: 10px;
+            line-height: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  #fhm-discover {
+    .discover-banner {
+      .discover-banner-content-wrap {
+        top: 10px;
+        h2 {
+          @extend .h3-xs;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .discover-container {
+      .discover-container-wrap {
+        border-top-left-radius: 40px;
+        padding-top: 30px;
+        top: -30px;
+        .discover-container-content {
+          margin-bottom: 30px;
+          h3 {
+            @extend .h3-xs;
+          }
+          p {
+            margin-bottom: 20px;
+          }
+        }
+        .discover-container-img {
+          padding: 0 5px;
+          img {
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+  #fhm-project {
+    margin-top: 400px;
+    .project-heading {
+      .project-heading-main {
+        h3 {
+          @extend .h3-xs;
+        }
+      }
+    }
+    .project-list {
+      .project-item {
+        .project-item-info {
+          padding: 3px 7px;
+          h5 {
+            font-size: 9px;
+          }
+        }
+      }
+    }
+  }
+
+  #fhm-feedback {
+    .feedback-heading {
+      h3 {
+        @extend .h3-xs;
+      }
+    }
+  }
+  #fhm-gallery {
+    .gallery-heading {
+      h3 {
+        @extend .h3-xs;
+      }
+    }
+  }
+  #fhm-blog {
+    .blog-heading {
+      h3 {
+        @extend .h3-xs;
       }
     }
   }

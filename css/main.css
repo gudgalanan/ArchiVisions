@@ -551,9 +551,6 @@ button:focus-visible {
     font-size: 15px;
     letter-spacing: 2px;
   }
-  #fhm-header .header-topbar-info {
-    display: none;
-  }
   #fhm-register .register-banner .register-banner-heading {
     top: 50px;
   }
@@ -587,6 +584,9 @@ button:focus-visible {
     font-size: 12px;
     letter-spacing: 2px;
   }
+  #fhm-header {
+    height: 60px;
+  }
   #fhm-header .header-container {
     position: relative;
   }
@@ -595,13 +595,15 @@ button:focus-visible {
     width: fit-content;
     padding-top: 10px;
     padding-left: 20px;
+    flex-direction: column;
+    padding: 0;
   }
   #fhm-header .navbar {
     position: static;
   }
   #fhm-header .header-nav .navbar-collapse {
     position: absolute;
-    top: 81px;
+    top: 60px;
     right: 0;
     z-index: 1000;
   }
@@ -707,9 +709,6 @@ button:focus-visible {
   .h3-ipad-sm, #fhm-register .register-banner .register-banner-heading h3 {
     font-size: 23px;
     line-height: 38px;
-  }
-  #fhm-header {
-    height: 60px;
   }
   #fhm-header .header-nav .navbar-nav {
     width: 100vi;
@@ -829,6 +828,9 @@ button:focus-visible {
     align-items: center;
     margin-top: 50px;
   }
+  #fhm-footer .footer-list .footer-item:first-child a {
+    text-align: center;
+  }
   #fhm-footer .footer-list .footer-item:nth-child(2) a {
     margin-left: 0px;
   }
@@ -845,5 +847,53 @@ button:focus-visible {
   }
   #fhm-footer .footer-bottom span {
     margin: 0;
+  }
+}
+@media (max-width: 424px) {
+  .p-xs {
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .h3-xs {
+    font-size: 23px;
+    line-height: 28px;
+  }
+  .button-xs {
+    padding: 6px 20px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 300;
+  }
+  #fhm-register .register-banner .register-banner-heading h3 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-bg img {
+    aspect-ratio: 277/385;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-heading {
+    gap: 0;
+    margin-top: 15px;
+    flex-direction: column;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-heading h4::after {
+    display: none;
+  }
+  #fhm-footer {
+    margin-top: 80px;
+  }
+  #fhm-footer .footer-list .footer-item {
+    margin-top: 30px;
+  }
+  #fhm-footer .footer-list .footer-item:last-child {
+    margin-top: 30px;
+  }
+  #fhm-footer .footer-bottom {
+    text-align: center;
+  }
+}
+@media (max-width: 384px) {
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-bg img {
+    aspect-ratio: 277/450;
   }
 }

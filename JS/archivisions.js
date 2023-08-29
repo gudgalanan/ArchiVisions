@@ -20,7 +20,7 @@ $(document).ready(function () {
     // Calculate the new scroll position based on the current slide
     const scrollPosition = currentSlide * slideWidth;
 
-    galleryList.animate({ scrollLeft: scrollPosition }, 400, function () {
+    galleryList.animate({ scrollLeft: scrollPosition }, 200, function () {
       galleryList.scrollLeft(scrollPosition);
     });
   });
@@ -29,28 +29,54 @@ $(document).ready(function () {
 // DRAGGABLE
 document.addEventListener("DOMContentLoaded", function () {
   const galleryList = document.getElementById("galleryList");
-  let isDragging = false;
-  let startX, scrollLeft;
+  const feedbackList = document.querySelector(".feedback-list");
 
-  // Handle mouse down event to start dragging
+  let isGalleryDragging = false;
+  let isFeedbackDragging = false;
+  let galleryStartX, galleryScrollLeft;
+  let feedbackStartX, feedbackScrollLeft;
+
+  // Event listeners for the galleryList element
   galleryList.addEventListener("mousedown", (e) => {
-    isDragging = true;
-    startX = e.pageX - galleryList.offsetLeft;
-    scrollLeft = galleryList.scrollLeft;
+    isGalleryDragging = true;
+    galleryStartX = e.pageX - galleryList.offsetLeft;
+    galleryScrollLeft = galleryList.scrollLeft;
   });
 
-  // Handle mouse up event to stop dragging
   galleryList.addEventListener("mouseup", () => {
-    isDragging = false;
+    isGalleryDragging = false;
   });
 
-  // Handle mouse move event to drag the slick list
   galleryList.addEventListener("mousemove", (e) => {
-    if (!isDragging) return;
+    if (!isGalleryDragging) return;
     e.preventDefault();
     const x = e.pageX - galleryList.offsetLeft;
-    const walk = (x - startX) * 1; // Adjust the sensitivity by multiplying
-    galleryList.scrollLeft = scrollLeft - walk;
+    const walk = (x - galleryStartX) * 1; // Adjust sensitivity as needed
+    galleryList.scrollLeft = galleryScrollLeft - walk;
+  });
+
+  // Event listeners for the feedbackList element
+  feedbackList.addEventListener("mousedown", (e) => {
+    isFeedbackDragging = true;
+    feedbackStartX = e.clientX;
+    feedbackScrollLeft = feedbackList.scrollLeft;
+    feedbackList.style.cursor = "grabbing";
+  });
+
+  feedbackList.addEventListener("mouseup", () => {
+    isFeedbackDragging = false;
+    feedbackList.style.cursor = "grab";
+  });
+
+  feedbackList.addEventListener("mousemove", (e) => {
+    if (!isFeedbackDragging) return;
+    const deltaX = e.clientX - feedbackStartX;
+    feedbackList.scrollLeft = feedbackScrollLeft - deltaX;
+  });
+
+  // Prevent the default behavior of dragging elements
+  feedbackList.addEventListener("dragover", (e) => {
+    e.preventDefault();
   });
 });
 
