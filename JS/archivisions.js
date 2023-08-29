@@ -1,8 +1,8 @@
 // // SLIDE
 $(document).ready(function () {
   const galleryList = $("#galleryList");
-  const slideWidth = 362 + 37; // Width of each slide plus the gap
-  const slidesToShow = 4; // Number of slides to show at once, adjust as needed
+  const slideWidth = 362 + 37;
+  const slidesToShow = 4;
 
   // Initialize a variable to keep track of the current slide index
   let currentSlide = 0;
@@ -20,9 +20,7 @@ $(document).ready(function () {
     // Calculate the new scroll position based on the current slide
     const scrollPosition = currentSlide * slideWidth;
 
-    // Animate the scroll
     galleryList.animate({ scrollLeft: scrollPosition }, 400, function () {
-      // After the animation is complete, adjust the scroll position
       galleryList.scrollLeft(scrollPosition);
     });
   });

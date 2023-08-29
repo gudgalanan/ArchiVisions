@@ -322,6 +322,7 @@ button {
   }
   .register-content {
     .register-content-wrap {
+      position: relative;
       z-index: 1;
       top: -150px;
       .video-wrapper {
@@ -594,7 +595,7 @@ button {
       .register-content-wrap {
         .video-wrapper {
           .video-container {
-            video {
+            img {
               aspect-ratio: 277/300;
             }
           }
@@ -726,10 +727,7 @@ button {
             margin-left: 50px;
           }
         }
-        &:nth-child(3) {
-          a {
-          }
-        }
+
         &:last-child {
           margin-top: 40px;
           justify-content: space-between;
@@ -810,7 +808,12 @@ button {
 
 @media (max-width: 767px) {
   // START HEADER
+  .h3-ipad-sm {
+    font-size: 23px;
+    line-height: 38px;
+  }
   #fhm-header {
+    height: 60px;
     .header-nav {
       .navbar-nav {
         width: 100vi;
@@ -818,4 +821,169 @@ button {
     }
   }
   // END HEADER
+
+  #fhm-register {
+    .register-banner {
+      .register-banner-heading {
+        top: 50px;
+
+        h3 {
+          @extend .h3-ipad-sm;
+        }
+      }
+    }
+    .register-content {
+      .register-content-wrap {
+        .video-wrapper {
+          margin-bottom: 50px;
+          .video-container {
+            video {
+              aspect-ratio: 277/273;
+            }
+          }
+        }
+        .register-content-detail {
+          position: relative;
+          .register-detail-bg {
+            img {
+              aspect-ratio: 277/273;
+            }
+          }
+          .register-detail-content {
+            padding: 0 10px;
+            margin-right: 10px;
+            .register-detail-heading {
+              padding: 10px 29px;
+              border-radius: 0px 0px 18px 18px;
+              h3 {
+                margin: 0;
+                font-size: 14px;
+                line-height: 20px;
+              }
+            }
+            .register-detail-info {
+              .register-detail-info-heading {
+                margin-top: 30px;
+                gap: 32px;
+                h4 {
+                  position: relative;
+                  color: $text-black;
+                  font-family: $font-family;
+                  font-size: 24px;
+                  font-weight: 700;
+                  line-height: 24px; /* 100% */
+                  letter-spacing: 0.12px;
+                  text-transform: uppercase;
+                  text-wrap: nowrap;
+                }
+                p {
+                  font-size: 12px;
+                  line-height: 20px; /* 166.667% */
+                }
+              }
+              .register-detail-info-form {
+                margin-top: 25px;
+                .form-control {
+                  margin-bottom: 24px;
+                }
+                .form-control-msg {
+                  height: 79px;
+                }
+              }
+              .register-detail-info-submit {
+                margin-top: 0px;
+
+                padding: 10px 0;
+                a {
+                  font-size: 14px;
+                  font-weight: 500;
+                  line-height: 24px; /* 171.429% */
+                  letter-spacing: 0.07px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .p-s {
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .h3-s {
+    font-size: 23px;
+    line-height: 28px;
+  }
+  .button-s {
+    padding: 6px 20px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 300;
+  }
+  #fhm-header {
+    .header-nav .navbar-collapse {
+      top: 60px;
+    }
+  }
+  #fhm-register {
+    margin-top: 50px;
+    .register-banner {
+      .register-banner-heading {
+        top: 10px;
+        h3 {
+          font-size: 19px;
+        }
+      }
+    }
+    .register-content {
+      .register-content-wrap {
+        position: unset;
+        .video-wrapper {
+          margin: 10px 0;
+        }
+        .register-content-detail {
+          .register-detail-bg {
+            img {
+              aspect-ratio: 277/322;
+            }
+          }
+        }
+      }
+    }
+  }
+  #fhm-footer {
+    margin-top: 50px;
+    .footer-list {
+      .footer-logo {
+        display: flex;
+        justify-content: center;
+      }
+      .footer-item {
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+        &:nth-child(2) a {
+          margin-left: 0px;
+        }
+        &:last-child {
+          margin-top: 50px;
+          a {
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+    .footer-bottom {
+      margin-top: 10px;
+      flex-direction: column;
+      align-items: center;
+      span {
+        margin: 0;
+      }
+    }
+  }
 }

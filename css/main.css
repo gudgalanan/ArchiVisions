@@ -319,6 +319,7 @@ button:focus-visible {
   text-transform: capitalize;
 }
 #fhm-register .register-content .register-content-wrap {
+  position: relative;
   z-index: 1;
   top: -150px;
 }
@@ -559,7 +560,7 @@ button:focus-visible {
   #fhm-register .register-content .register-content-wrap {
     top: -100px;
   }
-  #fhm-register .register-content .register-content-wrap .video-wrapper .video-container video {
+  #fhm-register .register-content .register-content-wrap .video-wrapper .video-container img {
     aspect-ratio: 277/300;
   }
   #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-bg img {
@@ -703,7 +704,146 @@ button:focus-visible {
   }
 }
 @media (max-width: 767px) {
+  .h3-ipad-sm, #fhm-register .register-banner .register-banner-heading h3 {
+    font-size: 23px;
+    line-height: 38px;
+  }
+  #fhm-header {
+    height: 60px;
+  }
   #fhm-header .header-nav .navbar-nav {
     width: 100vi;
+  }
+  #fhm-register .register-banner .register-banner-heading {
+    top: 50px;
+  }
+  #fhm-register .register-content .register-content-wrap .video-wrapper {
+    margin-bottom: 50px;
+  }
+  #fhm-register .register-content .register-content-wrap .video-wrapper .video-container video {
+    aspect-ratio: 277/273;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail {
+    position: relative;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-bg img {
+    aspect-ratio: 277/273;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content {
+    padding: 0 10px;
+    margin-right: 10px;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-heading {
+    padding: 10px 29px;
+    border-radius: 0px 0px 18px 18px;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-heading h3 {
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-heading {
+    margin-top: 30px;
+    gap: 32px;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-heading h4 {
+    position: relative;
+    color: #000;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px; /* 100% */
+    letter-spacing: 0.12px;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-heading p {
+    font-size: 12px;
+    line-height: 20px; /* 166.667% */
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-form {
+    margin-top: 25px;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-form .form-control {
+    margin-bottom: 24px;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-form .form-control-msg {
+    height: 79px;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-submit {
+    margin-top: 0px;
+    padding: 10px 0;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-submit a {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px; /* 171.429% */
+    letter-spacing: 0.07px;
+  }
+}
+@media (max-width: 575px) {
+  .p-s {
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .h3-s {
+    font-size: 23px;
+    line-height: 28px;
+  }
+  .button-s {
+    padding: 6px 20px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 300;
+  }
+  #fhm-header .header-nav .navbar-collapse {
+    top: 60px;
+  }
+  #fhm-register {
+    margin-top: 50px;
+  }
+  #fhm-register .register-banner .register-banner-heading {
+    top: 10px;
+  }
+  #fhm-register .register-banner .register-banner-heading h3 {
+    font-size: 19px;
+  }
+  #fhm-register .register-content .register-content-wrap {
+    position: unset;
+  }
+  #fhm-register .register-content .register-content-wrap .video-wrapper {
+    margin: 10px 0;
+  }
+  #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-bg img {
+    aspect-ratio: 277/322;
+  }
+  #fhm-footer {
+    margin-top: 50px;
+  }
+  #fhm-footer .footer-list .footer-logo {
+    display: flex;
+    justify-content: center;
+  }
+  #fhm-footer .footer-list .footer-item {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+  }
+  #fhm-footer .footer-list .footer-item:nth-child(2) a {
+    margin-left: 0px;
+  }
+  #fhm-footer .footer-list .footer-item:last-child {
+    margin-top: 50px;
+  }
+  #fhm-footer .footer-list .footer-item:last-child a {
+    margin-left: 0px;
+  }
+  #fhm-footer .footer-bottom {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+  #fhm-footer .footer-bottom span {
+    margin: 0;
   }
 }

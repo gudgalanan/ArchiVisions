@@ -57,6 +57,7 @@
 #fhm-intro {
   position: relative;
   .intro-bg {
+    position: absolute;
     max-width: 810px;
     right: 0;
     top: -79px;
@@ -178,7 +179,7 @@
 
 // <!-- START FIRGURES -->
 #fhm-firgures {
-  height: 250px;
+  min-height: 250px;
   background-color: $bg-element-brown;
   .firgures-number {
     color: $text-dark-white;
@@ -299,9 +300,6 @@
           transition: all 300ms ease-out;
 
           height: 441px;
-          &:first-child {
-            // aspect-ratio: 356/411;
-          }
         }
 
         .discover-container-img-content {
@@ -422,8 +420,7 @@
       .project-item-img {
         overflow: hidden;
         transition: transform 0.4s ease-in-out;
-        img {
-        }
+
         &:hover {
           img {
             transform: scale(1.2);
@@ -603,8 +600,9 @@
       border: 1px solid $bg-body;
 
       position: absolute;
-      left: -25px;
-      top: 225px;
+      left: -21px;
+      top: 50%;
+      transform: translateY(-50%);
 
       svg {
         position: absolute;
@@ -685,7 +683,7 @@
 
 // <!-- START BLOGS-->
 #fhm-blog {
-  margin-bottom: 100px;
+  margin: 100px 0;
   .blog-heading {
     margin-bottom: 50px;
     h6 {
@@ -1118,8 +1116,6 @@
     }
     .feedback-list {
       gap: 20px;
-      .feedback-item {
-      }
     }
   }
   #fhm-gallery {
@@ -1300,6 +1296,284 @@
     .blog-heading {
       h3 {
         @extend .h3-ipad-mini;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .h3-ipad-sm {
+    font-size: 23px;
+    line-height: 38px;
+  }
+
+  #fhm-banner {
+    .banner-content {
+      top: 45px;
+      .banner-content-button {
+        margin-top: 9px;
+      }
+    }
+  }
+  #fhm-intro {
+    .intro-content {
+      margin-bottom: 100px;
+      h2 {
+        @extend .h3-ipad-sm;
+      }
+    }
+  }
+  #fhm-services {
+    .services-heading {
+      h3 {
+        @extend .h3-ipad-sm;
+      }
+    }
+  }
+
+  #fhm-discover {
+    .discover-banner {
+      .discover-banner-content-wrap {
+        h2 {
+          @extend .h3-ipad-sm;
+        }
+      }
+    }
+    .discover-container {
+      .discover-container-wrap {
+        top: -150px;
+        .discover-container-content {
+          h3 {
+            @extend .h3-ipad-sm;
+          }
+        }
+      }
+    }
+  }
+  #fhm-project {
+    margin-top: 330px;
+    .project-heading {
+      .project-heading-main {
+        h3 {
+          @extend .h3-ipad-sm;
+        }
+      }
+    }
+  }
+  #fhm-feedback {
+    .feedback-heading {
+      h3 {
+        @extend .h3-ipad-sm;
+      }
+    }
+    .feedback-list {
+      .feedback-item {
+        padding: 17px 15px;
+      }
+    }
+  }
+  #fhm-gallery {
+    .gallery-heading {
+      h3 {
+        @extend .h3-ipad-sm;
+      }
+    }
+  }
+  #fhm-blog {
+    .blog-heading {
+      h3 {
+        @extend .h3-ipad-sm;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .p-s {
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .h3-s {
+    font-size: 23px;
+    line-height: 28px;
+  }
+  .button-s {
+    padding: 6px 20px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 300;
+  }
+  #fhm-banner {
+    margin-bottom: 0;
+    .banner-bg {
+      opacity: 0.6;
+    }
+    .banner-content {
+      text-align: center;
+      top: 10px;
+      max-width: 404px;
+      h1 {
+        font-size: 28px;
+      }
+
+      .banner-content-button {
+        margin-top: 20px;
+        a {
+          @extend .button-s;
+        }
+      }
+    }
+  }
+  #fhm-intro {
+    display: flex;
+    flex-direction: column-reverse;
+    .intro-bg {
+      position: relative;
+    }
+    .intro-content {
+      margin: 50px 0 100px;
+      text-align: center;
+
+      h2 {
+        @extend .h3-s;
+      }
+      p {
+        text-align: center;
+      }
+      .intro-content-button {
+        @extend .button-s;
+      }
+    }
+  }
+  #fhm-services {
+    margin-bottom: 50px;
+    .services-heading {
+      h3 {
+        @extend .h3-s;
+        margin-bottom: 20px;
+      }
+    }
+    .services-item {
+      margin-bottom: 25px;
+    }
+  }
+  #fhm-firgures {
+    .col-6 {
+      text-align: center;
+    }
+  }
+  #fhm-discover {
+    .discover-banner {
+      .discover-banner-content-wrap {
+        top: 20px;
+        h2 {
+          @extend .h3-s;
+          margin-bottom: 15px;
+        }
+        a {
+          @extend .button-s;
+        }
+      }
+    }
+    .discover-container {
+      .discover-container-wrap {
+        padding-top: 30px;
+        top: -100px;
+        .discover-container-content {
+          text-align: center;
+          margin-bottom: 30px;
+          h3 {
+            @extend .h3-s;
+          }
+          p {
+            text-align: center;
+          }
+          .discover-link {
+            @extend .button-s;
+          }
+        }
+        .discover-container-img {
+          padding: 0 5px;
+          img {
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+  #fhm-project {
+    margin-top: 360px;
+    margin-bottom: 17px;
+    .project-heading {
+      .project-heading-main {
+        h3 {
+          @extend .h3-s;
+        }
+      }
+    }
+    .project-list {
+      .project-item {
+        .project-item-info {
+          width: 100%;
+          padding: 3px 15px;
+          opacity: 0.6;
+          h5 {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+  #fhm-body-banner {
+    margin-bottom: 50px;
+  }
+  #fhm-feedback {
+    margin-bottom: 50px;
+    .feedback-heading {
+      margin-bottom: 20px;
+      h3 {
+        @extend .h3-s;
+      }
+    }
+    .feedback-list {
+      .feedback-item {
+        padding: 17px 15px;
+
+        .feedback-item-content {
+          h5 {
+            font-size: 14px;
+          }
+          p {
+            font-size: 10px;
+            line-height: 16px;
+          }
+        }
+      }
+    }
+  }
+  #fhm-gallery {
+    .gallery-heading {
+      text-align: center;
+      margin-bottom: 20px;
+      h3 {
+        @extend .h3-s;
+      }
+    }
+    .gallery-container .slick-list a img {
+      width: 200px;
+    }
+  }
+  #fhm-blog {
+    .blog-heading {
+      margin-bottom: 20px;
+      h3 {
+        @extend .h3-s;
+      }
+    }
+    .blog-list .blog-item {
+      margin-bottom: 25px;
+      .blog-item-content {
+        margin: 10px 0;
       }
     }
   }

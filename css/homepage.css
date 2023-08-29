@@ -171,6 +171,7 @@
   position: relative;
 }
 #fhm-intro .intro-bg {
+  position: absolute;
   max-width: 810px;
   right: 0;
   top: -79px;
@@ -277,7 +278,7 @@
 }
 
 #fhm-firgures {
-  height: 250px;
+  min-height: 250px;
   background-color: rgba(199, 132, 16, 0.3019607843);
 }
 #fhm-firgures .firgures-number {
@@ -646,8 +647,9 @@
   background-color: #c78410;
   border: 1px solid #000;
   position: absolute;
-  left: -25px;
-  top: 225px;
+  left: -21px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 #fhm-gallery .gallery-container .slick-btn svg {
   position: absolute;
@@ -656,7 +658,7 @@
 }
 
 #fhm-blog {
-  margin-bottom: 100px;
+  margin: 100px 0;
 }
 #fhm-blog .blog-heading {
   margin-bottom: 50px;
@@ -934,5 +936,158 @@
   #fhm-feedback .feedback-list .feedback-item .feedback-item-content p {
     font-size: 10px;
     line-height: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .h3-ipad-sm, #fhm-blog .blog-heading h3, #fhm-gallery .gallery-heading h3, #fhm-feedback .feedback-heading h3, #fhm-project .project-heading .project-heading-main h3, #fhm-discover .discover-container .discover-container-wrap .discover-container-content h3, #fhm-discover .discover-banner .discover-banner-content-wrap h2, #fhm-services .services-heading h3, #fhm-intro .intro-content h2 {
+    font-size: 23px;
+    line-height: 38px;
+  }
+  #fhm-banner .banner-content {
+    top: 45px;
+  }
+  #fhm-banner .banner-content .banner-content-button {
+    margin-top: 9px;
+  }
+  #fhm-intro .intro-content {
+    margin-bottom: 100px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap {
+    top: -150px;
+  }
+  #fhm-project {
+    margin-top: 330px;
+  }
+  #fhm-feedback .feedback-list .feedback-item {
+    padding: 17px 15px;
+  }
+}
+@media (max-width: 575px) {
+  .p-s {
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .h3-s, #fhm-blog .blog-heading h3, #fhm-gallery .gallery-heading h3, #fhm-feedback .feedback-heading h3, #fhm-project .project-heading .project-heading-main h3, #fhm-discover .discover-container .discover-container-wrap .discover-container-content h3, #fhm-discover .discover-banner .discover-banner-content-wrap h2, #fhm-services .services-heading h3, #fhm-intro .intro-content h2 {
+    font-size: 23px;
+    line-height: 28px;
+  }
+  .button-s, #fhm-discover .discover-container .discover-container-wrap .discover-container-content .discover-link, #fhm-discover .discover-banner .discover-banner-content-wrap a, #fhm-intro .intro-content .intro-content-button, #fhm-banner .banner-content .banner-content-button a {
+    padding: 6px 20px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 300;
+  }
+  #fhm-banner {
+    margin-bottom: 0;
+  }
+  #fhm-banner .banner-bg {
+    opacity: 0.6;
+  }
+  #fhm-banner .banner-content {
+    text-align: center;
+    top: 10px;
+    max-width: 404px;
+  }
+  #fhm-banner .banner-content h1 {
+    font-size: 28px;
+  }
+  #fhm-banner .banner-content .banner-content-button {
+    margin-top: 20px;
+  }
+  #fhm-intro {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #fhm-intro .intro-bg {
+    position: relative;
+  }
+  #fhm-intro .intro-content {
+    margin: 50px 0 100px;
+    text-align: center;
+  }
+  #fhm-intro .intro-content p {
+    text-align: center;
+  }
+  #fhm-services {
+    margin-bottom: 50px;
+  }
+  #fhm-services .services-heading h3 {
+    margin-bottom: 20px;
+  }
+  #fhm-services .services-item {
+    margin-bottom: 25px;
+  }
+  #fhm-firgures .col-6 {
+    text-align: center;
+  }
+  #fhm-discover .discover-banner .discover-banner-content-wrap {
+    top: 20px;
+  }
+  #fhm-discover .discover-banner .discover-banner-content-wrap h2 {
+    margin-bottom: 15px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap {
+    padding-top: 30px;
+    top: -100px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-content {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-content p {
+    text-align: center;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-img {
+    padding: 0 5px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-img img {
+    height: 200px;
+  }
+  #fhm-project {
+    margin-top: 360px;
+    margin-bottom: 17px;
+  }
+  #fhm-project .project-list .project-item .project-item-info {
+    width: 100%;
+    padding: 3px 15px;
+    opacity: 0.6;
+  }
+  #fhm-project .project-list .project-item .project-item-info h5 {
+    font-size: 10px;
+  }
+  #fhm-body-banner {
+    margin-bottom: 50px;
+  }
+  #fhm-feedback {
+    margin-bottom: 50px;
+  }
+  #fhm-feedback .feedback-heading {
+    margin-bottom: 20px;
+  }
+  #fhm-feedback .feedback-list .feedback-item {
+    padding: 17px 15px;
+  }
+  #fhm-feedback .feedback-list .feedback-item .feedback-item-content h5 {
+    font-size: 14px;
+  }
+  #fhm-feedback .feedback-list .feedback-item .feedback-item-content p {
+    font-size: 10px;
+    line-height: 16px;
+  }
+  #fhm-gallery .gallery-heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  #fhm-gallery .gallery-container .slick-list a img {
+    width: 200px;
+  }
+  #fhm-blog .blog-heading {
+    margin-bottom: 20px;
+  }
+  #fhm-blog .blog-list .blog-item {
+    margin-bottom: 25px;
+  }
+  #fhm-blog .blog-list .blog-item .blog-item-content {
+    margin: 10px 0;
   }
 }
