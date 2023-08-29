@@ -384,6 +384,7 @@
   text-transform: uppercase;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img {
+  flex-grow: 1;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -1006,7 +1007,6 @@
   #fhm-banner .banner-content {
     text-align: center;
     top: 10px;
-    max-width: 404px;
   }
   #fhm-banner .banner-content h1 {
     font-size: 28px;

@@ -294,19 +294,18 @@
         }
       }
       .discover-container-img {
+        flex-grow: 1;
+
         cursor: pointer;
         position: relative;
         overflow: hidden;
 
         img {
           transition: all 300ms ease-out;
-
           height: 441px;
         }
-
         .discover-container-img-content {
           background-color: $bg-body;
-          // opacity: 0;
           position: absolute;
           bottom: 0;
           left: 0;
@@ -1429,7 +1428,6 @@
     .banner-content {
       text-align: center;
       top: 10px;
-      max-width: 404px;
       h1 {
         font-size: 28px;
       }

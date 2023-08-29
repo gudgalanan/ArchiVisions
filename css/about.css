@@ -142,6 +142,7 @@
   line-height: 74px; /* 115.625% */
   letter-spacing: 6.4px;
   text-transform: uppercase;
+  max-width: 308px;
 }
 #fhm-banner .banner-content h3 {
   color: #ffffff;
@@ -156,6 +157,7 @@
   position: relative;
 }
 #fhm-intro .intro-bg {
+  position: absolute;
   max-width: 810px;
   right: 0;
   top: -130px;
@@ -310,10 +312,11 @@
   justify-content: center;
 }
 #fhm-discover .discover-container .discover-container-wrap {
+  width: 100%;
   position: absolute;
   max-width: 1400px;
-  padding: 97px 121px;
-  top: -140px;
+  padding-top: 97px;
+  top: -144px;
   border-top-left-radius: 100px;
   background-color: #000;
 }
@@ -344,16 +347,14 @@
   text-align: justify;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img {
+  flex-grow: 1;
   cursor: pointer;
   position: relative;
   overflow: hidden;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img img {
   transition: all 300ms ease-out;
-  height: 100%;
-}
-#fhm-discover .discover-container .discover-container-wrap .discover-container-img img:first-child {
-  aspect-ratio: 356/411;
+  height: 441px;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img .discover-container-img-content {
   background-color: #000;
@@ -361,11 +362,11 @@
   bottom: 0;
   left: 0;
   z-index: 2;
-  transition: all 300ms ease-out;
   opacity: 0;
   width: 100%;
   height: 86px;
   padding: 25px 36px 18px;
+  transition: all 0.7s ease-out;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img .discover-container-img-content span {
   transition-delay: 0.1s;
@@ -382,17 +383,20 @@
   transition: all 300ms ease-out;
   transform: translateY(40px);
 }
-#fhm-discover .discover-container .discover-container-wrap .discover-container-img .discover-container-img-content .overtext .discover-container-img-content-detail {
+#fhm-discover .discover-container .discover-container-wrap .discover-container-img .discover-container-img-content .discover-container-img-content-detail {
   transition-delay: 0.2s;
   transition-duration: 0.2s;
 }
-#fhm-discover .discover-container .discover-container-wrap .discover-container-img .discover-container-img-content .overtext .discover-container-img-content-detail h5 {
+#fhm-discover .discover-container .discover-container-wrap .discover-container-img .discover-container-img-content .discover-container-img-content-detail h5 {
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px; /* 171.429% */
   letter-spacing: 0.07px;
+}
+#fhm-discover .discover-container .discover-container-wrap .discover-container-img:hover, #fhm-discover .discover-container .discover-container-wrap .discover-container-img:focus {
+  width: 33.3333333%;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img:hover .discover-container-img-content, #fhm-discover .discover-container .discover-container-wrap .discover-container-img:focus .discover-container-img-content {
   opacity: 0.8;
@@ -437,6 +441,10 @@
   background-color: #303030;
   margin-bottom: 37px;
 }
+#fhm-award .award-list .award-item:hover svg path {
+  fill: #c78410;
+  stroke: #c78410;
+}
 
 #fhm-network {
   margin: 100px 0;
@@ -455,4 +463,304 @@
 }
 #fhm-network .network-map svg path:hover {
   fill: #c78410;
+}
+
+@media only screen and (max-width: 1366px) {
+  #fhm-banner .banner-content .banner-content-button a {
+    padding: 15px 33px;
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+  #fhm-intro .intro-content {
+    margin-bottom: 400px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .h6, #fhm-discover .discover-container .discover-container-wrap .discover-container-content h6, #fhm-discover .discover-banner .discover-banner-content-wrap h6, #fhm-intro .intro-content h6 {
+    font-size: 10px;
+  }
+  .p, #fhm-discover .discover-container .discover-container-wrap .discover-container-content p, #fhm-intro .intro-content p {
+    font-size: 13px;
+    line-height: 25px;
+  }
+  .button, #fhm-discover .discover-container .discover-container-wrap .discover-container-content .discover-link, #fhm-intro .intro-content .intro-content-button {
+    padding: 15px 33px;
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+  #fhm-banner .banner-content {
+    top: 100px;
+  }
+  #fhm-banner .banner-content h1 {
+    font-size: 60px;
+  }
+  #fhm-intro .intro-bg {
+    top: -50px;
+  }
+  #fhm-intro .intro-bg img {
+    border-top-left-radius: 150px;
+  }
+  #fhm-intro .intro-content {
+    margin: 140px 0;
+  }
+  #fhm-intro-2 .intro-content {
+    margin: 20px 0 120px;
+  }
+  #fhm-discover .discover-banner .discover-banner-content-wrap {
+    top: 100px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-img a {
+    display: none;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .h6-ipad, #fhm-discover .discover-container .discover-container-wrap .discover-container-content h6, #fhm-discover .discover-banner .discover-banner-content-wrap h6, #fhm-intro-2 .intro-content h6, #fhm-intro .intro-content h6 {
+    font-size: 12px;
+  }
+  .p-ipad, #fhm-discover .discover-container .discover-container-wrap .discover-container-content p, #fhm-intro-2 .intro-content p,
+  #fhm-intro-2 .intro-content .intro-content-list .intro-content-item span, #fhm-intro .intro-content p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .h3-ipad, #fhm-discover .discover-container .discover-container-wrap .discover-container-content h3, #fhm-discover .discover-banner .discover-banner-content-wrap h2, #fhm-intro-2 .intro-content h2, #fhm-intro .intro-content h2 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  .button-ipad, #fhm-discover .discover-banner .discover-banner-content-wrap a {
+    padding: 10px 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+  #fhm-banner .banner-content {
+    top: 30%;
+    text-align: center;
+  }
+  #fhm-banner .banner-content h1 {
+    max-width: unset;
+    font-size: 45px;
+    line-height: 50px;
+  }
+  #fhm-intro .intro-bg {
+    top: -15px;
+  }
+  #fhm-intro .intro-bg img {
+    border-top-left-radius: 100px;
+  }
+  #fhm-intro .intro-content {
+    margin: 120px 0 90px;
+  }
+  #fhm-firgures {
+    height: unset;
+  }
+  #fhm-firgures .firgures-number {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  #fhm-intro-2 .intro-content {
+    margin-bottom: 100px;
+  }
+  #fhm-discover {
+    margin-bottom: 360px;
+  }
+  #fhm-discover .discover-banner .discover-banner-content-wrap {
+    top: 100px;
+  }
+  #fhm-discover .discover-banner .discover-banner-content-wrap h2 {
+    margin-bottom: 30px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap {
+    top: -120px;
+    border-top-left-radius: 80px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-content {
+    padding: 0 0 0 10px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-img img {
+    height: 300px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-img .discover-container-img-content {
+    padding: 25px;
+  }
+  #fhm-award {
+    padding: 50px 0 33px;
+  }
+  #fhm-network {
+    margin: 50px 0;
+  }
+}
+@media (min-width: 767px) and (max-width: 819px) {
+  .h3-ipad-mini, #fhm-discover .discover-container .discover-container-wrap .discover-container-content h3, #fhm-discover .discover-banner .discover-banner-content-wrap h2, #fhm-intro-2 .intro-content h2, #fhm-intro .intro-content h2 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .button-ipad-mini, #fhm-discover .discover-container .discover-container-wrap .discover-container-content .discover-link, #fhm-discover .discover-banner .discover-banner-content-wrap a {
+    padding: 5px 20px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 400;
+  }
+  #fhm-intro .intro-bg img {
+    aspect-ratio: 4/5;
+  }
+  #fhm-intro .intro-content {
+    margin: 120px 0 130px;
+  }
+  #fhm-firgures {
+    margin-bottom: 60px;
+  }
+  #fhm-intro-2 .intro-bg img {
+    aspect-ratio: 4/5;
+  }
+  #fhm-intro-2 .intro-content {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  #fhm-discover {
+    margin-bottom: 300px;
+  }
+  #fhm-discover .discover-banner .discover-banner-content-wrap {
+    top: 50px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap {
+    border-top-left-radius: 40px;
+    padding-top: 75px;
+    top: -150px;
+  }
+}
+@media (max-width: 767px) {
+  .h3-ipad-sm, #fhm-discover .discover-container .discover-container-wrap .discover-container-content h3, #fhm-discover .discover-banner .discover-banner-content-wrap h2, #fhm-intro-2 .intro-content h2, #fhm-intro .intro-content h2 {
+    font-size: 23px;
+    line-height: 38px;
+  }
+  #fhm-banner .banner-content {
+    top: 45px;
+  }
+  #fhm-banner .banner-content .banner-content-button {
+    margin-top: 9px;
+  }
+  #fhm-intro .intro-content {
+    margin-bottom: 100px;
+  }
+  #fhm-intro .intro-content p {
+    text-align: justify;
+  }
+  #fhm-intro-2 .intro-content {
+    margin-bottom: 100px;
+  }
+  #fhm-intro-2 .intro-content h6 {
+    text-align: center;
+  }
+  #fhm-intro-2 .intro-content h2 {
+    text-align: center;
+  }
+  #fhm-discover .discover-container .discover-container-wrap {
+    top: -150px;
+  }
+}
+@media (max-width: 575px) {
+  .p-s {
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .h3-s, #fhm-discover .discover-container .discover-container-wrap .discover-container-content h3, #fhm-discover .discover-banner .discover-banner-content-wrap h2, #fhm-intro .intro-content h2 {
+    font-size: 23px;
+    line-height: 28px;
+  }
+  .button-s, #fhm-discover .discover-container .discover-container-wrap .discover-container-content .discover-link, #fhm-discover .discover-banner .discover-banner-content-wrap a, #fhm-intro .intro-content .intro-content-button, #fhm-banner .banner-content .banner-content-button a {
+    padding: 6px 20px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 300;
+  }
+  #fhm-banner {
+    margin-bottom: 0;
+  }
+  #fhm-banner .banner-bg {
+    opacity: 0.6;
+  }
+  #fhm-banner .banner-content {
+    text-align: center;
+    top: 10px;
+  }
+  #fhm-banner .banner-content h1 {
+    font-size: 28px;
+  }
+  #fhm-banner .banner-content .banner-content-button {
+    margin-top: 20px;
+  }
+  #fhm-intro {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #fhm-intro .intro-bg {
+    position: relative;
+  }
+  #fhm-intro .intro-content {
+    margin: 50px 0 100px;
+    text-align: center;
+  }
+  #fhm-firgures .col-6 {
+    text-align: center;
+  }
+  #fhm-discover .discover-banner .discover-banner-content-wrap {
+    top: 20px;
+  }
+  #fhm-discover .discover-banner .discover-banner-content-wrap h2 {
+    margin-bottom: 15px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap {
+    padding-top: 30px;
+    top: -100px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-content {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-content p {
+    text-align: center;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-img {
+    padding: 0 5px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-img img {
+    height: 200px;
+  }
+}
+@media (max-width: 424px) {
+  .h3-xs, #fhm-discover .discover-container .discover-container-wrap .discover-container-content h3, #fhm-discover .discover-banner .discover-banner-content-wrap h2, #fhm-intro h2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  #fhm-banner .banner-content {
+    min-width: 320px;
+    left: 0;
+    top: 10px;
+  }
+  #fhm-banner .banner-content h1 {
+    font-size: 25px;
+    line-height: 25px;
+  }
+  #fhm-discover .discover-banner .discover-banner-content-wrap {
+    top: 10px;
+  }
+  #fhm-discover .discover-banner .discover-banner-content-wrap h2 {
+    margin-bottom: 10px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap {
+    border-top-left-radius: 40px;
+    padding-top: 30px;
+    top: -30px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-content {
+    margin-bottom: 30px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-content p {
+    margin-bottom: 20px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-img {
+    padding: 0 5px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-img img {
+    height: 200px;
+  }
 }
