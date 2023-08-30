@@ -80,25 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// VIDEO
-document.addEventListener("DOMContentLoaded", function () {
-  $(".play-button-wrapper").on("click", function () {
-    const videoSrc = $(this).data("src");
-
-    // Set the source of the iframe to load the YouTube video
-    $("#videoIframe").attr("src", videoSrc);
-
-    // Show the modal
-    $("#videoModal").modal("show");
-  });
-
-  // Handle modal close event to stop video playback
-  $("#videoModal").on("hidden.bs.modal", function () {
-    // Clear the source of the iframe to stop video playback
-    $("#videoIframe").attr("src", "");
-  });
-});
-
 // NAVBAR CLOSING
 document.addEventListener("DOMContentLoaded", function () {
   // Select the navigation menu and the button that toggles it
@@ -117,4 +98,46 @@ document.addEventListener("DOMContentLoaded", function () {
       navMenu.classList.remove("show");
     }
   });
+});
+
+// VIDEO;
+// Function to handle video popup click
+$(".video").on("click", function (e) {
+  e.preventDefault();
+
+  // Show video popup elements
+  $(
+    "#video-popup-overlay, #video-popup-iframe-container, #video-popup-container, #video-popup-close"
+  ).show();
+
+  var srchref = "",
+    autoplay = "",
+    id = $(this).data("id");
+
+  if ($(this).data("type") == "vimeo") {
+    srchref = "//player.vimeo.com/video/";
+  } else if ($(this).data("type") == "youtube") {
+    srchref = "https://www.youtube.com/embed/";
+  }
+
+  if ($(this).data("autoplay")) {
+    autoplay = "?autoplay=1";
+  }
+
+  // Set the video source
+  $("#video-popup-iframe").attr("src", srchref + id + autoplay);
+
+  // Show the video popup container when the iframe is loaded
+  $("#video-popup-iframe").on("load", function () {
+    $("#video-popup-container").show();
+  });
+});
+
+// Function to close video popup
+$("#video-popup-close, #video-popup-overlay").on("click", function (e) {
+  // Hide video popup elements and reset the iframe source
+  $(
+    "#video-popup-iframe-container, #video-popup-container, #video-popup-close, #video-popup-overlay"
+  ).hide();
+  $("#video-popup-iframe").attr("src", "");
 });

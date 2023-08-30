@@ -61,7 +61,6 @@
       font-weight: 400;
       line-height: 50px;
       letter-spacing: 0.09px;
-      @extend .hover-link;
     }
     p {
       text-align: justify;
@@ -118,6 +117,7 @@
 #fhm-intro-2 {
   position: relative;
   .intro-bg {
+    position: absolute;
     max-width: 810px;
     left: 0;
     top: 0x;
@@ -138,7 +138,6 @@
       font-weight: 400;
       line-height: 50px;
       letter-spacing: 0.09px;
-      @extend .hover-link;
     }
     p {
       text-align: justify;
@@ -347,6 +346,9 @@
   .award-list {
     flex-wrap: wrap;
     gap: 34px;
+    overflow-x: auto;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    white-space: nowrap;
     .award-item {
       display: flex;
       align-items: center;
@@ -610,9 +612,35 @@
   }
   #fhm-award {
     padding: 50px 0 33px;
+    .award-heading {
+      h3 {
+        @extend .h3-ipad;
+      }
+    }
+    .award-list {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+      scrollbar-width: none; /* Hide scrollbar for Firefox */
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+      &::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+      }
+      .award-item {
+        margin-right: 5px;
+        flex: 0 0 auto;
+      }
+    }
   }
   #fhm-network {
     margin: 50px 0;
+    .network-heading {
+      margin-bottom: 50px;
+      h3 {
+        @extend .h3-ipad;
+      }
+    }
   }
 }
 
@@ -627,7 +655,6 @@
     letter-spacing: 2px;
     font-weight: 400;
   }
-
   #fhm-intro {
     .intro-bg img {
       aspect-ratio: 4/5;
@@ -685,6 +712,21 @@
       }
     }
   }
+  #fhm-award {
+    .award-heading {
+      h3 {
+        @extend .h3-ipad-mini;
+      }
+    }
+  }
+  #fhm-network {
+    .network-heading {
+      margin-bottom: 50px;
+      h3 {
+        @extend .h3-ipad-mini;
+      }
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -692,7 +734,6 @@
     font-size: 23px;
     line-height: 38px;
   }
-
   #fhm-banner {
     .banner-content {
       top: 45px;
@@ -748,6 +789,37 @@
       }
     }
   }
+  #fhm-award {
+    .award-heading {
+      h3 {
+        @extend .h3-ipad-sm;
+      }
+    }
+    .award-list {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+      scrollbar-width: none; /* Hide scrollbar for Firefox */
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+      &::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+      }
+      .award-item {
+        margin-right: 5px;
+        flex: 0 0 auto;
+      }
+    }
+  }
+  #fhm-network {
+    .network-heading {
+      margin-bottom: 20px;
+
+      h3 {
+        @extend .h3-ipad-sm;
+      }
+    }
+  }
 }
 
 @media (max-width: 575px) {
@@ -772,16 +844,13 @@
     }
     .banner-content {
       text-align: center;
-      top: 10px;
+      top: 40px;
       h1 {
-        font-size: 28px;
+        font-size: 35px;
       }
-
-      .banner-content-button {
-        margin-top: 20px;
-        a {
-          @extend .button-s;
-        }
+      h3 {
+        font-size: 26px;
+        line-height: 28px;
       }
     }
   }
@@ -792,23 +861,51 @@
       position: relative;
     }
     .intro-content {
-      margin: 50px 0 100px;
-      text-align: center;
+      margin: 65px 0 100px;
+      text-align: start;
 
       h2 {
         @extend .h3-s;
       }
       p {
+        @extend .p-s;
       }
-      .intro-content-button {
-        @extend .button-s;
+      .intro-content-list .intro-content-item {
+        margin: 0;
+        span {
+          @extend .p-s;
+        }
       }
     }
   }
-
   #fhm-firgures {
+    margin: 50px 0;
     .col-6 {
       text-align: center;
+    }
+  }
+  #fhm-intro-2 {
+    .intro-bg {
+      position: unset;
+    }
+    .intro-content {
+      margin: 20px 0 50px;
+      h6 {
+        text-align: start;
+      }
+      h2 {
+        @extend .h3-s;
+        text-align: start;
+      }
+      p {
+        @extend .p-s;
+      }
+      .intro-content-list .intro-content-item {
+        margin: 0;
+        span {
+          @extend .p-s;
+        }
+      }
     }
   }
   #fhm-discover {
@@ -827,7 +924,7 @@
     .discover-container {
       .discover-container-wrap {
         padding-top: 30px;
-        top: -100px;
+        top: -50px;
         .discover-container-content {
           text-align: center;
           margin-bottom: 30px;
@@ -835,10 +932,8 @@
             @extend .h3-s;
           }
           p {
-            text-align: center;
-          }
-          .discover-link {
-            @extend .button-s;
+            @extend .p-s;
+            text-align: justify;
           }
         }
         .discover-container-img {
@@ -850,32 +945,58 @@
       }
     }
   }
+  #fhm-award {
+    .award-heading {
+      h3 {
+        @extend .h3-s;
+      }
+    }
+  }
+  #fhm-network {
+    .network-heading {
+      h3 {
+        @extend .h3-s;
+      }
+    }
+  }
 }
 
 @media (max-width: 424px) {
   .h3-xs {
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 17px;
+    line-height: 25px;
   }
-
   #fhm-banner {
     .banner-content {
       min-width: 320px;
       left: 0;
-      top: 10px;
+      top: 30px;
       h1 {
         font-size: 25px;
         line-height: 25px;
       }
+      h3 {
+        font-size: 19px;
+      }
     }
   }
   #fhm-intro {
-    h2 {
-      @extend .h3-xs;
+    .intro-content {
+      margin: 50px 0 50px;
+      h2 {
+        @extend .h3-xs;
+      }
     }
   }
-
+  #fhm-intro-2 {
+    .intro-content {
+      h2 {
+        @extend .h3-xs;
+      }
+    }
+  }
   #fhm-discover {
+    margin-bottom: 500px;
     .discover-banner {
       .discover-banner-content-wrap {
         top: 10px;
@@ -907,5 +1028,33 @@
         }
       }
     }
+  }
+  #fhm-award {
+    padding: 10px 0 30px;
+    .award-heading {
+      margin: 25px;
+      h3 {
+        @extend .h3-xs;
+      }
+    }
+    .award-list {
+      gap: 10px;
+      .award-item {
+        width: 131px;
+        height: 58px;
+        margin: 0;
+        svg {
+          width: 100px;
+          height: auto;
+        }
+      }
+    }
+    // #fhm-network {
+    //   .network-heading {
+    //     h3 {
+    //       @extend .h3-s;
+    //     }
+    //   }
+    // }
   }
 }

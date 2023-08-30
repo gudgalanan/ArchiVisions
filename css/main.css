@@ -342,17 +342,9 @@ button:focus-visible {
   margin: auto;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  opacity: 0.8;
-  border: 9px solid rgba(255, 255, 255, 0.4);
 }
 #fhm-register .register-content .register-content-wrap .video-wrapper .video-container .play-button-wrapper:hover {
   opacity: 1;
-}
-#fhm-register .register-content .register-content-wrap .video-wrapper .video-container .play-button-wrapper .play-gif {
-  background-color: #c78410;
-  border-radius: 50%;
-  width: 69px;
-  height: 68px;
 }
 #fhm-register .register-content .register-content-wrap .video-wrapper .video-container .play-button-wrapper .play-gif svg {
   position: absolute;
@@ -360,6 +352,62 @@ button:focus-visible {
   left: 50%;
   margin: auto;
   transform: translate(-50%, -50%);
+}
+#fhm-register .register-content .register-content-wrap #video-popup-container {
+  display: none;
+  position: fixed;
+  z-index: 996;
+  width: 60%;
+  left: 50%;
+  margin-left: -30%;
+  top: 20%;
+  background-color: #ffffff;
+}
+#fhm-register .register-content .register-content-wrap #video-popup-container #video-popup-close {
+  cursor: pointer;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  z-index: 998;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 12px;
+  background-color: #000;
+  line-height: 25px;
+  color: #ffffff;
+}
+#fhm-register .register-content .register-content-wrap #video-popup-container #video-popup-close:hover {
+  color: #c78410;
+}
+#fhm-register .register-content .register-content-wrap #video-popup-container #video-popup-iframe-container {
+  position: absolute;
+  z-index: 997;
+  width: 100%;
+  padding-bottom: 56.25%;
+  border: 2px solid #000;
+  border-radius: 2px;
+  background-color: #000;
+}
+#fhm-register .register-content .register-content-wrap #video-popup-container #video-popup-iframe-container #video-popup-iframe {
+  z-index: 999;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #000;
+}
+#fhm-register .register-content .register-content-wrap #video-popup-overlay {
+  display: none;
+  position: fixed;
+  z-index: 995;
+  top: 0;
+  background-color: #000;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
 }
 #fhm-register .register-content .register-content-wrap .register-content-detail {
   position: relative;
