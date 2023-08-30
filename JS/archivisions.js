@@ -9,12 +9,10 @@ $(document).ready(function () {
 
   // Handle click on .slick-btn (previous button)
   $(".slick-btn").on("click", function () {
-    // Calculate the new slide index
-    currentSlide--;
-    if (currentSlide < 0) {
-      currentSlide = galleryList.children().length - slidesToShow;
-      // If you want to loop to the end instead of stopping at the beginning,
-      // you can set currentSlide to (galleryList.children().length - slidesToShow)
+    // Calculate the new slide index in the opposite direction
+    currentSlide++;
+    if (currentSlide >= galleryList.children().length - slidesToShow + 1) {
+      currentSlide = 0;
     }
 
     // Calculate the new scroll position based on the current slide
