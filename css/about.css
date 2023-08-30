@@ -94,6 +94,12 @@
   top: 0;
 }
 
+.hover-link, #fhm-discover .discover-container .discover-container-wrap .discover-container-content h3 {
+  transition: all 0.4s ease;
+}
+.hover-link svg path, #fhm-discover .discover-container .discover-container-wrap .discover-container-content h3 svg path {
+  transition: all 0.4s ease;
+}
 .hover-link:hover, #fhm-discover .discover-container .discover-container-wrap .discover-container-content h3:hover {
   color: #c78410;
 }
@@ -200,7 +206,6 @@
   letter-spacing: 0.09px;
 }
 #fhm-intro .intro-content p {
-  text-align: justify;
   margin: 3px 0 26px;
   color: #bfbfbf;
   font-family: "Poppins", sans-serif;
@@ -270,7 +275,6 @@
   letter-spacing: 0.09px;
 }
 #fhm-intro-2 .intro-content p {
-  text-align: justify;
   margin: 3px 0 26px;
   color: #bfbfbf;
   font-family: "Poppins", sans-serif;
@@ -366,7 +370,6 @@
   line-height: 24px; /* 171.429% */
   letter-spacing: 0.07px;
   margin: 8px 0 26px;
-  text-align: justify;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img {
   flex-grow: 1;
@@ -712,9 +715,6 @@
   #fhm-intro .intro-content {
     margin: 0px 0 20px;
   }
-  #fhm-intro .intro-content p {
-    text-align: justify;
-  }
   #fhm-intro-2 {
     display: flex;
     flex-direction: column;
@@ -826,9 +826,6 @@
   #fhm-discover .discover-container .discover-container-wrap .discover-container-content {
     text-align: center;
     margin-bottom: 30px;
-  }
-  #fhm-discover .discover-container .discover-container-wrap .discover-container-content p {
-    text-align: justify;
   }
   #fhm-discover .discover-container .discover-container-wrap .discover-container-img {
     padding: 0 5px;

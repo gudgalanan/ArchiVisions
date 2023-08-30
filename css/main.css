@@ -94,10 +94,16 @@
   top: 0;
 }
 
-.hover-link:hover, #fhm-footer .footer-list .footer-item a:hover, #fhm-footer .footer-list .footer-logo h3:hover, #fhm-header .header-logo h3:hover {
+.hover-link, #fhm-footer .footer-list .footer-item a, #fhm-footer .footer-list .footer-logo, #fhm-header .header-logo {
+  transition: all 0.4s ease;
+}
+.hover-link svg path, #fhm-footer .footer-list .footer-item a svg path, #fhm-footer .footer-list .footer-logo svg path, #fhm-header .header-logo svg path {
+  transition: all 0.4s ease;
+}
+.hover-link:hover, #fhm-footer .footer-list .footer-item a:hover, #fhm-footer .footer-list .footer-logo:hover, #fhm-header .header-logo:hover {
   color: #c78410;
 }
-.hover-link:hover svg path, #fhm-footer .footer-list .footer-item a:hover svg path, #fhm-footer .footer-list .footer-logo h3:hover svg path, #fhm-header .header-logo h3:hover svg path {
+.hover-link:hover svg path, #fhm-footer .footer-list .footer-item a:hover svg path, #fhm-footer .footer-list .footer-logo:hover svg path, #fhm-header .header-logo:hover svg path {
   fill: #c78410;
 }
 
@@ -225,14 +231,8 @@ button:focus-visible {
   background-color: #000;
   height: 100px;
 }
-#fhm-header .header-logo h3 {
+#fhm-header .header-logo svg {
   margin: 0;
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 4px;
-  text-transform: uppercase;
 }
 #fhm-header .header-content .navbar {
   position: unset;
@@ -567,15 +567,6 @@ button:focus-visible {
 #fhm-footer .footer-list {
   margin-bottom: 40px;
   justify-content: space-between;
-}
-#fhm-footer .footer-list .footer-logo h3 {
-  text-align: center;
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 4px;
-  text-transform: uppercase;
 }
 #fhm-footer .footer-list .footer-item:last-child {
   justify-content: space-between;

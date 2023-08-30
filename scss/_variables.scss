@@ -103,32 +103,6 @@ $easeInOut: cubic-bezier(0.42, 0, 0.58, 1);
   }
 }
 
-// .hover-button2 {
-//   position: relative;
-//   overflow: hidden;
-//   &::after {
-//     position: absolute;
-//     background-color: $highlight-color;
-//     content: "";
-//     display: block;
-//     height: 100%;
-//     width: 100%;
-//     left: 0;
-//     top: 0;
-//     transform: translate(-100%, 0) rotate(10deg);
-//     transform-origin: top left;
-//     transition: 0.2s transform ease-out;
-//     z-index: -1;
-//   }
-//   &:hover::after {
-//     transform: translate(0, 0);
-//   }
-//   &:hover {
-//     border: 1px solid transparent;
-//     transform: scale(1.05);
-//   }
-// }
-
 .hover-button2 {
   position: sticky;
 
@@ -165,6 +139,12 @@ $easeInOut: cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 .hover-link {
+  transition: all 0.4s ease;
+  svg {
+    path {
+      transition: all 0.4s ease;
+    }
+  }
   &:hover {
     color: $highlight-color;
     svg {

@@ -63,8 +63,6 @@
       letter-spacing: 0.09px;
     }
     p {
-      text-align: justify;
-
       margin: 3px 0 26px;
       color: $text-dark-white;
       font-family: $font-family;
@@ -141,7 +139,6 @@
       letter-spacing: 0.09px;
     }
     p {
-      text-align: justify;
       margin: 3px 0 26px;
       color: $text-dark-white;
       font-family: $font-family;
@@ -246,7 +243,6 @@
           line-height: 24px; /* 171.429% */
           letter-spacing: 0.07px;
           margin: 8px 0 26px;
-          text-align: justify;
         }
       }
       .discover-container-img {
@@ -772,7 +768,6 @@
         @extend .h3-ipad-sm;
       }
       p {
-        text-align: justify;
       }
     }
   }
@@ -944,7 +939,6 @@
           }
           p {
             @extend .p-s;
-            text-align: justify;
           }
         }
         .discover-container-img {
