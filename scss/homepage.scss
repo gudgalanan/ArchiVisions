@@ -44,7 +44,7 @@
         text-transform: uppercase;
         padding: 20px 50px;
         background-color: transparent;
-        border: 1px solid $border-color;
+        border: 2px solid $border-color;
 
         @extend .hover-button2;
       }
@@ -115,6 +115,7 @@
       @extend .h6-text;
       color: $text-blur-white;
       text-align: center;
+      font-size: 12px;
     }
     h3 {
       color: $text-white;
@@ -127,47 +128,52 @@
       margin: 8px 0 40px;
     }
   }
-  .services-item {
-    gap: 46px;
-    margin-bottom: 40px;
-    .service-item-wrap {
-      transition: all ease 0.3s;
-    }
-    &:hover {
+  .services-main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 46px;
+    row-gap: 40px;
+    .services-item {
+      gap: 46px;
       .service-item-wrap {
-        border-top-right-radius: 100px;
+        transition: all ease 0.3s;
       }
-    }
-    .services-item-bg {
-      background-color: $highlight-color;
-    }
-    .service-item-wrap {
-      display: block;
-
-      background-color: $bg-element-gray;
-      padding: 43px 35px 45px;
-      .services-item-content {
-        h5 {
-          margin: 55px 0 11px;
-          color: $text-white;
-          font-family: $font-family;
-          font-size: 18px;
-          font-weight: 600;
-          line-height: 24px;
-          letter-spacing: 0.09px;
+      &:hover {
+        .service-item-wrap {
+          border-top-right-radius: 100px;
         }
-        p {
-          color: $text-dark-white;
-          font-family: $font-family;
-          font-size: 14px;
-          font-weight: 300;
-          line-height: 24px;
-          letter-spacing: 0.07px;
-          -webkit-line-clamp: 2;
-          line-clamp: 2;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-          display: -webkit-box;
+      }
+      .services-item-bg {
+        background-color: $highlight-color;
+      }
+      .service-item-wrap {
+        display: block;
+
+        background-color: $bg-element-gray;
+        padding: 43px 35px 45px;
+        .services-item-content {
+          h5 {
+            margin: 55px 0 11px;
+            color: $text-white;
+            font-family: $font-family;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0.09px;
+          }
+          p {
+            color: $text-dark-white;
+            font-family: $font-family;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 24px;
+            letter-spacing: 0.07px;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            display: -webkit-box;
+          }
         }
       }
     }
@@ -181,7 +187,7 @@
   background-color: $bg-element-brown;
   .firgures-number,
   .firgures-number-wrap {
-    color: $text-dark-white;
+    color: $text-white;
     font-feature-settings: "liga" off;
     font-family: $font-family;
     font-size: 60px;
@@ -211,6 +217,7 @@
       top: 244px;
       h6 {
         @extend .h6-text;
+        font-weight: 200;
         color: $text-white;
         font-size: 12px;
         text-align: center;
@@ -229,7 +236,7 @@
         display: inline-block;
         padding: 22px 42px 16px;
         background-color: transparent;
-        border: 1px solid $border-color;
+        border: 2px solid $border-color;
         color: $text-white;
         text-align: center;
         font-family: $font-family;
@@ -411,12 +418,13 @@
     }
   }
   .project-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 37px;
+    row-gap: 33px;
     .project-item {
-      margin-bottom: 33px;
       position: relative;
-      display: block; /* Make the entire .project-item clickable */
-      text-decoration: none; /* Remove underlines or default link styling */
-      color: inherit; /* Inherit text color from parent */
+
       .project-item-img {
         overflow: hidden;
 
@@ -432,11 +440,13 @@
 
       .project-item-info {
         position: absolute;
-        // left: 10.5px;
-        bottom: 0;
+        bottom: -1px;
+        left: -1px;
+
         padding: 10px 30px;
         background-color: $main-color;
         border-top-right-radius: 10px;
+
         display: flex;
         align-items: center;
         justify-content: center;
@@ -448,6 +458,7 @@
           line-height: 24px;
           letter-spacing: 0.7px;
           text-transform: uppercase;
+          margin: 0;
         }
       }
     }
@@ -492,13 +503,14 @@
     }
   }
   .feedback-list {
-    gap: 57px;
+    gap: 43px;
     overflow-x: scroll;
     flex-wrap: nowrap;
+    margin-left: 10.5px;
     .feedback-item {
       background-color: $bg-feedback;
       padding: 42px;
-      max-width: 358px;
+      width: 358px;
       .feedback-item-info {
         gap: 12px;
         .feedback-item-info-avt {
@@ -577,7 +589,7 @@
     }
   }
   .gallery-container {
-    margin-left: calc(((100% - 1160px) / 2) - 10.5px);
+    margin-left: calc(((100% - 1160px) / 2));
     position: relative;
     .slick-list {
       display: flex;
@@ -712,66 +724,69 @@
   }
 
   .blog-list {
-    .blog-item {
-      .blog-item-img {
-        &:hover {
-          img {
-            opacity: 1;
-            -webkit-animation: flash 1.5s;
-            animation: flash 1.5s;
-          }
-        }
-        display: block;
-        .blog-item-img-date {
-          background-color: $bg-body;
-          padding: 5px 6px;
-          top: 12px;
-          right: 22.5px;
-          text-align: center;
-          h6 {
-            color: $text-white;
-            font-family: $font-family;
-            font-size: 10px;
-            font-weight: 300;
-            line-height: 13px;
-            letter-spacing: 0.025px;
-            margin: 0;
-            width: 32px;
-          }
-        }
-      }
-      .blog-item-content {
-        margin: 20px 0;
-        h4 {
-          color: $text-white;
-          font-family: $font-family2;
-          font-size: 20px;
-          font-weight: 400;
-          line-height: 28px; /* 140% */
-          letter-spacing: 0.03px;
-          @extend .hover-link;
-        }
-        p {
-          color: $text-dark-white;
-          font-family: $font-family;
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 24px;
-          letter-spacing: 0.07px;
-        }
-      }
-      .blog-item-link {
-        a {
-          color: $highlight-color;
-          text-align: center;
-          font-family: $font-family;
-          font-size: 14px;
-          font-weight: 500;
-          letter-spacing: 2.8px;
-          text-decoration-line: underline;
-          text-transform: uppercase;
+    .row {
+      gap: 16px;
+      .blog-item {
+        .blog-item-img {
           &:hover {
-            opacity: 0.8;
+            img {
+              opacity: 1;
+              -webkit-animation: flash 1.5s;
+              animation: flash 1.5s;
+            }
+          }
+          display: block;
+          .blog-item-img-date {
+            background-color: $bg-body;
+            padding: 5px 6px;
+            top: 12px;
+            right: 22.5px;
+            text-align: center;
+            h6 {
+              color: $text-white;
+              font-family: $font-family;
+              font-size: 10px;
+              font-weight: 300;
+              line-height: 13px;
+              letter-spacing: 0.025px;
+              margin: 0;
+              width: 32px;
+            }
+          }
+        }
+        .blog-item-content {
+          margin: 20px 0;
+          h4 {
+            color: $text-white;
+            font-family: $font-family2;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 28px; /* 140% */
+            letter-spacing: 0.03px;
+            @extend .hover-link;
+          }
+          p {
+            color: $text-dark-white;
+            font-family: $font-family;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0.07px;
+          }
+        }
+        .blog-item-link {
+          a {
+            color: $highlight-color;
+            text-align: center;
+            font-family: $font-family;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 2.8px;
+            text-decoration-line: underline;
+            text-transform: uppercase;
+            &:hover {
+              opacity: 0.8;
+            }
           }
         }
       }
@@ -781,6 +796,18 @@
 // <!-- END BLOGS-->
 
 // <!-- RESPONSIVE-->
+@media (min-width: 1400px) {
+  #fhm-banner .banner-content {
+    width: 600px;
+  }
+  #fhm-intro .intro-content p {
+    width: 436px;
+  }
+  #fhm-discover .discover-container .discover-container-content {
+    width: 345px;
+  }
+}
+
 @media only screen and (max-width: 1366px) {
   #fhm-banner {
     .banner-content {
@@ -800,6 +827,9 @@
     .intro-content {
       margin-bottom: 400px;
     }
+  }
+  #fhm-discover .discover-banner .discover-banner-content-wrap h2 {
+    margin-bottom: 20px;
   }
 }
 
@@ -821,12 +851,15 @@
     letter-spacing: 2px;
   }
   #fhm-banner {
+    margin-bottom: 0;
+
     .banner-content {
       h6 {
         @extend .h6;
       }
       h1 {
         font-size: 30px;
+        line-height: 50px;
       }
       p {
         @extend .p;
@@ -839,11 +872,15 @@
     }
   }
   #fhm-intro {
-    .intro-bg img {
-      border-top-left-radius: 150px;
+    .intro-bg {
+      top: 50%;
+      transform: translateY(-50%);
+      img {
+        border-top-left-radius: 150px;
+      }
     }
     .intro-content {
-      margin-bottom: 200px;
+      margin: 218px 0;
       h6 {
         @extend .h6;
       }
@@ -867,11 +904,16 @@
         @extend .h3;
       }
     }
+    .services-main {
+      column-gap: 30px;
+      row-gap: 30px;
+    }
   }
   #fhm-discover {
     .discover-banner {
       .discover-banner-content-wrap {
-        top: 100px;
+        top: 20%;
+
         h6 {
           @extend .h6;
         }
@@ -882,6 +924,7 @@
     }
     .discover-container {
       .discover-container-wrap {
+        top: -244px;
         .discover-container-content {
           h6 {
             @extend .h6;
@@ -905,7 +948,7 @@
     }
   }
   #fhm-project {
-    margin-top: 350px;
+    margin-top: 400px;
     .project-heading {
       h6 {
         @extend .h6;
@@ -1002,11 +1045,13 @@
     }
   }
   #fhm-intro {
-    .intro-bg img {
-      border-top-left-radius: 100px;
+    .intro-bg {
+      img {
+        border-top-left-radius: 100px;
+      }
     }
     .intro-content {
-      margin-bottom: 200px;
+      margin: 190px 0;
       h6 {
         @extend .h6-ipad;
       }
@@ -1024,26 +1069,34 @@
   }
   #fhm-services {
     .services-heading {
+      margin-bottom: 20px;
+
       h6 {
         @extend .h6-ipad;
       }
       h3 {
+        margin: 0;
         @extend .h3-ipad;
       }
     }
-    .services-item {
-      padding: 0 10px;
-      .service-item-wrap {
-        padding: 25px;
-        .services-item-content h5 {
-          margin: 35px 0 10px;
+    .services-main {
+      column-gap: 9px;
+      row-gap: 20px;
+      .services-item {
+        padding: 0 10px;
+        .service-item-wrap {
+          padding: 25px;
+          .services-item-content h5 {
+            margin: 35px 0 10px;
+          }
         }
       }
     }
   }
   #fhm-firgures {
     height: 200px;
-    .firgures-number {
+    .firgures-number,
+    .firgures-number-wrap {
       font-size: 50px;
       line-height: 60px;
     }
@@ -1051,13 +1104,12 @@
   #fhm-discover {
     .discover-banner {
       .discover-banner-content-wrap {
-        top: 100px;
         h6 {
           @extend .h6-ipad;
         }
         h2 {
           @extend .h3-ipad;
-          margin-bottom: 30px;
+          margin-bottom: 10px;
         }
         a {
           @extend .button-ipad;
@@ -1066,7 +1118,7 @@
     }
     .discover-container {
       .discover-container-wrap {
-        top: -200px;
+        top: -250px;
         border-top-left-radius: 80px;
         .discover-container-content {
           h6 {
@@ -1094,8 +1146,9 @@
     }
   }
   #fhm-project {
-    margin-top: 290px;
+    margin-top: 250px;
     .project-heading {
+      margin-bottom: 20px;
       h6 {
         @extend .h6-ipad;
       }
@@ -1109,6 +1162,7 @@
       }
     }
     .project-list {
+      column-gap: 30px;
       .project-item {
         .project-item-info {
           padding: 8px 15px;
@@ -1122,6 +1176,7 @@
   }
   #fhm-feedback {
     .feedback-heading {
+      margin-bottom: 20px;
       h6 {
         @extend .h6-ipad;
       }
@@ -1135,6 +1190,7 @@
   }
   #fhm-gallery {
     .gallery-heading {
+      margin-bottom: 20px;
       h6 {
         @extend .h6-ipad;
       }
@@ -1145,6 +1201,8 @@
   }
   #fhm-blog {
     .blog-heading {
+      margin-bottom: 20px;
+
       h6 {
         @extend .h6-ipad;
       }
@@ -1172,7 +1230,7 @@
   }
 }
 
-@media (min-width: 767px) and (max-width: 819px) {
+@media (max-width: 819px) {
   .h3-ipad-mini {
     font-size: 25px;
     line-height: 30px;
@@ -1195,7 +1253,7 @@
   }
   #fhm-intro {
     .intro-content {
-      margin: 150px 0 140px;
+      margin: 150px 0;
       h2 {
         @extend .h3-ipad-mini;
       }
@@ -1223,7 +1281,8 @@
     }
   }
   #fhm-firgures {
-    .firgures-number {
+    .firgures-number,
+    .firgures-number-wrap {
       font-size: 45px;
       line-height: 55px;
     }
@@ -1231,8 +1290,6 @@
   #fhm-discover {
     .discover-banner {
       .discover-banner-content-wrap {
-        top: 50px;
-
         h2 {
           @extend .h3-ipad-mini;
         }
@@ -1258,8 +1315,11 @@
       }
     }
   }
+  #fhm-body-banner {
+    margin-bottom: 50px;
+  }
   #fhm-project {
-    margin-top: 190px;
+    margin-bottom: 50px;
     .project-heading {
       .project-heading-main {
         h3 {
@@ -1269,6 +1329,8 @@
     }
   }
   #fhm-feedback {
+    margin-bottom: 50px;
+
     .feedback-heading {
       h3 {
         @extend .h3-ipad-mini;
@@ -1301,6 +1363,8 @@
     }
   }
   #fhm-gallery {
+    margin-bottom: 50px;
+
     .gallery-heading {
       h3 {
         @extend .h3-ipad-mini;
@@ -1308,6 +1372,8 @@
     }
   }
   #fhm-blog {
+    margin-bottom: 50px;
+
     .blog-heading {
       h3 {
         @extend .h3-ipad-mini;
@@ -1332,7 +1398,7 @@
   }
   #fhm-intro {
     .intro-content {
-      margin-bottom: 100px;
+      margin: 110px 0;
       h2 {
         @extend .h3-ipad-sm;
       }
@@ -1343,6 +1409,9 @@
       h3 {
         @extend .h3-ipad-sm;
       }
+    }
+    .services-main {
+      column-gap: 0;
     }
   }
 
@@ -1403,6 +1472,39 @@
   }
 }
 
+@media (max-width: 668px) {
+  #fhm-intro .intro-content {
+    margin: 80px 0;
+  }
+  #fhm-feedback .feedback-list .feedback-item {
+    width: 251px;
+  }
+  #fhm-gallery .gallery-container .slick-list {
+    gap: 15px;
+    a img {
+      width: 240px;
+    }
+  }
+  #fhm-register .register-content .register-content-wrap {
+    top: -50px;
+  }
+  #fhm-blog .blog-list .row {
+    gap: 0;
+    .blog-item .blog-item-content p {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3; /* number of lines to show */
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+  }
+  #fhm-project .project-list {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+}
+
 @media (max-width: 575px) {
   .p-s {
     font-size: 10px;
@@ -1425,7 +1527,8 @@
     }
     .banner-content {
       text-align: center;
-      top: 10px;
+      top: 50%;
+      transform: translateY(-50%);
       h1 {
         font-size: 28px;
       }
@@ -1442,10 +1545,11 @@
     display: flex;
     flex-direction: column-reverse;
     .intro-bg {
+      transform: none;
       position: relative;
     }
     .intro-content {
-      margin: 50px 0 100px;
+      margin: 50px 0 20px;
       text-align: center;
 
       h2 {
@@ -1460,15 +1564,28 @@
     }
   }
   #fhm-services {
-    margin-bottom: 50px;
+    margin: 100px 0;
     .services-heading {
       h3 {
         @extend .h3-s;
         margin-bottom: 20px;
       }
     }
-    .services-item {
-      margin-bottom: 25px;
+    .services-main {
+      grid-template-columns: repeat(2, 1fr);
+      .services-item {
+        margin-bottom: 0;
+        &:nth-child(5),
+        &:nth-child(6) {
+          display: none;
+        }
+        .service-item-wrap {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 10px;
+        }
+      }
     }
   }
   #fhm-firgures {
@@ -1479,7 +1596,6 @@
   #fhm-discover {
     .discover-banner {
       .discover-banner-content-wrap {
-        top: 20px;
         h2 {
           @extend .h3-s;
           margin-bottom: 15px;
@@ -1604,10 +1720,10 @@
         @extend .h3-s;
       }
     }
-    .blog-list .blog-item {
+    .blog-list .row .blog-item {
       margin-bottom: 25px;
       .blog-item-content {
-        margin: 10px 0;
+        margin: 10px 0 5px;
       }
     }
   }
@@ -1623,7 +1739,6 @@
     .banner-content {
       min-width: 320px;
       left: 0;
-      top: 10px;
       h1 {
         font-size: 25px;
         line-height: 25px;
@@ -1661,7 +1776,6 @@
   #fhm-discover {
     .discover-banner {
       .discover-banner-content-wrap {
-        top: 10px;
         h2 {
           @extend .h3-xs;
           margin-bottom: 10px;
@@ -1743,7 +1857,6 @@
 
   #fhm-banner {
     .banner-content {
-      top: 5px;
       h1 {
         font-size: 21px;
         line-height: 23px;

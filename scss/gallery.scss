@@ -1,0 +1,44 @@
+@import "./variables";
+
+// <!-- ______________ TIPS ______________ -->
+/* Add styles for the slider container */
+#fhm-carousel {
+  padding-top: 100px;
+  border-top: 1px solid $border-header;
+  .carousel-wrap {
+    display: grid;
+    place-items: center;
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap;
+
+    .carousel-wrap-list {
+      display: inline-flex;
+      animation: scroll 20s linear infinite;
+      &:hover {
+        animation-play-state: paused;
+      }
+      .carousel-wrap-item {
+        margin-right: 31px; /* Set the gap between slides */
+        overflow: hidden;
+        &:hover {
+          img {
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+            opacity: 0.9;
+          }
+        }
+        img {
+          height: auto;
+          aspect-ratio: 267/570;
+          width: 267px;
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          -webkit-transition: 0.3s ease-in-out;
+          transition: 0.3s ease-in-out;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+}

@@ -359,6 +359,7 @@
       &:hover {
         svg {
           path {
+            transition: all 0.3s ease;
             fill: $highlight-color;
             stroke: $highlight-color;
           }
@@ -388,6 +389,7 @@
     svg {
       path {
         &:hover {
+          transition: all 0.4s ease;
           fill: $highlight-color;
         }
       }

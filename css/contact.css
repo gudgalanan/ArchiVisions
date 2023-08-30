@@ -107,6 +107,14 @@
   fill: #c78410;
 }
 
+@keyframes scroll {
+  0% {
+    margin-right: 0;
+  }
+  100% {
+    margin-right: 100%;
+  }
+}
 @keyframes borderRadius {
   0% {
     border-top-right-radius: 0px;

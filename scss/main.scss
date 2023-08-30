@@ -181,7 +181,6 @@ button {
     }
   }
 }
-
 // <!-- END HEADER -->
 
 // <!-- START REGISTER-->
@@ -205,7 +204,7 @@ button {
     .register-banner-heading {
       position: absolute;
       top: 85px;
-      z-index: 2;
+      z-index: 1;
       h6 {
         @extend .h6-text;
         color: $text-white;
@@ -267,10 +266,10 @@ button {
         display: none;
         position: fixed;
         z-index: 996;
-        width: 60%;
+        width: 80%;
         left: 50%;
-        margin-left: -30%;
-        top: 20%;
+        top: 10%;
+        transform: translateX(-50%);
         background-color: $text-white;
         #video-popup-close {
           cursor: pointer;
@@ -292,14 +291,14 @@ button {
         }
         #video-popup-iframe-container {
           position: absolute;
-          z-index: 997;
+          z-index: 2;
           width: 100%;
           padding-bottom: 56.25%;
           border: 2px solid $bg-body;
           border-radius: 2px;
           background-color: $bg-body;
           #video-popup-iframe {
-            z-index: 999;
+            z-index: 2;
             position: absolute;
             width: 100%;
             height: 100%;
@@ -334,48 +333,54 @@ button {
             }
           }
         }
-        .register-detail-content {
+        .register-detail-heading {
           position: absolute;
           top: -10px;
-
+          width: fit-content;
+          padding: 15px 28px;
+          background-color: $highlight-color;
+          border-radius: 0px 0px 29px 29px;
+          left: 50%;
+          transform: translateX(-50%);
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -8px;
+            background-color: $highlight-color, rgba(0, 0, 0, 0.5);
+            border-top: 10px solid transparent;
+            border-right: 8px solid rgba(0, 0, 0, 0.5);
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -8px;
+            background-color: $highlight-color, rgba(0, 0, 0, 0.5);
+            border-top: 10px solid transparent;
+            border-left: 8px solid rgba(0, 0, 0, 0.5);
+          }
+          h3 {
+            color: $text-white;
+            font-family: $font-family2;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 28px;
+            letter-spacing: 0.027px;
+            text-wrap: nowrap;
+          }
+        }
+        .register-detail-content {
+          position: absolute;
+          top: calc(50%);
+          transform: translateY(-50%);
           display: flex;
           flex-direction: column;
           align-items: center;
 
-          padding: 0 80px;
-          .register-detail-heading {
-            position: relative;
-            width: fit-content;
-            padding: 15px 28px;
-            background-color: $highlight-color;
-            border-radius: 0px 0px 29px 29px;
-            &::after {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: -8px;
-              background-color: $highlight-color, rgba(0, 0, 0, 0.5);
-              border-top: 10px solid transparent;
-              border-right: 8px solid rgba(0, 0, 0, 0.5);
-            }
-            &::before {
-              content: "";
-              position: absolute;
-              top: 0;
-              right: -8px;
-              background-color: $highlight-color, rgba(0, 0, 0, 0.5);
-              border-top: 10px solid transparent;
-              border-left: 8px solid rgba(0, 0, 0, 0.5);
-            }
-            h3 {
-              color: $text-white;
-              font-family: $font-family2;
-              font-size: 18px;
-              font-weight: 400;
-              line-height: 28px;
-              letter-spacing: 0.027px;
-            }
-          }
+          padding: 10px 80px;
+
+          left: 0;
           .register-detail-info {
             .register-detail-info-heading {
               margin-top: 29px;
@@ -410,6 +415,7 @@ button {
             }
             .register-detail-info-form {
               margin-top: 31px;
+
               .form-control {
                 background-color: transparent;
                 border: none;
@@ -523,7 +529,7 @@ button {
   #fhm-register {
     .register-banner {
       .register-banner-heading {
-        top: 50px;
+        top: 100px;
         h6 {
           @extend .h6;
         }
@@ -556,9 +562,6 @@ button {
       }
     }
   }
-  // #fhm-header .header-content .navbar .navbar-nav {
-  //   height: calc(100vh - 60px);
-  // }
 }
 
 @media only screen and (max-width: 991px) {
@@ -617,10 +620,13 @@ button {
   }
   // END HEADER
 
+  // START REGISTER
   #fhm-register {
+    margin-top: 50px;
+
     .register-banner {
       .register-banner-heading {
-        top: 50px;
+        top: 80px;
         h6 {
           @extend .h6-ipad;
         }
@@ -633,12 +639,18 @@ button {
       .register-content-wrap {
         .register-content-detail {
           .register-detail-content {
-            padding: 0 20px;
+            padding: 0 30px;
+            top: calc(50% + 25px);
+
             .register-detail-info {
               .register-detail-info-heading {
                 margin-top: 15px;
+                p {
+                  font-size: 10px;
+                }
               }
               .register-detail-info-form {
+                margin-top: 10px;
                 .form-control {
                   margin-bottom: 18px;
                   padding: 0px;
@@ -658,9 +670,15 @@ button {
             }
           }
         }
+        #video-popup-container {
+          width: 95%;
+        }
       }
     }
   }
+  // END REGISTER
+
+  // START FOOTER
   #fhm-footer {
     margin-bottom: 50px;
     .footer-list {
@@ -694,6 +712,7 @@ button {
       }
     }
   }
+  // END FOOTER
 }
 
 @media (min-width: 767px) and (max-width: 819px) {
@@ -710,6 +729,7 @@ button {
   #fhm-register {
     .register-banner {
       .register-banner-heading {
+        top: 50px;
         h3 {
           @extend .h3-ipad-mini;
         }
@@ -719,16 +739,16 @@ button {
       .register-content-wrap {
         gap: 0px;
         .register-content-detail {
-          .register-detail-content {
-            .register-detail-heading {
-              padding: 10px 28px;
-              border-radius: 0px 0px 20px 20px;
-              h3 {
-                font-size: 13px;
-                line-height: 11px;
-                margin: 0;
-              }
+          .register-detail-heading {
+            padding: 10px 28px;
+            border-radius: 0px 0px 20px 20px;
+            h3 {
+              font-size: 13px;
+              line-height: 11px;
+              margin: 0;
             }
+          }
+          .register-detail-content {
             .register-detail-info {
               .register-detail-info-heading {
                 margin-top: 15px;
@@ -778,8 +798,10 @@ button {
 
   #fhm-register {
     .register-banner {
+      position: relative;
       .register-banner-heading {
-        top: 50px;
+        top: 50%;
+        transform: translateY(-50%);
 
         h3 {
           @extend .h3-ipad-sm;
@@ -788,6 +810,7 @@ button {
     }
     .register-content {
       .register-content-wrap {
+        position: initial;
         .video-wrapper {
           margin-bottom: 50px;
           .video-container {
@@ -800,21 +823,20 @@ button {
           position: relative;
           .register-detail-bg {
             img {
-              aspect-ratio: 277/273;
+              aspect-ratio: 277/366;
+            }
+          }
+          .register-detail-heading {
+            padding: 10px 29px;
+            border-radius: 0px 0px 18px 18px;
+            h3 {
+              margin: 0;
+              font-size: 14px;
+              line-height: 20px;
             }
           }
           .register-detail-content {
-            padding: 0 10px;
-            margin-right: 10px;
-            .register-detail-heading {
-              padding: 10px 29px;
-              border-radius: 0px 0px 18px 18px;
-              h3 {
-                margin: 0;
-                font-size: 14px;
-                line-height: 20px;
-              }
-            }
+            padding: 0 20px;
             .register-detail-info {
               .register-detail-info-heading {
                 margin-top: 30px;
@@ -861,6 +883,12 @@ button {
       }
     }
   }
+  #fhm-footer {
+    margin-top: 50px;
+    .footer-list .footer-item:last-child {
+      gap: 10px;
+    }
+  }
 }
 
 @media (max-width: 575px) {
@@ -887,7 +915,6 @@ button {
     margin-top: 50px;
     .register-banner {
       .register-banner-heading {
-        top: 10px;
         h3 {
           font-size: 19px;
         }

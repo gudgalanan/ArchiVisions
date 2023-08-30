@@ -107,6 +107,14 @@
   fill: #c78410;
 }
 
+@keyframes scroll {
+  0% {
+    margin-right: 0;
+  }
+  100% {
+    margin-right: 100%;
+  }
+}
 @keyframes borderRadius {
   0% {
     border-top-right-radius: 0px;
@@ -471,6 +479,7 @@
   margin-bottom: 37px;
 }
 #fhm-award .award-list .award-item:hover svg path {
+  transition: all 0.3s ease;
   fill: #c78410;
   stroke: #c78410;
 }
@@ -491,6 +500,7 @@
   text-transform: capitalize;
 }
 #fhm-network .network-map svg path:hover {
+  transition: all 0.4s ease;
   fill: #c78410;
 }
 

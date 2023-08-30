@@ -53,6 +53,8 @@ $border-line: #8a8a8a;
 $bg-contact: rgba(0, 0, 0, 0.1);
 $border-contact: #3f3f3f;
 
+$border-header: #343434;
+
 $easeInOut: cubic-bezier(0.42, 0, 0.58, 1);
 
 .h6-text {
@@ -154,7 +156,14 @@ $easeInOut: cubic-bezier(0.42, 0, 0.58, 1);
     }
   }
 }
-
+@keyframes scroll {
+  0% {
+    margin-right: 0;
+  }
+  100% {
+    margin-right: 100%;
+  }
+}
 @keyframes borderRadius {
   0% {
     border-top-right-radius: 0px;
