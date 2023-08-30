@@ -139,3 +139,20 @@ $("#video-popup-close, #video-popup-overlay").on("click", function (e) {
   ).hide();
   $("#video-popup-iframe").attr("src", "");
 });
+
+// COUNT STATISTIC
+let valueDisplays = document.querySelectorAll(".firgures-number");
+let interval = 3000;
+valueDisplays.forEach((valueDisplay) => {
+  let startValue = 0;
+  let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+  let duration = Math.floor(interval / endValue);
+  console.log(duration);
+  let counter = setInterval(function () {
+    startValue += 1;
+    valueDisplay.textContent = startValue;
+    if (startValue == endValue) {
+      clearInterval(counter);
+    }
+  }, duration);
+});

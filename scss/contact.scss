@@ -2,14 +2,24 @@
 
 // <!-- START CONTACT -->
 #fhm-contact {
-  position: relative;
+  background-image: url(../assets/img/contact/contact-bg.png);
+  background-position: center;
   .contact-bg {
     img {
       aspect-ratio: 4/3;
     }
   }
   .contact-wrap {
-    position: absolute;
+    .placeholder {
+      color: $text-white;
+      font-family: $font-family;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 14px; /* 116.667% */
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+    padding: 100px 0;
     top: 71px;
     .contact-main {
       margin-bottom: 129px;
@@ -47,13 +57,7 @@
           padding: 0 0 14px;
 
           &::placeholder {
-            color: $text-white;
-            font-family: $font-family;
-            font-size: 12px;
-            font-weight: 300;
-            line-height: 14px; /* 116.667% */
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
+            @extend .placeholder;
           }
           &:focus {
             border-color: inherit;
@@ -84,6 +88,7 @@
       }
     }
     .contact-branch {
+      justify-content: space-between;
       gap: 60px;
       .h5 {
         color: $text-white;
@@ -133,6 +138,13 @@
         }
       }
     }
+    .contact-main .contact-submit {
+      padding: 10px 0;
+      a {
+        font-weight: 500;
+        font-size: 12px;
+      }
+    }
   }
 }
 // <!-- END CONTACT -->
@@ -144,7 +156,67 @@
     width: 100%;
     height: auto;
     aspect-ratio: 2/1;
-    filter: grayscale(100%) invert(92%) contrast(83%);
+    filter: grayscale(50%) invert(92%) contrast(83%);
   }
 }
 // <!-- END MAP -->
+
+@media (max-width: 991px) {
+  #fhm-contact {
+    .contact-wrap {
+      .contact-branch {
+        justify-content: center;
+      }
+    }
+  }
+  #fhm-map {
+    .container-fluid {
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  #fhm-contact {
+    .contact-wrap {
+      padding: 30px 0;
+      .contact-main .contact-form .form-control {
+        margin-bottom: 35px;
+        padding: 0;
+      }
+      .placeholder {
+        color: $text-white;
+        font-family: $font-family;
+        font-size: 10px;
+        font-weight: 300;
+        line-height: 14px; /* 116.667% */
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+      }
+      .contact-branch .branch-detail {
+        padding-left: 20px;
+      }
+      .contact-branch {
+        .h5 {
+          color: $text-white;
+          font-family: $font-Helvetica-light;
+          font-size: 15px;
+          font-weight: 700;
+          line-height: 28px; /* 155.556% */
+          letter-spacing: 0.027px;
+        }
+        .a {
+          color: $text-white;
+          font-family: $font-Helvetica-light;
+          font-size: 10px;
+          font-weight: 400;
+          line-height: 14px; /* 116.667% */
+          letter-spacing: 0.03px;
+        }
+      }
+    }
+  }
+  #fhm-map {
+    margin-bottom: 50px;
+  }
+}

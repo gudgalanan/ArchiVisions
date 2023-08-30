@@ -225,7 +225,8 @@
 #fhm-firgures {
   margin-bottom: 100px;
 }
-#fhm-firgures .firgures-number {
+#fhm-firgures .firgures-number,
+#fhm-firgures .firgures-number-wrap {
   color: #bfbfbf;
   font-feature-settings: "liga" off;
   font-family: "Poppins", sans-serif;

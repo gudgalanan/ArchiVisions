@@ -142,14 +142,33 @@
   }
 }
 #fhm-contact {
-  position: relative;
+  background-image: url(../assets/img/contact/contact-bg.png);
+  background-position: center;
 }
 #fhm-contact .contact-bg img {
   aspect-ratio: 4/3;
 }
 #fhm-contact .contact-wrap {
-  position: absolute;
+  padding: 100px 0;
   top: 71px;
+}
+#fhm-contact .contact-wrap .contact-main .contact-form .form-control::-moz-placeholder {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 14px; /* 116.667% */
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+#fhm-contact .contact-wrap .placeholder, #fhm-contact .contact-wrap .contact-main .contact-form .form-control::placeholder {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 14px; /* 116.667% */
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
 }
 #fhm-contact .contact-wrap .contact-main {
   margin-bottom: 129px;
@@ -185,24 +204,6 @@
   border-bottom: 1px solid #8a8a8a;
   padding: 0 0 14px;
 }
-#fhm-contact .contact-wrap .contact-main .contact-form .form-control::-moz-placeholder {
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  font-size: 12px;
-  font-weight: 300;
-  line-height: 14px; /* 116.667% */
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-}
-#fhm-contact .contact-wrap .contact-main .contact-form .form-control::placeholder {
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  font-size: 12px;
-  font-weight: 300;
-  line-height: 14px; /* 116.667% */
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-}
 #fhm-contact .contact-wrap .contact-main .contact-form .form-control:focus {
   border-color: inherit;
   box-shadow: none;
@@ -227,6 +228,7 @@
   text-transform: uppercase;
 }
 #fhm-contact .contact-wrap .contact-branch {
+  justify-content: space-between;
   gap: 60px;
 }
 #fhm-contact .contact-wrap .contact-branch .h5, #fhm-contact .contact-wrap .contact-branch .branch-detail .branch-detail-contact .contact-info h5, #fhm-contact .contact-wrap .contact-branch .branch-detail .branch-detail-location .location-info h5 {
@@ -260,6 +262,14 @@
 #fhm-contact .contact-wrap .contact-branch .branch-detail .branch-detail-contact .contact-info .contact-address {
   gap: 24px;
 }
+#fhm-contact .contact-wrap .contact-main .contact-submit {
+  padding: 10px 0;
+}
+#fhm-contact .contact-wrap .contact-main .contact-submit a {
+  font-weight: 500;
+  font-size: 12px;
+}
+
 #fhm-map {
   margin-bottom: 100px;
 }
@@ -267,5 +277,63 @@
   width: 100%;
   height: auto;
   aspect-ratio: 2/1;
-  filter: grayscale(100%) invert(92%) contrast(83%);
+  filter: grayscale(50%) invert(92%) contrast(83%);
+}
+
+@media (max-width: 991px) {
+  #fhm-contact .contact-wrap .contact-branch {
+    justify-content: center;
+  }
+  #fhm-map .container-fluid {
+    padding: 0;
+  }
+}
+@media (max-width: 575px) {
+  #fhm-contact .contact-wrap {
+    padding: 30px 0;
+  }
+  #fhm-contact .contact-wrap .contact-main .contact-form .form-control {
+    margin-bottom: 35px;
+    padding: 0;
+  }
+  #fhm-contact .contact-wrap .contact-main .contact-form .form-control::-moz-placeholder {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 14px; /* 116.667% */
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+  #fhm-contact .contact-wrap .placeholder, #fhm-contact .contact-wrap .contact-main .contact-form .form-control::placeholder {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 14px; /* 116.667% */
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+  #fhm-contact .contact-wrap .contact-branch .branch-detail {
+    padding-left: 20px;
+  }
+  #fhm-contact .contact-wrap .contact-branch .h5, #fhm-contact .contact-wrap .contact-branch .branch-detail .branch-detail-location .location-info h5, #fhm-contact .contact-wrap .contact-branch .branch-detail .branch-detail-contact .contact-info h5 {
+    color: #ffffff;
+    font-family: Helvetica-light, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 28px; /* 155.556% */
+    letter-spacing: 0.027px;
+  }
+  #fhm-contact .contact-wrap .contact-branch .a, #fhm-contact .contact-wrap .contact-branch .branch-detail .branch-detail-location .location-info a, #fhm-contact .contact-wrap .contact-branch .branch-detail .branch-detail-contact .contact-info .contact-address a {
+    color: #ffffff;
+    font-family: Helvetica-light, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px; /* 116.667% */
+    letter-spacing: 0.03px;
+  }
+  #fhm-map {
+    margin-bottom: 50px;
+  }
 }

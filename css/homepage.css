@@ -301,7 +301,8 @@
   min-height: 250px;
   background-color: rgba(199, 132, 16, 0.3019607843);
 }
-#fhm-firgures .firgures-number {
+#fhm-firgures .firgures-number,
+#fhm-firgures .firgures-number-wrap {
   color: #bfbfbf;
   font-feature-settings: "liga" off;
   font-family: "Poppins", sans-serif;

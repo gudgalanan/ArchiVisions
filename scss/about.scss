@@ -94,7 +94,8 @@
 // <!-- START FIRGURES -->
 #fhm-firgures {
   margin-bottom: 100px;
-  .firgures-number {
+  .firgures-number,
+  .firgures-number-wrap {
     color: $text-dark-white;
     font-feature-settings: "liga" off;
     font-family: $font-family;
