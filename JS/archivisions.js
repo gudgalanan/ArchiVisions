@@ -1,4 +1,24 @@
-// // SLIDE
+// NAVBAR CLOSING
+document.addEventListener("DOMContentLoaded", function () {
+  // Select the navigation menu and the button that toggles it
+  const navMenu = document.querySelector(".navbar-collapse");
+  const navButton = document.querySelector(".navbar-toggler");
+
+  // Add a click event listener to the entire document
+  document.addEventListener("click", function (event) {
+    // Check if the navigation menu is open and if the click did not originate from the menu or the button
+    if (
+      navMenu.classList.contains("show") &&
+      !navMenu.contains(event.target) &&
+      event.target !== navButton
+    ) {
+      // Close the navigation menu by removing the "show" class
+      navMenu.classList.remove("show");
+    }
+  });
+});
+
+// // SLIDE _ GALLERY
 $(document).ready(function () {
   const galleryList = $("#galleryList");
   const slideWidth = 362 + 37;
@@ -24,8 +44,8 @@ $(document).ready(function () {
   });
 });
 
-// DRAGGABLE
 document.addEventListener("DOMContentLoaded", function () {
+  // // DRAGGABLE _ FEEDBACK / GALLERY
   const galleryList = document.getElementById("galleryList");
   const feedbackList = document.querySelector(".feedback-list");
 
@@ -34,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let galleryStartX, galleryScrollLeft;
   let feedbackStartX, feedbackScrollLeft;
 
-  // Event listeners for the galleryList element
+  // GALLERY
   galleryList.addEventListener("mousedown", (e) => {
     isGalleryDragging = true;
     galleryStartX = e.pageX - galleryList.offsetLeft;
@@ -53,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
     galleryList.scrollLeft = galleryScrollLeft - walk;
   });
 
-  // Event listeners for the feedbackList element
+  // FEEDBACK
   feedbackList.addEventListener("mousedown", (e) => {
     isFeedbackDragging = true;
     feedbackStartX = e.clientX;
@@ -78,27 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// NAVBAR CLOSING
-document.addEventListener("DOMContentLoaded", function () {
-  // Select the navigation menu and the button that toggles it
-  const navMenu = document.querySelector(".navbar-collapse");
-  const navButton = document.querySelector(".navbar-toggler");
-
-  // Add a click event listener to the entire document
-  document.addEventListener("click", function (event) {
-    // Check if the navigation menu is open and if the click did not originate from the menu or the button
-    if (
-      navMenu.classList.contains("show") &&
-      !navMenu.contains(event.target) &&
-      event.target !== navButton
-    ) {
-      // Close the navigation menu by removing the "show" class
-      navMenu.classList.remove("show");
-    }
-  });
-});
-
-// VIDEO;
+// VIDEO _ REGISTER
 // Function to handle video popup click
 $(".video").on("click", function (e) {
   e.preventDefault();

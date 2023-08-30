@@ -344,11 +344,13 @@
     }
   }
   .award-list {
+    justify-content: center;
     flex-wrap: wrap;
     gap: 34px;
     overflow-x: auto;
     scroll-behavior: smooth; /* Enable smooth scrolling */
     white-space: nowrap;
+
     .award-item {
       display: flex;
       align-items: center;
@@ -463,6 +465,7 @@
     margin: 20px 0 120px;
   }
   #fhm-discover {
+    margin-bottom: 540px;
     .discover-banner {
       .discover-banner-content-wrap {
         top: 100px;
@@ -473,6 +476,7 @@
     }
     .discover-container {
       .discover-container-wrap {
+        padding-top: 144px;
         .discover-container-content {
           h6 {
             @extend .h6;
@@ -526,7 +530,7 @@
   }
   #fhm-intro {
     .intro-bg {
-      top: -15px;
+      top: 0px;
       img {
         border-top-left-radius: 100px;
       }
@@ -546,13 +550,18 @@
   }
   #fhm-firgures {
     height: unset;
+    margin-bottom: 80px;
     .firgures-number {
       font-size: 50px;
       line-height: 60px;
     }
   }
   #fhm-intro-2 {
+    .intro-bg {
+      top: 22px;
+    }
     .intro-content {
+      margin-top: 0;
       margin-bottom: 100px;
       h6 {
         @extend .h6-ipad;
@@ -567,7 +576,7 @@
     }
   }
   #fhm-discover {
-    margin-bottom: 360px;
+    margin-bottom: 420px;
     .discover-banner {
       .discover-banner-content-wrap {
         top: 100px;
@@ -617,21 +626,6 @@
         @extend .h3-ipad;
       }
     }
-    .award-list {
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-      scrollbar-width: none; /* Hide scrollbar for Firefox */
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
-      &::-webkit-scrollbar {
-        display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
-      }
-      .award-item {
-        margin-right: 5px;
-        flex: 0 0 auto;
-      }
-    }
   }
   #fhm-network {
     margin: 50px 0;
@@ -639,6 +633,28 @@
       margin-bottom: 50px;
       h3 {
         @extend .h3-ipad;
+      }
+    }
+  }
+}
+
+@media (max-width: 819px) {
+  #fhm-award {
+    margin: 0;
+    overflow: hidden;
+    .container {
+      .award-list {
+        justify-content: unset;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        // width: 100%;
+        gap: 10px; /* Adjust the gap between slides as needed */
+        user-select: none;
+        .award-item {
+          min-width: 200px;
+          height: 120px;
+        }
       }
     }
   }
@@ -743,8 +759,14 @@
     }
   }
   #fhm-intro {
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column-reverse;
+    .intro-bg {
+      position: relative;
+    }
     .intro-content {
-      margin-bottom: 100px;
+      margin: 0px 0 20px;
       h2 {
         @extend .h3-ipad-sm;
       }
@@ -754,25 +776,25 @@
     }
   }
   #fhm-intro-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    .intro-bg {
+      position: relative;
+    }
     .intro-content {
       margin-bottom: 100px;
-      h6 {
-        text-align: center;
-        // @extend .h6-ipad-sm;
-      }
+
       h2 {
-        text-align: center;
         @extend .h3-ipad-sm;
-      }
-      p,
-      .intro-content-list .intro-content-item span {
-        // @extend .p-ipad-sm;
       }
     }
   }
   #fhm-discover {
+    margin-bottom: 500px;
     .discover-banner {
       .discover-banner-content-wrap {
+        top: 30px;
         h2 {
           @extend .h3-ipad-sm;
         }
@@ -781,6 +803,7 @@
     .discover-container {
       .discover-container-wrap {
         top: -150px;
+        padding-top: 100px;
         .discover-container-content {
           h3 {
             @extend .h3-ipad-sm;
@@ -793,21 +816,6 @@
     .award-heading {
       h3 {
         @extend .h3-ipad-sm;
-      }
-    }
-    .award-list {
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-      scrollbar-width: none; /* Hide scrollbar for Firefox */
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
-      &::-webkit-scrollbar {
-        display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
-      }
-      .award-item {
-        margin-right: 5px;
-        flex: 0 0 auto;
       }
     }
   }
@@ -861,7 +869,7 @@
       position: relative;
     }
     .intro-content {
-      margin: 65px 0 100px;
+      margin: 65px 0 20px;
       text-align: start;
 
       h2 {
@@ -885,6 +893,7 @@
     }
   }
   #fhm-intro-2 {
+    gap: 0px;
     .intro-bg {
       position: unset;
     }
@@ -909,6 +918,7 @@
     }
   }
   #fhm-discover {
+    margin-bottom: 430px;
     .discover-banner {
       .discover-banner-content-wrap {
         top: 20px;
@@ -951,6 +961,17 @@
         @extend .h3-s;
       }
     }
+    .award-list {
+      .award-item {
+        width: 131px;
+        height: 58px;
+        margin: 0;
+        svg {
+          width: 115px;
+          height: auto;
+        }
+      }
+    }
   }
   #fhm-network {
     .network-heading {
@@ -981,8 +1002,9 @@
     }
   }
   #fhm-intro {
+    margin-bottom: 50px;
     .intro-content {
-      margin: 50px 0 50px;
+      margin: 50px 0 10px;
       h2 {
         @extend .h3-xs;
       }
@@ -1056,5 +1078,12 @@
     //     }
     //   }
     // }
+  }
+  #fhm-network {
+    .network-heading {
+      h3 {
+        @extend .h3-xs;
+      }
+    }
   }
 }

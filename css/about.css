@@ -430,6 +430,7 @@
   text-transform: capitalize;
 }
 #fhm-award .award-list {
+  justify-content: center;
   flex-wrap: wrap;
   gap: 34px;
   overflow-x: auto;
@@ -510,8 +511,14 @@
   #fhm-intro-2 .intro-content {
     margin: 20px 0 120px;
   }
+  #fhm-discover {
+    margin-bottom: 540px;
+  }
   #fhm-discover .discover-banner .discover-banner-content-wrap {
     top: 100px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap {
+    padding-top: 144px;
   }
   #fhm-discover .discover-container .discover-container-wrap .discover-container-img a {
     display: none;
@@ -545,7 +552,7 @@
     line-height: 50px;
   }
   #fhm-intro .intro-bg {
-    top: -15px;
+    top: 0px;
   }
   #fhm-intro .intro-bg img {
     border-top-left-radius: 100px;
@@ -555,16 +562,21 @@
   }
   #fhm-firgures {
     height: unset;
+    margin-bottom: 80px;
   }
   #fhm-firgures .firgures-number {
     font-size: 50px;
     line-height: 60px;
   }
+  #fhm-intro-2 .intro-bg {
+    top: 22px;
+  }
   #fhm-intro-2 .intro-content {
+    margin-top: 0;
     margin-bottom: 100px;
   }
   #fhm-discover {
-    margin-bottom: 360px;
+    margin-bottom: 420px;
   }
   #fhm-discover .discover-banner .discover-banner-content-wrap {
     top: 100px;
@@ -588,26 +600,31 @@
   #fhm-award {
     padding: 50px 0 33px;
   }
-  #fhm-award .award-list {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
-  }
-  #fhm-award .award-list::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
-  }
-  #fhm-award .award-list .award-item {
-    margin-right: 5px;
-    flex: 0 0 auto;
-  }
   #fhm-network {
     margin: 50px 0;
   }
   #fhm-network .network-heading {
     margin-bottom: 50px;
+  }
+}
+@media (max-width: 819px) {
+  #fhm-award {
+    margin: 0;
+    overflow: hidden;
+  }
+  #fhm-award .container .award-list {
+    justify-content: unset;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    gap: 10px; /* Adjust the gap between slides as needed */
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  #fhm-award .container .award-list .award-item {
+    min-width: 200px;
+    height: 120px;
   }
 }
 @media (min-width: 767px) and (max-width: 819px) {
@@ -663,38 +680,40 @@
   #fhm-banner .banner-content .banner-content-button {
     margin-top: 9px;
   }
+  #fhm-intro {
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #fhm-intro .intro-bg {
+    position: relative;
+  }
   #fhm-intro .intro-content {
-    margin-bottom: 100px;
+    margin: 0px 0 20px;
   }
   #fhm-intro .intro-content p {
     text-align: justify;
   }
+  #fhm-intro-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  #fhm-intro-2 .intro-bg {
+    position: relative;
+  }
   #fhm-intro-2 .intro-content {
     margin-bottom: 100px;
   }
-  #fhm-intro-2 .intro-content h6 {
-    text-align: center;
+  #fhm-discover {
+    margin-bottom: 500px;
   }
-  #fhm-intro-2 .intro-content h2 {
-    text-align: center;
+  #fhm-discover .discover-banner .discover-banner-content-wrap {
+    top: 30px;
   }
   #fhm-discover .discover-container .discover-container-wrap {
     top: -150px;
-  }
-  #fhm-award .award-list {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
-  }
-  #fhm-award .award-list::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
-  }
-  #fhm-award .award-list .award-item {
-    margin-right: 5px;
-    flex: 0 0 auto;
+    padding-top: 100px;
   }
   #fhm-network .network-heading {
     margin-bottom: 20px;
@@ -740,7 +759,7 @@
     position: relative;
   }
   #fhm-intro .intro-content {
-    margin: 65px 0 100px;
+    margin: 65px 0 20px;
     text-align: start;
   }
   #fhm-intro .intro-content .intro-content-list .intro-content-item {
@@ -751,6 +770,9 @@
   }
   #fhm-firgures .col-6 {
     text-align: center;
+  }
+  #fhm-intro-2 {
+    gap: 0px;
   }
   #fhm-intro-2 .intro-bg {
     position: unset;
@@ -766,6 +788,9 @@
   }
   #fhm-intro-2 .intro-content .intro-content-list .intro-content-item {
     margin: 0;
+  }
+  #fhm-discover {
+    margin-bottom: 430px;
   }
   #fhm-discover .discover-banner .discover-banner-content-wrap {
     top: 20px;
@@ -790,9 +815,18 @@
   #fhm-discover .discover-container .discover-container-wrap .discover-container-img img {
     height: 200px;
   }
+  #fhm-award .award-list .award-item {
+    width: 131px;
+    height: 58px;
+    margin: 0;
+  }
+  #fhm-award .award-list .award-item svg {
+    width: 115px;
+    height: auto;
+  }
 }
 @media (max-width: 424px) {
-  .h3-xs, #fhm-award .award-heading h3, #fhm-discover .discover-container .discover-container-wrap .discover-container-content h3, #fhm-discover .discover-banner .discover-banner-content-wrap h2, #fhm-intro-2 .intro-content h2, #fhm-intro .intro-content h2 {
+  .h3-xs, #fhm-network .network-heading h3, #fhm-award .award-heading h3, #fhm-discover .discover-container .discover-container-wrap .discover-container-content h3, #fhm-discover .discover-banner .discover-banner-content-wrap h2, #fhm-intro-2 .intro-content h2, #fhm-intro .intro-content h2 {
     font-size: 17px;
     line-height: 25px;
   }
@@ -808,8 +842,11 @@
   #fhm-banner .banner-content h3 {
     font-size: 19px;
   }
+  #fhm-intro {
+    margin-bottom: 50px;
+  }
   #fhm-intro .intro-content {
-    margin: 50px 0 50px;
+    margin: 50px 0 10px;
   }
   #fhm-discover {
     margin-bottom: 500px;
