@@ -1185,3 +1185,22 @@
     font-size: 9px;
   }
 }
+@media (max-width: 321px) {
+  .h3-xxs, #fhm-blog .blog-heading h3, #fhm-gallery .gallery-heading h3, #fhm-feedback .feedback-heading h3, #fhm-project .project-heading .project-heading-main h3, #fhm-discover .discover-container .discover-container-wrap .discover-container-content h3, #fhm-discover .discover-banner .discover-banner-content-wrap h2, #fhm-services .services-heading h3, #fhm-intro h2 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  #fhm-banner .banner-content {
+    top: 5px;
+  }
+  #fhm-banner .banner-content h1 {
+    font-size: 21px;
+    line-height: 23px;
+  }
+  #fhm-banner .banner-content .banner-content-button {
+    margin-top: 5px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-content {
+    margin-bottom: 30px;
+  }
+}

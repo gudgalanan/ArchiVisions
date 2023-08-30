@@ -1736,3 +1736,85 @@
     }
   }
 }
+@media (max-width: 321px) {
+  .h3-xxs {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  #fhm-banner {
+    .banner-content {
+      top: 5px;
+      h1 {
+        font-size: 21px;
+        line-height: 23px;
+      }
+      .banner-content-button {
+        margin-top: 5px;
+      }
+    }
+  }
+  #fhm-intro {
+    h2 {
+      @extend .h3-xxs;
+    }
+  }
+  #fhm-services {
+    .services-heading {
+      h3 {
+        @extend .h3-xxs;
+      }
+    }
+  }
+
+  #fhm-discover {
+    .discover-banner {
+      .discover-banner-content-wrap {
+        h2 {
+          @extend .h3-xxs;
+        }
+      }
+    }
+    .discover-container {
+      .discover-container-wrap {
+        .discover-container-content {
+          margin-bottom: 30px;
+          h3 {
+            @extend .h3-xxs;
+          }
+        }
+      }
+    }
+  }
+  #fhm-project {
+    .project-heading {
+      .project-heading-main {
+        h3 {
+          @extend .h3-xxs;
+        }
+      }
+    }
+  }
+
+  #fhm-feedback {
+    .feedback-heading {
+      h3 {
+        @extend .h3-xxs;
+      }
+    }
+  }
+  #fhm-gallery {
+    .gallery-heading {
+      h3 {
+        @extend .h3-xxs;
+      }
+    }
+  }
+  #fhm-blog {
+    .blog-heading {
+      h3 {
+        @extend .h3-xxs;
+      }
+    }
+  }
+}
