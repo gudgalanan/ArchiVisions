@@ -74,6 +74,17 @@
     .project-item {
       .project-item-img {
         position: relative;
+        a {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          display: block;
+          -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            @extend .hover-img;
+          }
+        }
         .project-item-img-name {
           position: absolute;
           bottom: -27px;
