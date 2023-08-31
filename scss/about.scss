@@ -5,7 +5,6 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1600/797;
-  margin-bottom: 100px;
   img {
     opacity: 0.7;
   }
@@ -90,7 +89,6 @@
 
 // <!-- START FIRGURES -->
 #fhm-firgures {
-  margin-bottom: 100px;
   .firgures-number,
   .firgures-number-wrap {
     color: $text-dark-white;
@@ -114,6 +112,7 @@
 // <!-- START INTRO SECOND -->
 #fhm-intro-2 {
   position: relative;
+  margin-top: 100px;
   .intro-bg {
     position: absolute;
     max-width: 810px;
@@ -452,13 +451,11 @@
   }
   #fhm-intro {
     .intro-bg {
-      top: -50px;
-      img {
-        border-top-left-radius: 150px;
-      }
+      top: 50%;
+      transform: translateY(-50%);
     }
     .intro-content {
-      margin: 140px 0;
+      margin: 160px 0;
       h6 {
         @extend .h6;
       }
@@ -471,8 +468,15 @@
       }
     }
   }
-  #fhm-intro-2 .intro-content {
-    margin: 20px 0 120px;
+  #fhm-intro-2 {
+    margin-top: 0;
+    .intro-bg {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .intro-content {
+      margin: 155px 0;
+    }
   }
   #fhm-discover {
     margin-bottom: 540px;
@@ -528,7 +532,8 @@
   }
   #fhm-banner {
     .banner-content {
-      top: 30%;
+      top: 50%;
+      transform: translateY(-50%);
       text-align: center;
 
       h1 {
@@ -539,14 +544,8 @@
     }
   }
   #fhm-intro {
-    .intro-bg {
-      top: 0px;
-      img {
-        border-top-left-radius: 100px;
-      }
-    }
     .intro-content {
-      margin: 120px 0 90px;
+      margin: 100px 0;
       h6 {
         @extend .h6-ipad;
       }
@@ -560,19 +559,14 @@
   }
   #fhm-firgures {
     height: unset;
-    margin-bottom: 80px;
     .firgures-number {
       font-size: 50px;
       line-height: 60px;
     }
   }
   #fhm-intro-2 {
-    .intro-bg {
-      top: 22px;
-    }
     .intro-content {
-      margin-top: 0;
-      margin-bottom: 100px;
+      margin: 100px 0;
       h6 {
         @extend .h6-ipad;
       }
@@ -649,28 +643,6 @@
 }
 
 @media (max-width: 819px) {
-  #fhm-award {
-    margin: 0;
-    overflow: hidden;
-    .container {
-      .award-list {
-        justify-content: unset;
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-        scroll-behavior: smooth;
-        // width: 100%;
-        gap: 10px; /* Adjust the gap between slides as needed */
-        user-select: none;
-        .award-item {
-          min-width: 200px;
-          height: 120px;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 767px) and (max-width: 819px) {
   .h3-ipad-mini {
     font-size: 25px;
     line-height: 30px;
@@ -686,22 +658,20 @@
       aspect-ratio: 4/5;
     }
     .intro-content {
-      margin: 120px 0 130px;
+      margin: 130px 0;
       h2 {
         @extend .h3-ipad-mini;
       }
     }
   }
-  #fhm-firgures {
-    margin-bottom: 60px;
-  }
+
   #fhm-intro-2 {
     .intro-bg img {
       aspect-ratio: 4/5;
     }
     .intro-content {
-      margin-top: 50px;
-      margin-bottom: 100px;
+      margin: 130px 0;
+
       h2 {
         @extend .h3-ipad-mini;
       }
@@ -739,12 +709,30 @@
     }
   }
   #fhm-award {
+    margin: 0;
+    overflow: hidden;
     .award-heading {
       h3 {
         @extend .h3-ipad-mini;
       }
     }
+    .container {
+      .award-list {
+        justify-content: unset;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        // width: 100%;
+        gap: 10px; /* Adjust the gap between slides as needed */
+        user-select: none;
+        .award-item {
+          min-width: 200px;
+          height: 120px;
+        }
+      }
+    }
   }
+
   #fhm-network {
     .network-heading {
       margin-bottom: 50px;
@@ -762,21 +750,20 @@
   }
   #fhm-banner {
     .banner-content {
-      top: 45px;
       .banner-content-button {
         margin-top: 9px;
       }
     }
   }
   #fhm-intro {
-    margin-bottom: 80px;
     display: flex;
     flex-direction: column-reverse;
     .intro-bg {
       position: relative;
+      transform: none;
     }
     .intro-content {
-      margin: 0px 0 20px;
+      margin: 70px 0 10px;
       h2 {
         @extend .h3-ipad-sm;
       }
@@ -784,15 +771,18 @@
       }
     }
   }
+  #fhm-firgures {
+    margin: 70px 0;
+  }
   #fhm-intro-2 {
     display: flex;
     flex-direction: column;
-    gap: 50px;
     .intro-bg {
       position: relative;
+      transform: none;
     }
     .intro-content {
-      margin-bottom: 100px;
+      margin: 10px 0 70px;
 
       h2 {
         @extend .h3-ipad-sm;
@@ -803,9 +793,11 @@
     margin-bottom: 500px;
     .discover-banner {
       .discover-banner-content-wrap {
-        top: 30px;
+        top: 25%;
+        transform: translateY(-50%);
         h2 {
           @extend .h3-ipad-sm;
+          margin: 5px 0;
         }
       }
     }
@@ -861,7 +853,6 @@
     }
     .banner-content {
       text-align: center;
-      top: 40px;
       h1 {
         font-size: 35px;
       }
@@ -886,6 +877,7 @@
       }
       p {
         @extend .p-s;
+        margin-bottom: 0;
       }
       .intro-content-list .intro-content-item {
         margin: 0;
@@ -896,7 +888,6 @@
     }
   }
   #fhm-firgures {
-    margin: 50px 0;
     .col-6 {
       text-align: center;
     }
@@ -917,6 +908,7 @@
       }
       p {
         @extend .p-s;
+        margin-bottom: 0;
       }
       .intro-content-list .intro-content-item {
         margin: 0;
@@ -930,7 +922,7 @@
     margin-bottom: 430px;
     .discover-banner {
       .discover-banner-content-wrap {
-        top: 20px;
+        top: 35%;
         h2 {
           @extend .h3-s;
           margin-bottom: 15px;
@@ -999,7 +991,6 @@
     .banner-content {
       min-width: 320px;
       left: 0;
-      top: 30px;
       h1 {
         font-size: 25px;
         line-height: 25px;
@@ -1029,7 +1020,7 @@
     margin-bottom: 500px;
     .discover-banner {
       .discover-banner-content-wrap {
-        top: 10px;
+        top: 40%;
         h2 {
           @extend .h3-xs;
           margin-bottom: 10px;

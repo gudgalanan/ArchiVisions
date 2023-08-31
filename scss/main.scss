@@ -790,7 +790,6 @@ button {
 }
 
 @media (max-width: 767px) {
-  // START HEADER
   .h3-ipad-sm {
     font-size: 23px;
     line-height: 38px;
@@ -802,8 +801,6 @@ button {
       }
     }
   }
-  // END HEADER
-
   #fhm-register {
     .register-banner {
       position: relative;
@@ -892,6 +889,7 @@ button {
     }
   }
   #fhm-footer {
+    position: unset;
     margin-top: 50px;
     .footer-list .footer-item:last-child {
       gap: 10px;

@@ -906,6 +906,7 @@ button:focus-visible {
     letter-spacing: 0.07px;
   }
   #fhm-footer {
+    position: unset;
     margin-top: 50px;
   }
   #fhm-footer .footer-list .footer-item:last-child {
