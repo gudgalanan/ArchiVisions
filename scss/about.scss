@@ -287,6 +287,7 @@
             transition-delay: 0.2s;
             transition-duration: 0.2s;
             h5 {
+              text-wrap: nowrap;
               color: $text-white;
               font-family: $font-family;
               font-size: 14px;

@@ -430,6 +430,7 @@
   transition-duration: 0.2s;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img .discover-container-img-content .discover-container-img-content-detail h5 {
+  text-wrap: nowrap;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
