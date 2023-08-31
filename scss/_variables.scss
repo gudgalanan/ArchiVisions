@@ -43,6 +43,7 @@ $bg-feedback: #2e2e2e;
 $bg-box-gray: #303030;
 $bg-main-btn: #c78410;
 $highlight-color: #c78410;
+$text-project: #a1a1a1;
 $text-black: #000;
 $text-white: #ffffff;
 $text-blur-white: rgba(255, 255, 255, 0.6);
@@ -172,9 +173,11 @@ $easeInOut: cubic-bezier(0.42, 0, 0.58, 1);
 @keyframes scroll {
   0% {
     margin-right: 0;
+    transition: all 0.1s ease;
   }
   100% {
     margin-right: 100%;
+    transition: all 0.1s ease;
   }
 }
 @keyframes borderRadius {

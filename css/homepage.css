@@ -119,9 +119,11 @@
 @keyframes scroll {
   0% {
     margin-right: 0;
+    transition: all 0.1s ease;
   }
   100% {
     margin-right: 100%;
+    transition: all 0.1s ease;
   }
 }
 @keyframes borderRadius {
@@ -292,8 +294,8 @@
 #fhm-services .services-main .services-item {
   gap: 46px;
 }
-#fhm-services .services-main .services-item .service-item-wrap {
-  transition: all ease 0.3s;
+#fhm-services .services-main .services-item:hover {
+  border-left: 1px solid #c78410;
 }
 #fhm-services .services-main .services-item:hover .service-item-wrap {
   border-top-right-radius: 100px;
@@ -303,6 +305,7 @@
 }
 #fhm-services .services-main .services-item .service-item-wrap {
   display: block;
+  transition: all ease 0.3s;
   background-color: #202020;
   padding: 43px 35px 45px;
 }

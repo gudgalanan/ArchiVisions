@@ -62,9 +62,9 @@ button {
   }
 }
 
-.container {
-  max-width: 1160px;
-}
+// .container {
+//   max-width: 1160px;
+// }
 // END RESET
 .h6-text {
   font-family: $font-family;
@@ -570,6 +570,9 @@ button {
       }
     }
   }
+  #fhm-footer {
+    top: 0;
+  }
 }
 
 @media only screen and (max-width: 991px) {
@@ -685,42 +688,15 @@ button {
     }
   }
   // END REGISTER
-
-  // START FOOTER
+}
+@media (min-width: 575px) and (max-width: 991px) {
   #fhm-footer {
-    margin-bottom: 50px;
+    position: initial;
     .footer-list {
-      justify-content: center;
-      .footer-logo {
-        h3 {
-          text-align: start;
-        }
-      }
-      .footer-item {
-        &:nth-child(2) {
-          a {
-            margin-bottom: 0;
-            margin-left: 50px;
-          }
-        }
-
-        &:last-child {
-          margin-top: 40px;
-          justify-content: space-between;
-          gap: 35px;
-          a {
-            margin-left: 50px;
-            svg {
-              path {
-                fill: $highlight-color;
-              }
-            }
-          }
-        }
-      }
+      justify-content: space-between;
+      row-gap: 25px;
     }
   }
-  // END FOOTER
 }
 
 @media (min-width: 767px) and (max-width: 819px) {
@@ -814,10 +790,12 @@ button {
       }
     }
     .register-content {
+      margin-bottom: 80px;
       .register-content-wrap {
         position: initial;
+
         .video-wrapper {
-          margin-bottom: 50px;
+          margin-bottom: 10px;
           .video-container {
             video {
               aspect-ratio: 277/273;
@@ -888,13 +866,6 @@ button {
       }
     }
   }
-  #fhm-footer {
-    position: unset;
-    margin-top: 50px;
-    .footer-list .footer-item:last-child {
-      gap: 10px;
-    }
-  }
 }
 
 @media (max-width: 575px) {
@@ -943,8 +914,10 @@ button {
     }
   }
   #fhm-footer {
+    position: initial;
     margin: 50px 0 20px;
     .footer-list {
+      justify-content: center;
       .footer-logo {
         display: flex;
         justify-content: center;

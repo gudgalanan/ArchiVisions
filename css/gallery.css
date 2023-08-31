@@ -119,9 +119,11 @@
 @keyframes scroll {
   0% {
     margin-right: 0;
+    transition: all 0.1s ease;
   }
   100% {
     margin-right: 100%;
+    transition: all 0.1s ease;
   }
 }
 @keyframes borderRadius {
@@ -178,6 +180,7 @@
 #fhm-carousel .carousel-wrap .carousel-wrap-list {
   display: inline-flex;
   transition: all 0.3s ease-in-out;
+  animation: scroll 20s linear infinite;
 }
 #fhm-carousel .carousel-wrap .carousel-wrap-list:hover {
   animation-play-state: paused;
@@ -307,9 +310,14 @@
   }
   #fhm-gallery .gallery-heading .gallery-heading-list .gallery-list-item {
     gap: 40px;
+    padding: 0;
   }
 }
 @media (max-width: 575px) {
+  #fhm-gallery .gallery-heading h3 {
+    font-size: 30px;
+    margin-bottom: 7px;
+  }
   #fhm-gallery .gallery-heading .gallery-heading-list {
     justify-content: unset;
     overflow-x: scroll;
@@ -332,5 +340,9 @@
   }
   #fhm-gallery .gallery-main .row:nth-child(3) .col-5 {
     row-gap: 10px;
+  }
+  #fhm-gallery #fhm-gallery .gallery-btn a {
+    font-size: 13px;
+    padding: 15px 0;
   }
 }

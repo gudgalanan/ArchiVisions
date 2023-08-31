@@ -139,19 +139,19 @@
     row-gap: 40px;
     .services-item {
       gap: 46px;
-      .service-item-wrap {
-        transition: all ease 0.3s;
-      }
       &:hover {
+        border-left: 1px solid $highlight-color;
         .service-item-wrap {
           border-top-right-radius: 100px;
         }
       }
+
       .services-item-bg {
         background-color: $highlight-color;
       }
       .service-item-wrap {
         display: block;
+        transition: all ease 0.3s;
 
         background-color: $bg-element-gray;
         padding: 43px 35px 45px;

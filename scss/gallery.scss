@@ -15,7 +15,7 @@
       display: inline-flex;
       -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
-      // animation: scroll 20s linear infinite;
+      animation: scroll 20s linear infinite;
 
       &:hover {
         animation-play-state: paused;
@@ -163,18 +163,25 @@
   }
   #fhm-gallery .gallery-heading .gallery-heading-list .gallery-list-item {
     gap: 40px;
+    padding: 0;
   }
 }
 
 @media (max-width: 575px) {
   #fhm-gallery {
-    .gallery-heading .gallery-heading-list {
-      justify-content: unset;
-      overflow-x: scroll;
-      .gallery-list-item {
-        gap: 24px;
-        a {
-          font-size: 20px;
+    .gallery-heading {
+      h3 {
+        font-size: 30px;
+        margin-bottom: 7px;
+      }
+      .gallery-heading-list {
+        justify-content: unset;
+        overflow-x: scroll;
+        .gallery-list-item {
+          gap: 24px;
+          a {
+            font-size: 20px;
+          }
         }
       }
     }
@@ -192,6 +199,10 @@
           row-gap: 10px;
         }
       }
+    }
+    #fhm-gallery .gallery-btn a {
+      font-size: 13px;
+      padding: 15px 0;
     }
   }
 }

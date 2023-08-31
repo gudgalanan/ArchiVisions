@@ -119,9 +119,11 @@
 @keyframes scroll {
   0% {
     margin-right: 0;
+    transition: all 0.1s ease;
   }
   100% {
     margin-right: 100%;
+    transition: all 0.1s ease;
   }
 }
 @keyframes borderRadius {
@@ -227,10 +229,6 @@ h6 {
 
 button:focus-visible {
   outline: none;
-}
-
-.container {
-  max-width: 1160px;
 }
 
 .h6-text, #fhm-register .register-banner .register-banner-heading h6 {
@@ -660,6 +658,9 @@ button:focus-visible {
   #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content {
     padding: 0 40px;
   }
+  #fhm-footer {
+    top: 0;
+  }
 }
 @media only screen and (max-width: 991px) {
   .h6-ipad, #fhm-register .register-banner .register-banner-heading h6 {
@@ -750,29 +751,14 @@ button:focus-visible {
   #fhm-register .register-content .register-content-wrap #video-popup-container {
     width: 95%;
   }
+}
+@media (min-width: 575px) and (max-width: 991px) {
   #fhm-footer {
-    margin-bottom: 50px;
+    position: initial;
   }
   #fhm-footer .footer-list {
-    justify-content: center;
-  }
-  #fhm-footer .footer-list .footer-logo h3 {
-    text-align: start;
-  }
-  #fhm-footer .footer-list .footer-item:nth-child(2) a {
-    margin-bottom: 0;
-    margin-left: 50px;
-  }
-  #fhm-footer .footer-list .footer-item:last-child {
-    margin-top: 40px;
     justify-content: space-between;
-    gap: 35px;
-  }
-  #fhm-footer .footer-list .footer-item:last-child a {
-    margin-left: 50px;
-  }
-  #fhm-footer .footer-list .footer-item:last-child a svg path {
-    fill: #c78410;
+    row-gap: 25px;
   }
 }
 @media (min-width: 767px) and (max-width: 819px) {
@@ -840,11 +826,14 @@ button:focus-visible {
     top: 50%;
     transform: translateY(-50%);
   }
+  #fhm-register .register-content {
+    margin-bottom: 80px;
+  }
   #fhm-register .register-content .register-content-wrap {
     position: initial;
   }
   #fhm-register .register-content .register-content-wrap .video-wrapper {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
   #fhm-register .register-content .register-content-wrap .video-wrapper .video-container video {
     aspect-ratio: 277/273;
@@ -905,13 +894,6 @@ button:focus-visible {
     line-height: 24px; /* 171.429% */
     letter-spacing: 0.07px;
   }
-  #fhm-footer {
-    position: unset;
-    margin-top: 50px;
-  }
-  #fhm-footer .footer-list .footer-item:last-child {
-    gap: 10px;
-  }
 }
 @media (max-width: 575px) {
   .p-s {
@@ -947,7 +929,11 @@ button:focus-visible {
     aspect-ratio: 277/322;
   }
   #fhm-footer {
+    position: initial;
     margin: 50px 0 20px;
+  }
+  #fhm-footer .footer-list {
+    justify-content: center;
   }
   #fhm-footer .footer-list .footer-logo {
     display: flex;
