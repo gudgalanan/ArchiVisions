@@ -7,7 +7,7 @@
   aspect-ratio: 1600/797;
   margin-bottom: 100px;
   img {
-    opacity: 0.8;
+    opacity: 0.7;
   }
 
   .banner-content {
@@ -21,7 +21,6 @@
       line-height: 74px; /* 115.625% */
       letter-spacing: 6.4px;
       text-transform: uppercase;
-
       max-width: 308px;
     }
     h3 {
@@ -140,7 +139,7 @@
     }
     p {
       margin: 3px 0 26px;
-      color: $text-dark-white;
+      color: $text-white;
       font-family: $font-family;
       font-size: 14px;
       font-weight: 400;
@@ -174,7 +173,7 @@
       aspect-ratio: 400/185;
     }
     .discover-banner-content-wrap {
-      top: 244px;
+      top: 180px;
       h6 {
         @extend .h6-text;
         color: $text-white;
@@ -355,7 +354,6 @@
       width: 200px;
       height: 120px;
       background-color: $bg-box-gray;
-      margin-bottom: 37px;
       &:hover {
         svg {
           path {
@@ -397,6 +395,18 @@
   }
 }
 // <!-- END NETWORK -->
+@media (min-width: 1400px) {
+  #fhm-intro .intro-content {
+    width: 414px;
+  }
+  #fhm-intro-2 .intro-content {
+    padding-left: 74px;
+    h2,
+    p {
+      width: 402px;
+    }
+  }
+}
 
 @media only screen and (max-width: 1366px) {
   #fhm-banner {

@@ -107,6 +107,15 @@
   fill: #c78410;
 }
 
+.hover-img img {
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+.hover-img:hover img {
+  transform: scale(1.2);
+  opacity: 0.9;
+}
+
 @keyframes scroll {
   0% {
     margin-right: 0;
@@ -206,7 +215,13 @@ h3 {
   line-height: 24px;
 }
 
-p {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: 0;
 }
 
@@ -237,7 +252,7 @@ button:focus-visible {
   display: flex;
   align-items: center;
   background-color: #000;
-  height: 100px;
+  height: 85px;
 }
 #fhm-header .header-logo svg {
   margin: 0;

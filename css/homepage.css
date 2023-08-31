@@ -107,6 +107,15 @@
   fill: #c78410;
 }
 
+.hover-img img {
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+.hover-img:hover img {
+  transform: scale(1.2);
+  opacity: 0.9;
+}
+
 @keyframes scroll {
   0% {
     margin-right: 0;
@@ -155,6 +164,10 @@
     opacity: 1;
   }
 }
+#fhm-header {
+  height: 100px;
+}
+
 #fhm-banner {
   position: relative;
   width: 100%;

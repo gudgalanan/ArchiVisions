@@ -107,6 +107,15 @@
   fill: #c78410;
 }
 
+.hover-img img {
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+.hover-img:hover img {
+  transform: scale(1.2);
+  opacity: 0.9;
+}
+
 @keyframes scroll {
   0% {
     margin-right: 0;
@@ -162,7 +171,7 @@
   margin-bottom: 100px;
 }
 #fhm-banner img {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 #fhm-banner .banner-content {
   position: absolute;
@@ -284,7 +293,7 @@
 }
 #fhm-intro-2 .intro-content p {
   margin: 3px 0 26px;
-  color: #bfbfbf;
+  color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -312,7 +321,7 @@
   aspect-ratio: 400/185;
 }
 #fhm-discover .discover-banner .discover-banner-content-wrap {
-  top: 244px;
+  top: 180px;
 }
 #fhm-discover .discover-banner .discover-banner-content-wrap h6 {
   color: #ffffff;
@@ -476,7 +485,6 @@
   width: 200px;
   height: 120px;
   background-color: #303030;
-  margin-bottom: 37px;
 }
 #fhm-award .award-list .award-item:hover svg path {
   transition: all 0.3s ease;
@@ -504,6 +512,18 @@
   fill: #c78410;
 }
 
+@media (min-width: 1400px) {
+  #fhm-intro .intro-content {
+    width: 414px;
+  }
+  #fhm-intro-2 .intro-content {
+    padding-left: 74px;
+  }
+  #fhm-intro-2 .intro-content h2,
+  #fhm-intro-2 .intro-content p {
+    width: 402px;
+  }
+}
 @media only screen and (max-width: 1366px) {
   #fhm-banner .banner-content .banner-content-button a {
     padding: 15px 33px;

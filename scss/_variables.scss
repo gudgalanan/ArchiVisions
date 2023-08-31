@@ -63,7 +63,6 @@ $easeInOut: cubic-bezier(0.42, 0, 0.58, 1);
   letter-spacing: 2.8px;
   text-transform: uppercase;
 }
-
 .hover-button {
   position: relative;
   transition: all 0.5s $easeInOut;
@@ -104,7 +103,6 @@ $easeInOut: cubic-bezier(0.42, 0, 0.58, 1);
     opacity: 1;
   }
 }
-
 .hover-button2 {
   position: sticky;
 
@@ -139,7 +137,6 @@ $easeInOut: cubic-bezier(0.42, 0, 0.58, 1);
     top: 0;
   }
 }
-
 .hover-link {
   transition: all 0.4s ease;
   svg {
@@ -156,6 +153,22 @@ $easeInOut: cubic-bezier(0.42, 0, 0.58, 1);
     }
   }
 }
+.hover-img {
+  img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+    img {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+      opacity: 0.9;
+    }
+  }
+}
+
 @keyframes scroll {
   0% {
     margin-right: 0;
@@ -181,7 +194,6 @@ $easeInOut: cubic-bezier(0.42, 0, 0.58, 1);
     border-top-right-radius: 100px;
   }
 }
-
 @keyframes overlay {
   0% {
     background-color: rgba(0, 0, 0, 0.2);
@@ -197,7 +209,6 @@ $easeInOut: cubic-bezier(0.42, 0, 0.58, 1);
     background-color: rgba(0, 0, 0, 0.8);
   }
 }
-
 @-webkit-keyframes flash {
   0% {
     opacity: 0.4;
@@ -206,7 +217,6 @@ $easeInOut: cubic-bezier(0.42, 0, 0.58, 1);
     opacity: 1;
   }
 }
-
 @keyframes flash {
   0% {
     opacity: 0.4;
