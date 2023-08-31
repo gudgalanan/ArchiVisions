@@ -591,6 +591,8 @@ button:focus-visible {
 }
 
 #fhm-footer {
+  position: relative;
+  top: -76px;
   margin-bottom: 100px;
 }
 #fhm-footer .footer-list {

@@ -303,6 +303,10 @@
   filter: grayscale(50%) invert(92%) contrast(83%);
 }
 
+#fhm-footer {
+  position: unset;
+}
+
 @media (max-width: 991px) {
   #fhm-contact .contact-wrap .contact-branch {
     justify-content: center;

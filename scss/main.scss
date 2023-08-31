@@ -472,6 +472,8 @@ button {
 
 // <!-- START FOOTER-->
 #fhm-footer {
+  position: relative;
+  top: -76px;
   margin-bottom: 100px;
   .footer-list {
     margin-bottom: 40px;
