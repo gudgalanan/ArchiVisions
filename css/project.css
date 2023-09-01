@@ -186,6 +186,7 @@
   top: 290px;
 }
 #fhm-banner .banner-heading h1 {
+  text-wrap: nowrap;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 48px;
