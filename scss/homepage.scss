@@ -1030,7 +1030,8 @@
   }
   #fhm-banner {
     .banner-content {
-      top: 60px;
+      top: 50%;
+      transform: translateY(-50%);
       h6 {
         @extend .h6-ipad;
       }
@@ -1084,12 +1085,12 @@
       }
     }
     .services-main {
-      column-gap: 9px;
-      row-gap: 20px;
+      column-gap: 10px;
+      row-gap: 15px;
       .services-item {
-        padding: 0 10px;
+        padding: 0;
         .service-item-wrap {
-          padding: 25px;
+          padding: 20px;
           .services-item-content h5 {
             margin: 35px 0 10px;
           }
@@ -1123,8 +1124,12 @@
     .discover-container {
       .discover-container-wrap {
         top: -250px;
+
+        padding: 97px 6px 0;
         border-top-left-radius: 80px;
+        gap: 10px;
         .discover-container-content {
+          padding: 6 6px;
           h6 {
             @extend .h6-ipad;
           }
@@ -1139,6 +1144,7 @@
           }
         }
         .discover-container-img {
+          padding: 0 6px;
           img {
             height: 300px;
           }
@@ -1150,7 +1156,7 @@
     }
   }
   #fhm-project {
-    margin-top: 250px;
+    margin-top: 220px;
     .project-heading {
       margin-bottom: 20px;
       h6 {
@@ -1247,7 +1253,6 @@
   }
   #fhm-banner {
     .banner-content {
-      top: 30px;
       .banner-content-button {
         a {
           @extend .button-ipad-mini;
@@ -1273,7 +1278,6 @@
       }
     }
     .services-item {
-      padding: 0 5px;
       .service-item-wrap {
         padding: 15px;
         .services-item-content {
@@ -1320,10 +1324,10 @@
     }
   }
   #fhm-body-banner {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
   #fhm-project {
-    margin-bottom: 50px;
+    margin: 170px 0 60px;
     .project-heading {
       .project-heading-main {
         h3 {
@@ -1367,8 +1371,7 @@
     }
   }
   #fhm-gallery {
-    margin-bottom: 50px;
-
+    margin-bottom: 60px;
     .gallery-heading {
       h3 {
         @extend .h3-ipad-mini;
@@ -1376,8 +1379,7 @@
     }
   }
   #fhm-blog {
-    margin-bottom: 50px;
-
+    margin-bottom: 60px;
     .blog-heading {
       h3 {
         @extend .h3-ipad-mini;
@@ -1394,7 +1396,6 @@
 
   #fhm-banner {
     .banner-content {
-      top: 45px;
       .banner-content-button {
         margin-top: 9px;
       }
@@ -1414,9 +1415,6 @@
         @extend .h3-ipad-sm;
       }
     }
-    .services-main {
-      column-gap: 0;
-    }
   }
 
   #fhm-discover {
@@ -1435,17 +1433,25 @@
             @extend .h3-ipad-sm;
           }
         }
+        .discover-container-img .discover-container-img-content {
+          padding: 15px;
+          height: fit-content;
+        }
       }
     }
   }
   #fhm-project {
-    margin-top: 330px;
+    margin-top: 270px;
     .project-heading {
       .project-heading-main {
         h3 {
           @extend .h3-ipad-sm;
         }
       }
+    }
+    .project-list {
+      row-gap: 20px;
+      column-gap: 20px;
     }
   }
   #fhm-feedback {
@@ -1471,6 +1477,15 @@
     .blog-heading {
       h3 {
         @extend .h3-ipad-sm;
+      }
+    }
+    .blog-list {
+      padding: 0 12px;
+      .row {
+        gap: 5px;
+        .blog-item {
+          padding: 0;
+        }
       }
     }
   }
@@ -1531,8 +1546,7 @@
     }
     .banner-content {
       text-align: center;
-      top: 50%;
-      transform: translateY(-50%);
+
       h1 {
         font-size: 28px;
       }
@@ -1568,7 +1582,7 @@
     }
   }
   #fhm-services {
-    margin: 100px 0;
+    margin: 60px 0;
     .services-heading {
       h3 {
         @extend .h3-s;
@@ -1646,8 +1660,8 @@
       }
     }
     .project-list {
+      column-gap: 0;
       .project-item {
-        margin-bottom: 20px;
         padding: 0 5px;
         .project-item-info {
           padding: 3px 15px;
@@ -1659,10 +1673,10 @@
     }
   }
   #fhm-body-banner {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
   #fhm-feedback {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     .feedback-heading {
       margin-bottom: 20px;
       h3 {

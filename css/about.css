@@ -177,7 +177,6 @@
 #fhm-banner .banner-content {
   position: absolute;
   top: 174px;
-  width: auto;
 }
 #fhm-banner .banner-content h1 {
   color: #ffffff;
@@ -578,7 +577,7 @@
     top: 100px;
   }
   #fhm-discover .discover-container .discover-container-wrap {
-    padding-top: 144px;
+    padding-top: 110px;
   }
   #fhm-discover .discover-container .discover-container-wrap .discover-container-img a {
     display: none;
@@ -645,7 +644,10 @@
     height: 300px;
   }
   #fhm-discover .discover-container .discover-container-wrap .discover-container-img .discover-container-img-content {
-    padding: 25px;
+    padding: 2px 25px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-img .discover-container-img-content .overtext {
+    margin: 0;
   }
   #fhm-award {
     padding: 40px 0 50px;
@@ -758,7 +760,18 @@
   }
   #fhm-discover .discover-container .discover-container-wrap {
     top: -150px;
-    padding-top: 100px;
+    padding-top: 60px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-img {
+    padding: 0 5px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-img .discover-container-img-content {
+    padding: 15px;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #fhm-award .award-heading {
+    margin-bottom: 20px;
   }
   #fhm-network .network-heading {
     margin-bottom: 20px;

@@ -110,6 +110,7 @@
       .project-item-info {
         margin: 41px 0 12px;
         gap: 43px;
+        justify-content: center;
         span {
           color: $text-project;
           font-family: $font-family2;
@@ -152,3 +153,100 @@
   }
 }
 // <!-- END PROJECT-->
+
+// RESPONSIVE
+@media only screen and (max-width: 991px) {
+  #fhm-project {
+    margin-top: 50px;
+    .project-heading {
+      margin-bottom: 21px;
+    }
+    .project-main {
+      row-gap: 21px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  #fhm-banner {
+    .container-fluid {
+      padding: 0;
+    }
+    .banner-heading {
+      top: 30%;
+      transform: translate(-50%);
+      left: 50%;
+      h1 {
+        text-wrap: nowrap;
+      }
+    }
+    .banner-bg-decor {
+      display: none;
+    }
+  }
+  #fhm-project {
+    .project-heading .project-heading-list .project-list-item {
+      gap: 40px;
+      padding: 0;
+    }
+    .project-main {
+      column-gap: 20px;
+      .project-item {
+        .project-item-img .project-item-img-name {
+          bottom: -19px;
+          padding: 13px 26px 0;
+          max-width: 100%;
+          a {
+            font-size: 10px;
+          }
+        }
+        .project-item-info {
+          margin: 30px 0 12px;
+          justify-content: space-between;
+          gap: 0;
+        }
+        .project-item-desc {
+          padding: 0 10px;
+          p {
+            font-size: 12px;
+            line-height: 15px;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  #fhm-project {
+    .project-heading {
+      h3 {
+        font-size: 30px;
+        margin-bottom: 7px;
+      }
+      .project-heading-list {
+        justify-content: unset;
+        overflow-x: scroll;
+        .project-list-item {
+          gap: 24px;
+          a {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .project-main {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 10px;
+      .project-item {
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+    #fhm-project .project-btn a {
+      font-size: 13px;
+      padding: 15px 0;
+    }
+  }
+}
