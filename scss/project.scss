@@ -3,16 +3,19 @@
 // <!-- START BANNER-->
 #fhm-banner {
   position: relative;
-  .banner-bg {
-    .banner-bg-decor {
-      position: absolute;
-      bottom: 0;
-      left: 0;
+  .container-fluid {
+    padding: 0;
+    .banner-bg {
+      .banner-bg-decor {
+        position: absolute;
+        bottom: 0;
+        left: 0;
 
-      width: 713px;
-      height: 109px;
-      background-color: $bg-body;
-      border-top-right-radius: 100px;
+        width: 713px;
+        height: 109px;
+        background-color: $bg-body;
+        border-top-right-radius: 100px;
+      }
     }
   }
   .banner-heading {
@@ -155,7 +158,21 @@
 // <!-- END PROJECT-->
 
 // RESPONSIVE
+@media only screen and (max-width: 1199px) {
+  #fhm-banner {
+    .banner-heading {
+      top: 30%;
+      transform: translate(-50%);
+      left: 50%;
+    }
+  }
+}
 @media only screen and (max-width: 991px) {
+  #fhm-banner {
+    .banner-bg-decor {
+      display: none;
+    }
+  }
   #fhm-project {
     margin-top: 50px;
     .project-heading {
@@ -168,19 +185,10 @@
 }
 @media (max-width: 767px) {
   #fhm-banner {
-    .container-fluid {
-      padding: 0;
-    }
     .banner-heading {
-      top: 30%;
-      transform: translate(-50%);
-      left: 50%;
       h1 {
         text-wrap: nowrap;
       }
-    }
-    .banner-bg-decor {
-      display: none;
     }
   }
   #fhm-project {
@@ -248,5 +256,10 @@
       font-size: 13px;
       padding: 15px 0;
     }
+  }
+}
+@media (max-width: 384px) {
+  #fhm-banner .banner-heading h1 {
+    font-size: 40px;
   }
 }

@@ -169,7 +169,10 @@
 #fhm-banner {
   position: relative;
 }
-#fhm-banner .banner-bg .banner-bg-decor {
+#fhm-banner .container-fluid {
+  padding: 0;
+}
+#fhm-banner .container-fluid .banner-bg .banner-bg-decor {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -305,7 +308,17 @@
   display: block;
 }
 
+@media only screen and (max-width: 1199px) {
+  #fhm-banner .banner-heading {
+    top: 30%;
+    transform: translate(-50%);
+    left: 50%;
+  }
+}
 @media only screen and (max-width: 991px) {
+  #fhm-banner .banner-bg-decor {
+    display: none;
+  }
   #fhm-project {
     margin-top: 50px;
   }
@@ -317,19 +330,8 @@
   }
 }
 @media (max-width: 767px) {
-  #fhm-banner .container-fluid {
-    padding: 0;
-  }
-  #fhm-banner .banner-heading {
-    top: 30%;
-    transform: translate(-50%);
-    left: 50%;
-  }
   #fhm-banner .banner-heading h1 {
     text-wrap: nowrap;
-  }
-  #fhm-banner .banner-bg-decor {
-    display: none;
   }
   #fhm-project .project-heading .project-heading-list .project-list-item {
     gap: 40px;
@@ -386,5 +388,10 @@
   #fhm-project #fhm-project .project-btn a {
     font-size: 13px;
     padding: 15px 0;
+  }
+}
+@media (max-width: 384px) {
+  #fhm-banner .banner-heading h1 {
+    font-size: 40px;
   }
 }
