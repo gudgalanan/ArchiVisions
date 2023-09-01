@@ -222,6 +222,7 @@
   border-bottom: 1px solid #2e2e2e;
 }
 #fhm-project .project-heading .project-heading-list .project-list-item a {
+  text-wrap: nowrap;
   margin-bottom: 8px;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
