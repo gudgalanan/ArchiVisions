@@ -168,15 +168,11 @@
 }
 * {
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.px {
-  padding: 0 120px !important;
 }
 
 body {
@@ -229,6 +225,10 @@ h6 {
 
 button:focus-visible {
   outline: none;
+}
+
+.container {
+  max-width: 1160px;
 }
 
 .h6-text, #fhm-register .register-banner .register-banner-heading h6 {
@@ -313,6 +313,7 @@ button:focus-visible {
   fill: #c78410;
 }
 #fhm-header .header-content .navbar .navbar-nav .header-select .header-search-button {
+  text-wrap: nowrap;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 12px;
@@ -622,7 +623,7 @@ button:focus-visible {
 
 @media (min-width: 1400px) {
   .container {
-    max-width: 1190px;
+    max-width: 1184px;
   }
 }
 @media only screen and (max-width: 1199px) {
@@ -641,6 +642,9 @@ button:focus-visible {
     padding: 15px 33px;
     font-size: 15px;
     letter-spacing: 2px;
+  }
+  #fhm-header .header-content .navbar .navbar-nav {
+    gap: 40px;
   }
   #fhm-register .register-banner .register-banner-heading {
     top: 100px;

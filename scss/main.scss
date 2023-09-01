@@ -2,15 +2,11 @@
 // START RESET
 * {
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.px {
-  padding: 0 120px !important;
 }
 
 body {
@@ -62,9 +58,9 @@ button {
   }
 }
 
-// .container {
-//   max-width: 1160px;
-// }
+.container {
+  max-width: 1160px;
+}
 // END RESET
 .h6-text {
   font-family: $font-family;
@@ -89,7 +85,6 @@ button {
   height: 85px;
 
   .header-logo {
-    //   display: block;
     @extend .hover-link;
     svg {
       margin: 0;
@@ -172,6 +167,7 @@ button {
             }
           }
           .header-search-button {
+            text-wrap: nowrap;
             color: $text-white;
             font-family: $font-family;
             font-size: 12px;
@@ -513,7 +509,7 @@ button {
 // RESPONSIVE
 @media (min-width: 1400px) {
   .container {
-    max-width: 1190px;
+    max-width: 1184px;
   }
 }
 
@@ -533,6 +529,9 @@ button {
     padding: 15px 33px;
     font-size: 15px;
     letter-spacing: 2px;
+  }
+  #fhm-header .header-content .navbar .navbar-nav {
+    gap: 40px;
   }
   #fhm-register {
     .register-banner {

@@ -177,6 +177,7 @@
 #fhm-banner .banner-content {
   position: absolute;
   top: 174px;
+  width: auto;
 }
 #fhm-banner .banner-content h1 {
   color: #ffffff;
