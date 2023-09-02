@@ -287,18 +287,13 @@
 #fhm-contact .contact-wrap .contact-branch .branch-detail .branch-detail-contact .contact-info .contact-address {
   gap: 24px;
 }
-#fhm-contact .contact-wrap .contact-main .contact-submit {
-  padding: 10px 0;
-}
-#fhm-contact .contact-wrap .contact-main .contact-submit a {
-  font-weight: 500;
-  font-size: 12px;
-}
-
 #fhm-map {
   margin-bottom: 100px;
 }
-#fhm-map iframe {
+#fhm-map .container-fluid {
+  padding: 0;
+}
+#fhm-map .container-fluid iframe {
   width: 100%;
   height: auto;
   aspect-ratio: 2/1;
@@ -309,6 +304,11 @@
   position: unset;
 }
 
+@media (min-width: 1400px) {
+  #fhm-contact .contact-wrap .contact-main .contact-heading {
+    max-width: 659px;
+  }
+}
 @media (max-width: 991px) {
   #fhm-contact .contact-wrap .contact-branch {
     justify-content: center;

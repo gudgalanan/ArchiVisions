@@ -107,11 +107,11 @@
   fill: #c78410;
 }
 
-.hover-img img, #fhm-gallery .gallery-main .row .gallery-item img, #fhm-carousel .carousel-wrap .carousel-wrap-list .carousel-wrap-item img {
+.hover-img img, #fhm-gallery .gallery-main .row .gallery-item img, #fhm-carousel .container-fluid .carousel-wrap .carousel-wrap-list .carousel-wrap-item img {
   transform: scale(1);
   transition: all 0.3s ease-in-out;
 }
-.hover-img:hover img, #fhm-gallery .gallery-main .row .gallery-item:hover img, #fhm-carousel .carousel-wrap .carousel-wrap-list .carousel-wrap-item:hover img {
+.hover-img:hover img, #fhm-gallery .gallery-main .row .gallery-item:hover img, #fhm-carousel .container-fluid .carousel-wrap .carousel-wrap-list .carousel-wrap-item:hover img {
   transform: scale(1.2);
   opacity: 0.9;
 }
@@ -170,27 +170,30 @@
   padding-top: 100px;
   border-top: 1px solid #343434;
 }
-#fhm-carousel .carousel-wrap {
+#fhm-carousel .container-fluid {
+  padding: 0;
+}
+#fhm-carousel .container-fluid .carousel-wrap {
   display: grid;
   place-items: center;
   margin: auto;
   overflow: hidden;
   white-space: nowrap;
 }
-#fhm-carousel .carousel-wrap .carousel-wrap-list {
+#fhm-carousel .container-fluid .carousel-wrap .carousel-wrap-list {
   display: inline-flex;
   transition: all 0.3s ease-in-out;
   animation: scroll 20s linear infinite;
 }
-#fhm-carousel .carousel-wrap .carousel-wrap-list:hover {
+#fhm-carousel .container-fluid .carousel-wrap .carousel-wrap-list:hover {
   animation-play-state: paused;
 }
-#fhm-carousel .carousel-wrap .carousel-wrap-list .carousel-wrap-item {
+#fhm-carousel .container-fluid .carousel-wrap .carousel-wrap-list .carousel-wrap-item {
   margin-right: 31px; /* Set the gap between slides */
   overflow: hidden;
   border-radius: 8px;
 }
-#fhm-carousel .carousel-wrap .carousel-wrap-list .carousel-wrap-item img {
+#fhm-carousel .container-fluid .carousel-wrap .carousel-wrap-list .carousel-wrap-item img {
   height: auto;
   aspect-ratio: 267/570;
   width: 267px;
@@ -273,6 +276,12 @@
   display: block;
 }
 
+@media only screen and (min-width: 1400px) {
+  #fhm-gallery .gallery-main .row .col-5,
+  #fhm-gallery .gallery-main .row .col-7 {
+    padding: 0 15px;
+  }
+}
 @media only screen and (max-width: 1199px) {
   #fhm-carousel .carousel-wrap .carousel-wrap-list .carousel-wrap-item img {
     width: 215px;

@@ -138,13 +138,6 @@
         }
       }
     }
-    .contact-main .contact-submit {
-      padding: 10px 0;
-      a {
-        font-weight: 500;
-        font-size: 12px;
-      }
-    }
   }
 }
 // <!-- END CONTACT -->
@@ -152,11 +145,14 @@
 // <!-- START MAP -->
 #fhm-map {
   margin-bottom: 100px;
-  iframe {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 2/1;
-    filter: grayscale(50%) invert(92%) contrast(83%);
+  .container-fluid {
+    padding: 0;
+    iframe {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 2/1;
+      filter: grayscale(50%) invert(92%) contrast(83%);
+    }
   }
 }
 
@@ -164,7 +160,11 @@
   position: unset;
 }
 // <!-- END MAP -->
-
+@media (min-width: 1400px) {
+  #fhm-contact .contact-wrap .contact-main .contact-heading {
+    max-width: 659px;
+  }
+}
 @media (max-width: 991px) {
   #fhm-contact {
     .contact-wrap {
