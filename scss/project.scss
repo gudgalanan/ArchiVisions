@@ -22,7 +22,7 @@
     position: absolute;
     top: 290px;
     h1 {
-      // text-wrap: nowrap;
+      text-wrap: nowrap;
       color: $text-white;
       font-family: $font-family;
       font-size: 48px;
@@ -58,7 +58,7 @@
         padding: 0 15px;
         border-bottom: 1px solid $bg-feedback;
         a {
-          // text-wrap: nowrap;
+          text-wrap: nowrap;
           margin-bottom: 8px;
           color: $text-white;
           font-family: $font-family;
