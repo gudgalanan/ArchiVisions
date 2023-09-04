@@ -232,6 +232,11 @@
   font-weight: 300;
   line-height: 28px; /* 200% */
   letter-spacing: 0.021px;
+  margin: 0;
+  padding-bottom: 8px;
+}
+#fhm-gallery .gallery-heading .gallery-heading-list .gallery-list-item a:hover {
+  border-bottom: 1px solid #c78410;
 }
 #fhm-gallery .gallery-main {
   display: grid;

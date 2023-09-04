@@ -329,17 +329,17 @@ button:focus-visible {
   position: relative;
 }
 #fhm-register .register-banner .register-banner-bg {
-  position: relative; /* Ensure proper stacking context */
+  position: relative;
 }
 #fhm-register .register-banner .register-banner-bg::after {
-  content: ""; /* Create a pseudo-element to overlay with color */
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(199, 132, 16, 0.8); /* Semi-transparent color */
-  z-index: 1; /* Ensure it's above the image */
+  background-color: rgba(199, 132, 16, 0.8);
+  z-index: 1;
 }
 #fhm-register .register-banner .register-banner-heading {
   position: absolute;
@@ -508,11 +508,11 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 80px;
+  padding: 10px 88px;
   left: 0;
 }
 #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-heading {
-  margin-top: 29px;
+  margin-top: 32px;
   gap: 32px;
 }
 #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-heading h4 {
@@ -557,14 +557,14 @@ button:focus-visible {
   color: #000;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0.035px;
 }
 #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-form .form-control::placeholder {
   color: #000;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0.035px;
 }
 #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-form .form-control:focus {

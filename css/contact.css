@@ -168,31 +168,31 @@
 }
 #fhm-contact {
   background-image: url(../assets/img/contact/contact-bg.png);
-  background-position: center;
+  background-position: inherit;
+  border-top: 1px solid #343434;
 }
 #fhm-contact .contact-bg img {
   aspect-ratio: 4/3;
 }
 #fhm-contact .contact-wrap {
-  padding: 100px 0;
-  top: 71px;
+  padding: 71px 0 100px;
 }
 #fhm-contact .contact-wrap .contact-main .contact-form .form-control::-moz-placeholder {
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 14px; /* 116.667% */
-  letter-spacing: 1.2px;
+  letter-spacing: 1.3px;
   text-transform: uppercase;
 }
 #fhm-contact .contact-wrap .placeholder, #fhm-contact .contact-wrap .contact-main .contact-form .form-control::placeholder {
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 14px; /* 116.667% */
-  letter-spacing: 1.2px;
+  letter-spacing: 1.3px;
   text-transform: uppercase;
 }
 #fhm-contact .contact-wrap .contact-main {
@@ -214,30 +214,37 @@
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 24px; /* 200% */
-  letter-spacing: 0.06px;
+  letter-spacing: 0.1px;
 }
 #fhm-contact .contact-wrap .contact-main .contact-form {
-  margin-top: 31px;
+  margin-top: 63px;
 }
 #fhm-contact .contact-wrap .contact-main .contact-form .form-control {
   background-color: transparent;
   border: none;
   border-radius: 0;
-  margin-bottom: 35px;
+  margin-bottom: 28px;
   border-bottom: 1px solid #8a8a8a;
-  padding: 0 0 14px;
+  padding: 0 0 10px;
+  color: #ffffff;
+  font-weight: 200;
 }
 #fhm-contact .contact-wrap .contact-main .contact-form .form-control:focus {
   border-color: inherit;
   box-shadow: none;
+  color: #ffffff;
 }
 #fhm-contact .contact-wrap .contact-main .contact-form .form-control-msg {
   height: 147px;
+  margin: 7px 0 42px;
+  resize: none;
+}
+#fhm-contact .contact-wrap .contact-main .contact-form .form-control-msg:focus {
+  color: #ffffff;
 }
 #fhm-contact .contact-wrap .contact-main .contact-submit {
-  margin-top: 7px;
   background-color: #c78410;
   text-align: center;
   padding: 20px 0;
@@ -247,12 +254,13 @@
   font-family: Helvetica-light, sans-serif;
   font-size: 14px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 24px; /* 171.429% */
   letter-spacing: 0.7px;
   text-transform: uppercase;
 }
 #fhm-contact .contact-wrap .contact-branch {
+  padding: 0 12px;
   justify-content: space-between;
   gap: 60px;
 }
@@ -260,8 +268,8 @@
   color: #ffffff;
   font-family: Helvetica-light, sans-serif;
   font-size: 18px;
-  font-weight: 700;
-  line-height: 28px; /* 155.556% */
+  font-weight: 600;
+  line-height: 23px; /* 155.556% */
   letter-spacing: 0.027px;
 }
 #fhm-contact .contact-wrap .contact-branch .a, #fhm-contact .contact-wrap .contact-branch .branch-detail .branch-detail-contact .contact-info .contact-address a, #fhm-contact .contact-wrap .contact-branch .branch-detail .branch-detail-location .location-info a {
@@ -283,6 +291,9 @@
 }
 #fhm-contact .contact-wrap .contact-branch .branch-detail .branch-detail-contact {
   gap: 12px;
+}
+#fhm-contact .contact-wrap .contact-branch .branch-detail .branch-detail-contact .contact-info h5 {
+  margin-bottom: 7px;
 }
 #fhm-contact .contact-wrap .contact-branch .branch-detail .branch-detail-contact .contact-info .contact-address {
   gap: 24px;

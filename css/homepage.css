@@ -107,11 +107,11 @@
   fill: #c78410;
 }
 
-.hover-img img {
+.hover-img img, #fhm-blog .blog-list .row .blog-item .blog-item-img img {
   transform: scale(1);
   transition: all 0.3s ease-in-out;
 }
-.hover-img:hover img {
+.hover-img:hover img, #fhm-blog .blog-list .row .blog-item .blog-item-img:hover img {
   transform: scale(1.2);
   opacity: 0.9;
 }
@@ -195,7 +195,7 @@
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 32px;
   letter-spacing: 0.48px;
   margin-top: 8px;
@@ -208,10 +208,10 @@
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 4px;
   text-transform: uppercase;
-  padding: 20px 50px;
+  padding: 18px 48px;
   background-color: transparent;
   border: 2px solid #fff;
 }
@@ -267,7 +267,7 @@
 }
 
 #fhm-services {
-  margin-bottom: 78px;
+  margin-bottom: 100px;
 }
 #fhm-services .services-heading h6 {
   color: rgba(255, 255, 255, 0.6);
@@ -295,7 +295,8 @@
   gap: 46px;
 }
 #fhm-services .services-main .services-item:hover {
-  border-left: 1px solid #c78410;
+  border-left: 0.1px solid #c78410;
+  border-bottom: 0.1px solid #c78410;
 }
 #fhm-services .services-main .services-item:hover .service-item-wrap {
   border-top-right-radius: 100px;
@@ -383,12 +384,12 @@
   display: inline-block;
   padding: 22px 42px 16px;
   background-color: transparent;
-  border: 2px solid #fff;
+  border: 1.5px solid #fff;
   color: #ffffff;
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 2.8px;
   text-transform: uppercase;
 }
@@ -622,7 +623,8 @@
   gap: 43px;
   overflow-x: scroll;
   flex-wrap: nowrap;
-  margin-left: 10.5px;
+  margin: 0px;
+  padding-bottom: 20px;
 }
 #fhm-feedback .feedback-list .feedback-item {
   background-color: #2e2e2e;
@@ -759,11 +761,8 @@
   gap: 16px;
 }
 #fhm-blog .blog-list .row .blog-item .blog-item-img {
+  overflow: hidden;
   display: block;
-}
-#fhm-blog .blog-list .row .blog-item .blog-item-img:hover img {
-  opacity: 1;
-  animation: flash 1.5s;
 }
 #fhm-blog .blog-list .row .blog-item .blog-item-img .blog-item-img-date {
   background-color: #000;

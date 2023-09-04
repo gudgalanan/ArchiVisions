@@ -31,7 +31,7 @@
       color: $text-white;
       font-family: $font-family;
       font-size: 16px;
-      font-weight: 400;
+      font-weight: 300;
       line-height: 32px;
       letter-spacing: 0.48px;
       margin-top: 8px;
@@ -43,10 +43,10 @@
         color: $text-white;
         font-family: $font-family;
         font-size: 20px;
-        font-weight: 500;
+        font-weight: 400;
         letter-spacing: 4px;
         text-transform: uppercase;
-        padding: 20px 50px;
+        padding: 18px 48px;
         background-color: transparent;
         border: 2px solid $border-color;
 
@@ -113,7 +113,7 @@
 
 // <!-- START SERVICES -->
 #fhm-services {
-  margin-bottom: 78px;
+  margin-bottom: 100px;
   .services-heading {
     h6 {
       @extend .h6-text;
@@ -140,7 +140,9 @@
     .services-item {
       gap: 46px;
       &:hover {
-        border-left: 1px solid $highlight-color;
+        border-left: 0.1px solid $highlight-color;
+        border-bottom: 0.1px solid $highlight-color;
+
         .service-item-wrap {
           border-top-right-radius: 100px;
         }
@@ -240,12 +242,12 @@
         display: inline-block;
         padding: 22px 42px 16px;
         background-color: transparent;
-        border: 2px solid $border-color;
+        border: 1.5px solid $border-color;
         color: $text-white;
         text-align: center;
         font-family: $font-family;
         font-size: 14px;
-        font-weight: 500;
+        font-weight: 400;
         letter-spacing: 2.8px;
         text-transform: uppercase;
 
@@ -510,7 +512,8 @@
     gap: 43px;
     overflow-x: scroll;
     flex-wrap: nowrap;
-    margin-left: 10.5px;
+    margin: 0px;
+    padding-bottom: 20px;
     .feedback-item {
       background-color: $bg-feedback;
       padding: 42px;
@@ -732,13 +735,16 @@
       gap: 16px;
       .blog-item {
         .blog-item-img {
-          &:hover {
-            img {
-              opacity: 1;
-              -webkit-animation: flash 1.5s;
-              animation: flash 1.5s;
-            }
-          }
+          overflow: hidden;
+
+          @extend .hover-img;
+          // &:hover {
+          //   img {
+          //     opacity: 1;
+          //     -webkit-animation: flash 1.5s;
+          //     animation: flash 1.5s;
+          //   }
+          // }
           display: block;
           .blog-item-img-date {
             background-color: $bg-body;

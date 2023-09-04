@@ -191,16 +191,16 @@ button {
   position: relative;
   .register-banner {
     .register-banner-bg {
-      position: relative; /* Ensure proper stacking context */
+      position: relative;
       &::after {
-        content: ""; /* Create a pseudo-element to overlay with color */
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(199, 132, 16, 0.8); /* Semi-transparent color */
-        z-index: 1; /* Ensure it's above the image */
+        background-color: rgba(199, 132, 16, 0.8);
+        z-index: 1;
       }
     }
     .register-banner-heading {
@@ -380,12 +380,12 @@ button {
           flex-direction: column;
           align-items: center;
 
-          padding: 10px 80px;
+          padding: 10px 88px;
 
           left: 0;
           .register-detail-info {
             .register-detail-info-heading {
-              margin-top: 29px;
+              margin-top: 32px;
               gap: 32px;
               h4 {
                 position: relative;
@@ -430,7 +430,7 @@ button {
                   color: $text-black;
                   font-family: $font-family;
                   font-size: 14px;
-                  font-weight: 400;
+                  font-weight: 300;
                   letter-spacing: 0.035px;
                 }
                 &:focus {

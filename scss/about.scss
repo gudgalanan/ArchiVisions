@@ -26,7 +26,7 @@
       color: $text-white;
       font-family: $font-family;
       font-size: 28px;
-      font-weight: 400;
+      font-weight: 300;
       line-height: 80px; /* 285.714% */
       letter-spacing: 0.14px;
     }
@@ -45,7 +45,7 @@
   }
   .intro-content {
     margin-top: 280px;
-    margin-bottom: 270px;
+    margin-bottom: 250px;
     h6 {
       @extend .h6-text;
       color: $text-blur-white;
@@ -59,9 +59,10 @@
       font-weight: 400;
       line-height: 50px;
       letter-spacing: 0.09px;
+      margin-bottom: 21px;
     }
     p {
-      margin: 3px 0 26px;
+      margin: 3px 0 21px;
       color: $text-dark-white;
       font-family: $font-family;
       font-size: 14px;
@@ -91,7 +92,7 @@
 #fhm-firgures {
   .firgures-number,
   .firgures-number-wrap {
-    color: $text-dark-white;
+    color: $text-white;
     font-feature-settings: "liga" off;
     font-family: $font-family;
     font-size: 60px;
@@ -137,13 +138,13 @@
       letter-spacing: 0.09px;
     }
     p {
-      margin: 3px 0 26px;
       color: $text-white;
       font-family: $font-family;
       font-size: 14px;
       font-weight: 400;
       line-height: 24px; /* 171.429% */
       letter-spacing: 0.07px;
+      margin: 21px 0;
     }
     .intro-content-list {
       .intro-content-item {
@@ -190,13 +191,13 @@
       }
       a {
         display: inline-block;
-        padding: 22px 42px;
+        padding: 19px 42px;
         background-color: $highlight-color;
         color: $text-white;
         text-align: center;
         font-family: $font-family;
         font-size: 14px;
-        font-weight: 500;
+        font-weight: 400;
         letter-spacing: 2.8px;
         text-transform: uppercase;
 

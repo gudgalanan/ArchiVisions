@@ -69,7 +69,12 @@
           font-weight: 300;
           line-height: 28px; /* 200% */
           letter-spacing: 0.021px;
+          margin: 0;
+          padding-bottom: 8px;
           @extend .hover-link;
+          &:hover {
+            border-bottom: 1px solid $highlight-color;
+          }
         }
       }
     }

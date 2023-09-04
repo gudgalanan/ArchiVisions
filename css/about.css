@@ -192,7 +192,7 @@
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 28px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 80px; /* 285.714% */
   letter-spacing: 0.14px;
 }
@@ -208,7 +208,7 @@
 }
 #fhm-intro .intro-content {
   margin-top: 280px;
-  margin-bottom: 270px;
+  margin-bottom: 250px;
 }
 #fhm-intro .intro-content h6 {
   color: rgba(255, 255, 255, 0.6);
@@ -222,9 +222,10 @@
   font-weight: 400;
   line-height: 50px;
   letter-spacing: 0.09px;
+  margin-bottom: 21px;
 }
 #fhm-intro .intro-content p {
-  margin: 3px 0 26px;
+  margin: 3px 0 21px;
   color: #bfbfbf;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
@@ -247,7 +248,7 @@
 
 #fhm-firgures .firgures-number,
 #fhm-firgures .firgures-number-wrap {
-  color: #bfbfbf;
+  color: #ffffff;
   font-feature-settings: "liga" off;
   font-family: "Poppins", sans-serif;
   font-size: 60px;
@@ -291,13 +292,13 @@
   letter-spacing: 0.09px;
 }
 #fhm-intro-2 .intro-content p {
-  margin: 3px 0 26px;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px; /* 171.429% */
   letter-spacing: 0.07px;
+  margin: 21px 0;
 }
 #fhm-intro-2 .intro-content .intro-content-list .intro-content-item {
   gap: 8px;
@@ -338,13 +339,13 @@
 }
 #fhm-discover .discover-banner .discover-banner-content-wrap a {
   display: inline-block;
-  padding: 22px 42px;
+  padding: 19px 42px;
   background-color: #c78410;
   color: #ffffff;
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 2.8px;
   text-transform: uppercase;
 }
