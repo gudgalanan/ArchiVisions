@@ -194,7 +194,6 @@
   border-radius: 8px;
 }
 #fhm-carousel .container-fluid .carousel-wrap .carousel-wrap-list .carousel-wrap-item img {
-  height: auto;
   aspect-ratio: 267/570;
   width: 267px;
 }
@@ -288,7 +287,10 @@
   }
 }
 @media only screen and (max-width: 1199px) {
-  #fhm-carousel .carousel-wrap .carousel-wrap-list .carousel-wrap-item img {
+  #fhm-carousel .container-fluid .carousel-wrap .carousel-wrap-list .carousel-wrap-item {
+    margin-right: 20px;
+  }
+  #fhm-carousel .container-fluid .carousel-wrap .carousel-wrap-list .carousel-wrap-item img {
     width: 215px;
   }
 }
@@ -316,10 +318,10 @@
   }
 }
 @media (max-width: 767px) {
-  #fhm-carousel .carousel-wrap .carousel-wrap-list .carousel-wrap-item {
+  #fhm-carousel .container-fluid .carousel-wrap .carousel-wrap-list .carousel-wrap-item {
     margin-right: 5px;
   }
-  #fhm-carousel .carousel-wrap .carousel-wrap-list .carousel-wrap-item img {
+  #fhm-carousel .container-fluid .carousel-wrap .carousel-wrap-list .carousel-wrap-item img {
     width: 128px;
   }
   #fhm-gallery .gallery-heading .gallery-heading-list .gallery-list-item {
@@ -328,6 +330,12 @@
   }
 }
 @media (max-width: 575px) {
+  #fhm-carousel .container-fluid .carousel-wrap .carousel-wrap-list .carousel-wrap-item {
+    margin-right: 5px;
+  }
+  #fhm-carousel .container-fluid .carousel-wrap .carousel-wrap-list .carousel-wrap-item img {
+    width: 90px;
+  }
   #fhm-gallery .gallery-heading h3 {
     font-size: 30px;
     margin-bottom: 7px;

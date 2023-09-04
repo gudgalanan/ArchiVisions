@@ -28,7 +28,6 @@
           border-radius: 8px;
           @extend .hover-img;
           img {
-            height: auto;
             aspect-ratio: 267/570;
             width: 267px;
           }
@@ -140,8 +139,15 @@
   }
 }
 @media only screen and (max-width: 1199px) {
-  #fhm-carousel .carousel-wrap .carousel-wrap-list .carousel-wrap-item img {
-    width: 215px;
+  #fhm-carousel
+    .container-fluid
+    .carousel-wrap
+    .carousel-wrap-list
+    .carousel-wrap-item {
+    margin-right: 20px;
+    img {
+      width: 215px;
+    }
   }
 }
 
@@ -171,7 +177,11 @@
   }
 }
 @media (max-width: 767px) {
-  #fhm-carousel .carousel-wrap .carousel-wrap-list .carousel-wrap-item {
+  #fhm-carousel
+    .container-fluid
+    .carousel-wrap
+    .carousel-wrap-list
+    .carousel-wrap-item {
     margin-right: 5px;
     img {
       width: 128px;
@@ -184,6 +194,16 @@
 }
 
 @media (max-width: 575px) {
+  #fhm-carousel
+    .container-fluid
+    .carousel-wrap
+    .carousel-wrap-list
+    .carousel-wrap-item {
+    margin-right: 5px;
+    img {
+      width: 90px;
+    }
+  }
   #fhm-gallery {
     .gallery-heading {
       h3 {
