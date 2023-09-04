@@ -10,6 +10,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="./css/animate.css" />
     <link rel="stylesheet" href="./css/gallery.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <title>Gallery _ ArchiVisions</title>
@@ -208,10 +210,10 @@
     <!-- START GALLERY-->
     <section id="fhm-gallery">
       <div class="container">
-        <div class="gallery-heading">
+        <div class="gallery-heading slideInUp wow">
           <h3>Our Gallery</h3>
           <div class="gallery-heading-list d-flex">
-            <div class="gallery-list-item d-flex">
+            <div class="gallery-list-item d-flex slideInUp wow">
               <a href="" class="col-auto">Living Room</a>
               <a href="" class="col-auto active">Luxury Bar</a>
               <a href="" class="col-auto">Bed Room</a>
@@ -220,7 +222,7 @@
             </div>
           </div>
         </div>
-        <div class="gallery-main">
+        <div class="gallery-main slideInUp wow">
           <div class="row">
             <div class="col-7">
               <div class="gallery-item">
@@ -293,7 +295,7 @@
           <img src="./assets/img/homepage/appoinment_bg.png" alt="" />
         </div>
         <div class="container d-flex justify-content-center">
-          <div class="register-banner-heading">
+          <div class="register-banner-heading wow slideInUp">
             <h6>Get Started</h6>
             <h3>
               we believe infrastructure creates opportunity for everyone <br />
@@ -307,7 +309,9 @@
           <div
             class="row register-content-wrap align-items-start justify-content-center"
           >
-            <div class="video-wrapper col-sm-8 col-md col-12 position-relative">
+            <div
+              class="video-wrapper col-sm-8 col-md col-12 position-relative wow slideInLeft"
+            >
               <div
                 class="video-container tutorial-item-image"
                 id="video-container"
@@ -390,7 +394,9 @@
               </div>
             </div>
 
-            <div class="register-content-detail col-sm-8 col-md col-12">
+            <div
+              class="register-content-detail col-sm-8 col-md col-12 wow slideInRight"
+            >
               <div class="register-detail-bg position-relative">
                 <img src="./assets/img/homepage/register.png" alt="" />
                 <img
@@ -634,5 +640,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script src="./JS/archivisions.js"></script>
+    <script src="./JS/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>

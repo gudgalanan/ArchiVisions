@@ -9,6 +9,8 @@
     />
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
     <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./css/animate.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/contact.css" />
 
@@ -127,7 +129,9 @@
       <div class="container">
         <div class="contact-wrap">
           <div class="row justify-content-center contact-main">
-            <div class="col-lg col-md-10 col-sm-11 col-12 contact-heading">
+            <div
+              class="col-lg col-md-10 col-sm-11 col-12 contact-heading wow slideInUp"
+            >
               <h1>Send us a Message</h1>
               <p>
                 Lorem ipsum dolor sit amet consectetur. Vestibulum egestas amet
@@ -200,7 +204,9 @@
             </div>
           </div>
           <div class="row contact-branch">
-            <div class="col-lg col-md-10 col-sm-11 col-12 branch-detail">
+            <div
+              class="col-lg col-md-10 col-sm-11 col-12 branch-detail wow slideInLeft"
+            >
               <div class="branch-detail-location d-flex">
                 <div class="location-icon">
                   <svg
@@ -254,7 +260,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg col-md-10 col-sm-11 col-12 branch-detail">
+            <div
+              class="col-lg col-md-10 col-sm-11 col-12 branch-detail wow slideInRight"
+            >
               <div class="branch-detail-location d-flex">
                 <div class="location-icon">
                   <svg
@@ -316,7 +324,7 @@
 
     <!-- START MAP -->
     <section id="fhm-map">
-      <div class="container-fluid">
+      <div class="container-fluid wow slideInUp">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0283434675594!2d105.78841167590815!3d21.031551880618423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab48d8ca69cd%3A0xd31a952513f5e5a0!2zU-G7kSAyIE5nLiAyNSBQLiBUaOG7jSBUaMOhcCwgROG7i2NoIFbhu41uZywgQ-G6p3UgR2nhuqV5LCBIw6AgTuG7mWkgMTAwMDAwLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1693381218106!5m2!1sen!2s"
           width="600"
@@ -474,5 +482,10 @@
       </div>
     </section>
     <!-- END FOOTER-->
+    <script src="./JS/archivisions.js"></script>
+    <script src="./JS/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>

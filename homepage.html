@@ -18,11 +18,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"
     />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" href="./css/animate.css" />
     <link rel="stylesheet" href="./css/homepage.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <title>Homepage _ ArchiVisions</title>
@@ -143,7 +145,7 @@
         <div class="container">
           <div class="row">
             <div
-              class="banner-content col-xxl-4 col-12 col-sm-7 col-md-6 col-lg-5"
+              class="banner-content wow zoomIn col-xxl-4 col-12 col-sm-7 col-md-6 col-lg-5"
             >
               <h6>No.1 Brand</h6>
               <h1>Design More Than You Expect.</h1>
@@ -164,12 +166,12 @@
     <!-- START INTRO -->
     <section id="fhm-intro">
       <div class="container-fluid">
-        <div class="intro-bg col-sm-6 col-12">
+        <div class="intro-bg col-sm-6 col-12 wow slideInRight">
           <img src="./assets/img/homepage/body1.png" alt="" />
         </div>
       </div>
       <div class="container">
-        <div class="intro-content col-sm-5 col-12">
+        <div class="intro-content wow slideInLeft col-sm-5 col-12">
           <h6>Who we are?</h6>
           <h2>Architecture Is Adangerous Power & Importance.</h2>
           <p>
@@ -189,13 +191,13 @@
     <!-- START SERVICES -->
     <section id="fhm-services">
       <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center wow slideInUp">
           <div class="services-heading col-xl-6 col-12 col-sm-7">
             <h6>Our Services</h6>
             <h3>We Are Committed to Providing the Best Services</h3>
           </div>
         </div>
-        <div class="services-main">
+        <div class="services-main wow slideInUp">
           <div class="services-item">
             <div class="services-item-bg">
               <a href="#" class="service-item-wrap">
@@ -364,7 +366,7 @@
     <!-- START FIRGURES -->
     <section id="fhm-firgures" class="d-flex align-items-center">
       <div class="container">
-        <div class="row justify-content-between">
+        <div class="row justify-content-between wow slideInLeft">
           <div class="col-sm-auto col-6">
             <div class="firgures-number-wrap">
               <span class="firgures-number" data-val="100">0</span>%
@@ -412,7 +414,9 @@
       <div class="discover-banner position-relative">
         <img src="./assets/img/homepage/discover_banner.jpg" alt="" />
         <div class="container d-flex justify-content-center">
-          <div class="discover-banner-content-wrap position-absolute">
+          <div
+            class="discover-banner-content-wrap position-absolute slideInUp wow"
+          >
             <h6>Our Discovers</h6>
             <h2>Start Your Customer Journey With Us</h2>
             <div
@@ -424,7 +428,7 @@
         </div>
       </div>
       <div class="discover-container position-relative">
-        <div class="discover-container-wrap">
+        <div class="discover-container-wrap wow slideInUp">
           <div class="container">
             <div class="row justify-content-between">
               <div class="discover-container-content col-sm-4 col-12">
@@ -527,7 +531,7 @@
     <!-- START PROJECTS -->
     <section id="fhm-project">
       <div class="container">
-        <div class="project-heading">
+        <div class="project-heading wow slideInUp">
           <h6>latest Projects</h6>
           <div
             class="project-heading-main d-flex align-items-center justify-content-between"
@@ -554,7 +558,7 @@
             </div>
           </div>
         </div>
-        <div class="project-list">
+        <div class="project-list wow slideInUp">
           <div href="#" class="project-item">
             <div class="project-item-img">
               <img src="./assets/img/homepage/project1.png" alt="" />
@@ -618,11 +622,14 @@
     <!-- START FEEDBACK-->
     <section id="fhm-feedback">
       <div class="container">
-        <div class="feedback-heading">
+        <div class="feedback-heading wow slideInUp">
           <h6>Our Testimonials</h6>
           <h3>What's Customer Saying?</h3>
         </div>
-        <div class="feedback-list row justify-content-between" draggable="true">
+        <div
+          class="feedback-list row justify-content-between wow slideInUp"
+          draggable="true"
+        >
           <div class="feedback-item col-sm-4 col-8">
             <div class="feedback-item-info d-flex align-items-center">
               <div class="feedback-item-info-avt">
@@ -947,13 +954,13 @@
     <!-- START GALLERY-->
     <section id="fhm-gallery">
       <div class="container">
-        <div class="gallery-heading">
+        <div class="gallery-heading wow slideInUp">
           <h6>Gallery</h6>
           <h3>a new design style</h3>
         </div>
       </div>
       <div class="container-fluild">
-        <div class="gallery-container">
+        <div class="gallery-container wow slideInRight">
           <div class="slick-list gallery-list" id="galleryList">
             <a><img src="./assets/img/homepage/slide1.png" alt="" /></a>
             <a><img src="./assets/img/homepage/slide2.png" alt="" /></a>
@@ -983,11 +990,11 @@
     <!-- START BLOGS-->
     <secion id="fhm-blog">
       <div class="container">
-        <div class="blog-heading">
+        <div class="blog-heading wow slideInUp">
           <h6>blogs</h6>
           <h3>breaking news quickly</h3>
         </div>
-        <div class="blog-list">
+        <div class="blog-list wow slideInUp">
           <div class="row">
             <div class="col-sm col-12 blog-item position-relative">
               <a href="#" class="blog-item-img">
@@ -1068,7 +1075,7 @@
           <img src="./assets/img/homepage/appoinment_bg.png" alt="" />
         </div>
         <div class="container d-flex justify-content-center">
-          <div class="register-banner-heading">
+          <div class="register-banner-heading wow slideInUp">
             <h6>Get Started</h6>
             <h3>
               we believe infrastructure creates opportunity for everyone <br />
@@ -1082,7 +1089,9 @@
           <div
             class="row register-content-wrap align-items-start justify-content-center"
           >
-            <div class="video-wrapper col-sm-8 col-md col-12 position-relative">
+            <div
+              class="video-wrapper col-sm-8 col-md col-12 position-relative wow slideInLeft"
+            >
               <div
                 class="video-container tutorial-item-image"
                 id="video-container"
@@ -1165,7 +1174,9 @@
               </div>
             </div>
 
-            <div class="register-content-detail col-sm-8 col-md col-12">
+            <div
+              class="register-content-detail col-sm-8 col-md col-12 wow slideInRight"
+            >
               <div class="register-detail-bg position-relative">
                 <img src="./assets/img/homepage/register.png" alt="" />
                 <img
@@ -1407,5 +1418,9 @@
     <!-- START JS -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="./JS/archivisions.js"></script>
+    <script src="./JS/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>
