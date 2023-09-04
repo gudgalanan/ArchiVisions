@@ -16,35 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
       navMenu.classList.remove("show");
     }
   });
-});
-
-// // SLIDE _ GALLERY
-$(document).ready(function () {
-  const galleryList = $("#galleryList");
-  const slideWidth = 362 + 37;
-  const slidesToShow = 4;
-
-  // Initialize a variable to keep track of the current slide index
-  let currentSlide = 0;
-
-  // Handle click on .slick-btn (previous button)
-  $(".slick-btn").on("click", function () {
-    // Calculate the new slide index in the opposite direction
-    currentSlide++;
-    if (currentSlide >= galleryList.children().length - slidesToShow + 1) {
-      currentSlide = 0;
-    }
-
-    // Calculate the new scroll position based on the current slide
-    const scrollPosition = currentSlide * slideWidth;
-
-    galleryList.animate({ scrollLeft: scrollPosition }, 200, function () {
-      galleryList.scrollLeft(scrollPosition);
-    });
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
   // // DRAGGABLE _ FEEDBACK / GALLERY
   const galleryList = document.getElementById("galleryList");
   const feedbackList = document.querySelector(".feedback-list");
@@ -95,6 +66,32 @@ document.addEventListener("DOMContentLoaded", function () {
   // Prevent the default behavior of dragging elements
   feedbackList.addEventListener("dragover", (e) => {
     e.preventDefault();
+  });
+});
+
+// // SLIDE _ GALLERY
+$(document).ready(function () {
+  const galleryList = $("#galleryList");
+  const slideWidth = 362 + 37;
+  const slidesToShow = 4;
+
+  // Initialize a variable to keep track of the current slide index
+  let currentSlide = 0;
+
+  // Handle click on .slick-btn (previous button)
+  $(".slick-btn").on("click", function () {
+    // Calculate the new slide index in the opposite direction
+    currentSlide++;
+    if (currentSlide >= galleryList.children().length - slidesToShow + 1) {
+      currentSlide = 0;
+    }
+
+    // Calculate the new scroll position based on the current slide
+    const scrollPosition = currentSlide * slideWidth;
+
+    galleryList.animate({ scrollLeft: scrollPosition }, 200, function () {
+      galleryList.scrollLeft(scrollPosition);
+    });
   });
 });
 
@@ -156,3 +153,29 @@ valueDisplays.forEach((valueDisplay) => {
     }
   }, duration);
 });
+
+// Active
+function addActiveClassToLinks(containerClass) {
+  // Get all the anchor elements within the specified container
+  const links = document.querySelectorAll(`.${containerClass} a`);
+
+  // Add a click event listener to each anchor element
+  links.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      // Prevent the default behavior of the anchor element (e.g., navigating to a new page)
+      event.preventDefault();
+
+      // Remove the 'active' class from all anchor elements within the container
+      links.forEach((otherLink) => {
+        otherLink.classList.remove("active");
+      });
+
+      // Add the 'active' class to the clicked anchor element
+      link.classList.add("active");
+    });
+  });
+}
+
+// Call the function for both containers
+addActiveClassToLinks("gallery-list-item");
+addActiveClassToLinks("project-list-item");

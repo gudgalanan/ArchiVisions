@@ -235,7 +235,7 @@
   margin: 0;
   padding-bottom: 8px;
 }
-#fhm-project .project-heading .project-heading-list .project-list-item a:hover {
+#fhm-project .project-heading .project-heading-list .project-list-item a.active {
   border-bottom: 1px solid #c78410;
 }
 #fhm-project .project-main {

@@ -71,9 +71,9 @@
           margin: 0;
           padding-bottom: 8px;
           @extend .hover-link;
-          &:hover {
-            border-bottom: 1px solid $highlight-color;
-          }
+        }
+        a.active {
+          border-bottom: 1px solid $highlight-color;
         }
       }
     }
