@@ -22,6 +22,7 @@
     position: absolute;
     top: 290px;
     h1 {
+      white-space: nowrap;
       text-wrap: nowrap;
       color: $text-white;
       font-family: $font-family;
@@ -58,6 +59,7 @@
         padding: 0 15px;
         border-bottom: 1px solid $bg-feedback;
         a {
+          white-space: nowrap;
           text-wrap: nowrap;
           margin-bottom: 8px;
           color: $text-white;
@@ -124,7 +126,7 @@
         justify-content: center;
         span {
           color: $text-project;
-          font-family: $font-helve;
+          font-family: $font-helvetica;
           font-size: 10px;
           font-weight: 400;
           line-height: 14px;
@@ -266,8 +268,13 @@
     }
   }
 }
-@media (max-width: 384px) {
+@media (max-width: 424px) {
   #fhm-banner .banner-heading h1 {
     font-size: 40px;
+  }
+  #fhm-project {
+    .project-main {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }
