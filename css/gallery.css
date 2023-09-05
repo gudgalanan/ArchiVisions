@@ -235,7 +235,7 @@
   padding-bottom: 8px;
 }
 #fhm-gallery .gallery-heading .gallery-heading-list .gallery-list-item a.active {
-  border-bottom: 1px solid #c78410;
+  border-bottom: 2px solid #c78410;
 }
 #fhm-gallery .gallery-main {
   display: grid;

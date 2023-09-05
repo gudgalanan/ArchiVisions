@@ -234,7 +234,7 @@
   padding-bottom: 8px;
 }
 #fhm-project .project-heading .project-heading-list .project-list-item a.active {
-  border-bottom: 1px solid #c78410;
+  border-bottom: 2px solid #c78410;
 }
 #fhm-project .project-main {
   display: grid;
