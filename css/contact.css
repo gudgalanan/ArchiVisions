@@ -319,7 +319,7 @@
   #fhm-contact .contact-wrap .contact-main .contact-heading {
     max-width: 659px;
   }
-  #fhm-contact .contact-wrap .contact-main .contact-heading #fhm-contact {
+  #fhm-contact {
     background-position: inherit;
   }
 }
