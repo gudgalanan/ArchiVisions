@@ -573,6 +573,7 @@ button:focus-visible {
 }
 #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-form .form-control-msg {
   height: 79px;
+  resize: none;
 }
 #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-submit {
   margin-top: 10px;
