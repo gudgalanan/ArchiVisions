@@ -294,10 +294,6 @@
 #fhm-services .services-main .services-item {
   gap: 46px;
 }
-#fhm-services .services-main .services-item:hover {
-  border-left: 0.1px solid #c78410;
-  border-bottom: 0.1px solid #c78410;
-}
 #fhm-services .services-main .services-item:hover .service-item-wrap {
   border-top-right-radius: 100px;
 }

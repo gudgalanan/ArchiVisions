@@ -140,8 +140,8 @@
     .services-item {
       gap: 46px;
       &:hover {
-        border-left: 0.1px solid $highlight-color;
-        border-bottom: 0.1px solid $highlight-color;
+        // border-left: 0.1px solid $highlight-color;
+        // border-bottom: 0.1px solid $highlight-color;
 
         .service-item-wrap {
           border-top-right-radius: 100px;
