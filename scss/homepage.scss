@@ -191,22 +191,33 @@
 #fhm-firgures {
   min-height: 250px;
   background-color: $bg-element-brown;
-  .firgures-number,
-  .firgures-number-wrap {
-    color: $text-white;
-    font-feature-settings: "liga" off;
-    font-family: $font-family;
-    font-size: 60px;
-    font-weight: 275;
-    line-height: 72px;
-  }
-  .firgures-info {
-    color: $text-dark-white;
-    font-family: $font-family3;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 1.2px;
+  .firgures-item {
+    &:nth-child(2) {
+      display: grid;
+      justify-content: center;
+    }
+    &:nth-child(3),
+    &:last-child {
+      display: grid;
+      justify-content: end;
+    }
+    .firgures-number,
+    .firgures-number-wrap {
+      color: $text-white;
+      font-feature-settings: "liga" off;
+      font-family: $font-family;
+      font-size: 60px;
+      font-weight: 275;
+      line-height: 72px;
+    }
+    .firgures-info {
+      color: $text-dark-white;
+      font-family: $font-family3;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 1.2px;
+    }
   }
 }
 // <!-- END FIRGURES -->
@@ -346,7 +357,7 @@
             transition-delay: 0.2s;
             transition-duration: 0.2s;
             h5 {
-              text-wrap: nowrap;
+              white-space: nowrap;
               color: $text-white;
               font-family: $font-family;
               font-size: 14px;

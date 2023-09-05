@@ -313,7 +313,7 @@ button:focus-visible {
   fill: #c78410;
 }
 #fhm-header .header-content .navbar .navbar-nav .header-select .header-search-button {
-  text-wrap: nowrap;
+  white-space: nowrap;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 12px;
@@ -499,7 +499,7 @@ button:focus-visible {
   font-weight: 400;
   line-height: 28px;
   letter-spacing: 0.027px;
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
 #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content {
   position: absolute;
@@ -524,7 +524,7 @@ button:focus-visible {
   line-height: 24px; /* 100% */
   letter-spacing: 0.12px;
   text-transform: uppercase;
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
 #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-heading h4::after {
   content: "";
@@ -876,7 +876,7 @@ button:focus-visible {
     line-height: 24px; /* 100% */
     letter-spacing: 0.12px;
     text-transform: uppercase;
-    text-wrap: nowrap;
+    white-space: nowrap;
   }
   #fhm-register .register-content .register-content-wrap .register-content-detail .register-detail-content .register-detail-info .register-detail-info-heading p {
     font-size: 12px;

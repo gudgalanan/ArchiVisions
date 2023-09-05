@@ -187,7 +187,6 @@
 }
 #fhm-banner .banner-heading h1 {
   white-space: nowrap;
-  text-wrap: nowrap;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 48px;
@@ -224,7 +223,6 @@
 }
 #fhm-project .project-heading .project-heading-list .project-list-item a {
   white-space: nowrap;
-  text-wrap: nowrap;
   margin-bottom: 8px;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
@@ -267,7 +265,7 @@
 }
 #fhm-project .project-main .project-item .project-item-img .project-item-img-name a {
   text-align: center;
-  text-wrap: nowrap;
+  white-space: nowrap;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
@@ -342,7 +340,7 @@
 }
 @media (max-width: 767px) {
   #fhm-banner .banner-heading h1 {
-    text-wrap: nowrap;
+    white-space: nowrap;
   }
   #fhm-project .project-heading .project-heading-list .project-list-item {
     gap: 40px;

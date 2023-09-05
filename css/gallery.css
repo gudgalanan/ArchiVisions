@@ -319,10 +319,10 @@
 }
 @media (max-width: 767px) {
   #fhm-carousel .container-fluid .carousel-wrap .carousel-wrap-list .carousel-wrap-item {
-    margin-right: 5px;
+    margin-right: 8px;
   }
   #fhm-carousel .container-fluid .carousel-wrap .carousel-wrap-list .carousel-wrap-item img {
-    width: 128px;
+    width: 175px;
   }
   #fhm-gallery .gallery-heading .gallery-heading-list .gallery-list-item {
     gap: 40px;
@@ -334,7 +334,7 @@
     margin-right: 5px;
   }
   #fhm-carousel .container-fluid .carousel-wrap .carousel-wrap-list .carousel-wrap-item img {
-    width: 90px;
+    width: 125px;
   }
   #fhm-gallery .gallery-heading h3 {
     font-size: 30px;

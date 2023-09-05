@@ -3,7 +3,7 @@
 // <!-- START CONTACT -->
 #fhm-contact {
   background-image: url(../assets/img/contact/contact-bg.png);
-  background-position: inherit;
+  background-position: center;
   border-top: 1px solid $border-header;
   .contact-bg {
     img {
@@ -173,6 +173,9 @@
 @media (min-width: 1400px) {
   #fhm-contact .contact-wrap .contact-main .contact-heading {
     max-width: 659px;
+    #fhm-contact {
+      background-position: inherit;
+    }
   }
 }
 @media (max-width: 991px) {
