@@ -343,7 +343,7 @@ button:focus-visible {
 }
 #fhm-register .register-banner .register-banner-heading {
   position: absolute;
-  top: 85px;
+  top: 97px;
   z-index: 1;
 }
 #fhm-register .register-banner .register-banner-heading h6 {
@@ -351,13 +351,15 @@ button:focus-visible {
   font-size: 12px;
   text-align: center;
   letter-spacing: 2.4px;
+  margin-bottom: 12px;
+  font-weight: 200;
 }
 #fhm-register .register-banner .register-banner-heading h3 {
   color: #ffffff;
   text-align: center;
   font-family: "Marcellus", serif;
   font-size: 34px;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 60px; /* 176.471% */
   letter-spacing: 0.085px;
   text-transform: capitalize;
