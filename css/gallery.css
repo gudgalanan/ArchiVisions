@@ -283,7 +283,10 @@
 @media only screen and (min-width: 1400px) {
   #fhm-gallery .gallery-main .row .col-5,
   #fhm-gallery .gallery-main .row .col-7 {
-    padding: 0 15px;
+    padding: 0 12px;
+  }
+  #fhm-gallery .gallery-main .row .gallery-col {
+    padding-right: 18px;
   }
 }
 @media only screen and (max-width: 1199px) {
