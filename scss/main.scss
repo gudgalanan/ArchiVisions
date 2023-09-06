@@ -185,6 +185,30 @@ button {
 }
 // <!-- END HEADER -->
 
+// <!-- START FIRGURES -->
+#fhm-firgures {
+  .firgures-item {
+    .firgures-number,
+    .firgures-number-wrap {
+      color: $text-white;
+      font-feature-settings: "liga" off;
+      font-family: $font-family;
+      font-size: 60px;
+      font-weight: 275;
+      line-height: 72px;
+    }
+    .firgures-info {
+      color: $text-dark-white;
+      font-family: $font-family3;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 1.2px;
+    }
+  }
+}
+// <!-- END FIRGURES -->
+
 // <!-- START REGISTER-->
 #fhm-register {
   margin-top: 100px;
@@ -514,6 +538,19 @@ button {
   .container {
     max-width: 1184px;
   }
+  #fhm-firgures {
+    .firgures-item {
+      &:nth-child(2) {
+        display: grid;
+        justify-content: center;
+      }
+      &:nth-child(3),
+      &:last-child {
+        display: grid;
+        justify-content: end;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 1199px) {
@@ -633,6 +670,12 @@ button {
   }
   // END HEADER
 
+  #fhm-firgures {
+    .col-6 {
+      text-align: center;
+    }
+  }
+
   // START REGISTER
   #fhm-register {
     margin-top: 50px;
@@ -691,6 +734,7 @@ button {
   }
   // END REGISTER
 }
+
 @media (min-width: 575px) and (max-width: 991px) {
   #fhm-footer {
     position: initial;
