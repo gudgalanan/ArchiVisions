@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       navMenu.classList.remove("show");
     }
   });
+
   // // DRAGGABLE _ FEEDBACK / GALLERY
   const galleryList = document.getElementById("galleryList");
   const feedbackList = document.querySelector(".feedback-list");

@@ -997,6 +997,16 @@
       }
     }
   }
+  #fhm-award .container {
+    .award-heading {
+      margin: 15px;
+    }
+    .award-list .award-item {
+      min-width: 131px;
+      height: 70px;
+    }
+  }
+
   #fhm-intro-2 {
     .intro-content {
       h2 {

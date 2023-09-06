@@ -888,6 +888,13 @@
   #fhm-intro .intro-content {
     margin: 50px 0 10px;
   }
+  #fhm-award .container .award-heading {
+    margin: 15px;
+  }
+  #fhm-award .container .award-list .award-item {
+    min-width: 131px;
+    height: 70px;
+  }
   #fhm-discover {
     margin-bottom: 500px;
   }
