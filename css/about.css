@@ -349,9 +349,6 @@
   border-top-left-radius: 100px;
   background-color: #000;
 }
-#fhm-discover .discover-container .discover-container-wrap .discover-container-content {
-  padding-right: 51px;
-}
 #fhm-discover .discover-container .discover-container-wrap .discover-container-content h6 {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.6);
@@ -510,6 +507,9 @@
   #fhm-intro-2 .intro-content h2,
   #fhm-intro-2 .intro-content p {
     width: 402px;
+  }
+  #fhm-discover .discover-container .discover-container-wrap .discover-container-content {
+    padding-right: 51px;
   }
 }
 @media only screen and (max-width: 1366px) {

@@ -200,7 +200,6 @@
       border-top-left-radius: 100px;
       background-color: $bg-body;
       .discover-container-content {
-        padding-right: 51px;
         h6 {
           @extend .h6-text;
           font-size: 12px;
@@ -388,6 +387,12 @@
     p {
       width: 402px;
     }
+  }
+  #fhm-discover
+    .discover-container
+    .discover-container-wrap
+    .discover-container-content {
+    padding-right: 51px;
   }
 }
 
