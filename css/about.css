@@ -211,18 +211,21 @@
   margin-bottom: 250px;
 }
 #fhm-intro .intro-content h6 {
-  color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
   font-size: 12px;
   margin-bottom: 7px;
+  letter-spacing: 2.4px;
+  margin-bottom: 12px;
 }
 #fhm-intro .intro-content h2 {
   color: #ffffff;
   font-family: "Marcellus", serif;
-  font-size: 36px;
+  font-size: 34px;
   font-weight: 400;
-  line-height: 50px;
+  line-height: 45px;
   letter-spacing: 0.09px;
   margin-bottom: 21px;
+  text-transform: capitalize;
 }
 #fhm-intro .intro-content p {
   margin: 3px 0 21px;
@@ -261,17 +264,19 @@
   margin-bottom: 270px;
 }
 #fhm-intro-2 .intro-content h6 {
-  color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
   font-size: 12px;
+  letter-spacing: 2.4px;
   margin-bottom: 7px;
 }
 #fhm-intro-2 .intro-content h2 {
   color: #ffffff;
   font-family: "Marcellus", serif;
-  font-size: 36px;
+  font-size: 34px;
+  font-style: normal;
   font-weight: 400;
-  line-height: 50px;
-  letter-spacing: 0.09px;
+  line-height: 44px; /* 129.412% */
+  text-transform: capitalize;
 }
 #fhm-intro-2 .intro-content p {
   color: #ffffff;
@@ -299,7 +304,6 @@
   margin-bottom: 500px;
 }
 #fhm-discover .discover-banner img {
-  opacity: 0.8;
   aspect-ratio: 400/185;
 }
 #fhm-discover .discover-banner .discover-banner-content-wrap {
@@ -346,7 +350,7 @@
   background-color: #000;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-content {
-  padding-right: 50px;
+  padding-right: 51px;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-content h6 {
   font-size: 12px;

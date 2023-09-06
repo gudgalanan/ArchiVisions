@@ -181,8 +181,10 @@
   top: 89px;
 }
 #fhm-banner .banner-content h6 {
+  font-weight: 200;
   font-size: 14px;
   color: #ffffff;
+  margin-bottom: 5px;
 }
 #fhm-banner .banner-content h1 {
   color: #ffffff;
@@ -211,7 +213,7 @@
   font-weight: 400;
   letter-spacing: 4px;
   text-transform: uppercase;
-  padding: 18px 48px;
+  padding: 18px 45px 18px 48px;
   background-color: transparent;
   border: 2px solid #fff;
 }
@@ -235,7 +237,8 @@
 #fhm-intro .intro-content h6 {
   color: rgba(255, 255, 255, 0.6);
   font-size: 12px;
-  margin-bottom: 7px;
+  margin-bottom: 9px;
+  letter-spacing: 2.5px;
 }
 #fhm-intro .intro-content h2 {
   color: #ffffff;
@@ -257,7 +260,7 @@
 #fhm-intro .intro-content .intro-content-button {
   display: inline-block;
   background-color: #c78410;
-  padding: 18px 35px;
+  padding: 18px 33px;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
@@ -389,7 +392,7 @@
 #fhm-discover .discover-container .discover-container-wrap .discover-container-content h6 {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-content h3 {
   color: #ffffff;
@@ -409,7 +412,7 @@
   margin: 8px 0 26px;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-content .discover-link {
-  padding: 18px 35px;
+  padding: 18px 33px;
   background-color: #c78410;
   display: inline-block;
   color: #ffffff;
@@ -471,6 +474,9 @@
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img:hover, #fhm-discover .discover-container .discover-container-wrap .discover-container-img:focus {
   width: 33.3333333%;
+}
+#fhm-discover .discover-container .discover-container-wrap .discover-container-img:hover img, #fhm-discover .discover-container .discover-container-wrap .discover-container-img:focus img {
+  opacity: 0.8;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img:hover .discover-container-img-content, #fhm-discover .discover-container .discover-container-wrap .discover-container-img:focus .discover-container-img-content {
   opacity: 0.8;
@@ -587,6 +593,7 @@
   font-weight: 300;
   letter-spacing: 2.4px;
   text-transform: uppercase;
+  margin-bottom: 12px;
 }
 #fhm-feedback .feedback-heading h3 {
   text-align: center;
@@ -666,6 +673,7 @@
 #fhm-gallery .gallery-heading h6 {
   color: rgba(255, 255, 255, 0.6);
   font-size: 12px;
+  margin-bottom: 12px;
 }
 #fhm-gallery .gallery-heading h3 {
   color: #ffffff;
@@ -724,7 +732,7 @@
   color: rgba(255, 255, 255, 0.6);
   font-size: 12px;
   text-align: center;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 #fhm-blog .blog-heading h3 {
   text-align: center;
@@ -770,6 +778,7 @@
   font-weight: 400;
   line-height: 28px; /* 140% */
   letter-spacing: 0.03px;
+  margin-bottom: 12px;
 }
 #fhm-blog .blog-list .row .blog-item .blog-item-content p {
   color: #bfbfbf;
@@ -800,8 +809,9 @@
   #fhm-intro .intro-content p {
     width: 436px;
   }
-  #fhm-discover .discover-container .discover-container-content {
-    width: 345px;
+  #fhm-discover .discover-container .discover-container-content p,
+  #fhm-discover .discover-container .discover-container-content h3 {
+    max-width: 345px;
   }
 }
 @media only screen and (max-width: 1366px) {

@@ -48,18 +48,21 @@
     margin-bottom: 250px;
     h6 {
       @extend .h6-text;
-      color: $text-blur-white;
+      color: $text-white;
       font-size: 12px;
       margin-bottom: 7px;
+      letter-spacing: 2.4px;
+      margin-bottom: 12px;
     }
     h2 {
       color: $text-white;
       font-family: $font-family2;
-      font-size: 36px;
+      font-size: 34px;
       font-weight: 400;
-      line-height: 50px;
+      line-height: 45px;
       letter-spacing: 0.09px;
       margin-bottom: 21px;
+      text-transform: capitalize;
     }
     p {
       margin: 3px 0 21px;
@@ -103,17 +106,19 @@
     margin-bottom: 270px;
     h6 {
       @extend .h6-text;
-      color: $text-blur-white;
+      color: $text-white;
       font-size: 12px;
+      letter-spacing: 2.4px;
       margin-bottom: 7px;
     }
     h2 {
       color: $text-white;
       font-family: $font-family2;
-      font-size: 36px;
+      font-size: 34px;
+      font-style: normal;
       font-weight: 400;
-      line-height: 50px;
-      letter-spacing: 0.09px;
+      line-height: 44px; /* 129.412% */
+      text-transform: capitalize;
     }
     p {
       color: $text-white;
@@ -147,7 +152,6 @@
   margin-bottom: 500px;
   .discover-banner {
     img {
-      opacity: 0.8;
       aspect-ratio: 400/185;
     }
     .discover-banner-content-wrap {
@@ -196,7 +200,7 @@
       border-top-left-radius: 100px;
       background-color: $bg-body;
       .discover-container-content {
-        padding-right: 50px;
+        padding-right: 51px;
         h6 {
           @extend .h6-text;
           font-size: 12px;
