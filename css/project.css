@@ -109,7 +109,7 @@
 
 .hover-img img, #fhm-project .project-main .project-item .project-item-img a:hover img {
   transform: scale(1);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.75s ease-in-out;
 }
 .hover-img:hover img, #fhm-project .project-main .project-item .project-item-img a:hover img {
   transform: scale(1.2);

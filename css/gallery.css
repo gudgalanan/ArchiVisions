@@ -109,7 +109,7 @@
 
 .hover-img img, #fhm-gallery .gallery-main .row .gallery-item img, #fhm-carousel .container-fluid .carousel-wrap .carousel-wrap-list .carousel-wrap-item img {
   transform: scale(1);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.75s ease-in-out;
 }
 .hover-img:hover img, #fhm-gallery .gallery-main .row .gallery-item:hover img, #fhm-carousel .container-fluid .carousel-wrap .carousel-wrap-list .carousel-wrap-item:hover img {
   transform: scale(1.2);

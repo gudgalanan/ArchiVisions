@@ -110,7 +110,7 @@ button {
             font-size: 12px;
             letter-spacing: 1.2px;
             text-transform: uppercase;
-            font-weight: 400;
+            font-weight: 300;
             padding: 0;
 
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -199,10 +199,12 @@ button {
       line-height: 72px;
     }
     .firgures-info {
+      margin-top: 7px;
+
       color: $text-dark-white;
       font-family: $font-family3;
       font-size: 12px;
-      font-weight: 400;
+      font-weight: 300;
       line-height: 20px;
       letter-spacing: 1.2px;
     }

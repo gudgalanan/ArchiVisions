@@ -80,6 +80,7 @@
       font-size: 12px;
       margin-bottom: 9px;
       letter-spacing: 2.5px;
+      font-weight: 200;
     }
     h2 {
       color: $text-white;
@@ -94,7 +95,7 @@
       color: $text-dark-white;
       font-family: $font-family;
       font-size: 14px;
-      font-weight: 400;
+      font-weight: 300;
       line-height: 24px; /* 171.429% */
       letter-spacing: 0.07px;
     }
@@ -105,7 +106,7 @@
       color: $text-white;
       font-family: $font-family;
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 400;
       letter-spacing: 2.8px;
       text-transform: uppercase;
       @extend .hover-button;
@@ -253,6 +254,7 @@
       top: -144px;
       border-top-left-radius: 100px;
       background-color: $bg-body;
+
       .discover-container-content {
         h6 {
           @extend .h6-text;
@@ -296,25 +298,26 @@
         cursor: pointer;
         position: relative;
         overflow: hidden;
+        transition: all 0.3s ease-in;
 
         img {
-          transition: all 300ms ease-out;
+          transition: all 0.3s ease-in;
+
           height: 441px;
         }
         .discover-container-img-content {
-          background-color: $bg-body;
+          background-color: rgba(0, 0, 0, 0);
           position: absolute;
           bottom: 0;
           left: 0;
           z-index: 2;
-          opacity: 0;
           width: 100%;
           height: 86px;
-          padding: 25px 36px 18px;
+          padding: 25px 48px 18px;
+          opacity: 0;
 
           transition: all 0.7s ease-in;
           span {
-            transition-delay: 0.1s;
             transition-duration: 0.2s;
             color: $text-dark-white;
             font-family: $font-family;
@@ -325,11 +328,10 @@
             margin-bottom: 5px;
           }
           .overtext {
-            transition: all 300ms ease-in;
+            transition: all 0.2s ease-in;
             transform: translateY(40px);
           }
           .discover-container-img-content-detail {
-            transition-delay: 0.2s;
             transition-duration: 0.2s;
             h5 {
               white-space: nowrap;
@@ -350,17 +352,15 @@
           }
           width: 33.3333333%;
           .discover-container-img-content {
-            opacity: 0.8;
-
+            background-color: rgba(0, 0, 0, 0.8);
+            opacity: 1;
             .overtext {
               transform: translateY(0px);
 
               &span {
-                opacity: 0.8;
               }
 
               &.discover-container-img-content-detail {
-                opacity: 0.8;
                 transform: translateX(0px);
               }
             }
@@ -375,7 +375,7 @@
 // <!-- START PROJECTS -->
 #fhm-project {
   margin-top: 506px;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
   .project-heading {
     margin-bottom: 51px;
     h6 {
@@ -398,6 +398,8 @@
       .project-heading-link {
         gap: 10px;
         a {
+          display: flex;
+          align-items: center;
           color: $highlight-color;
           font-family: $font-family;
           font-size: 14px;
@@ -429,7 +431,7 @@
           }
         }
         img {
-          transition: all 0.4s ease-in-out;
+          transition: all 0.6s ease-in-out;
         }
       }
 
@@ -500,10 +502,16 @@
   }
   .feedback-list {
     gap: 43px;
-    overflow-x: scroll;
     flex-wrap: nowrap;
     margin: 0px;
     padding-bottom: 20px;
+
+    overflow-x: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+      display: none;
+    }
     .feedback-item {
       background-color: $bg-feedback;
       padding: 42px;
@@ -530,7 +538,7 @@
             color: $text-dark-white;
             font-family: $font-family;
             font-size: 12px;
-            font-weight: 400;
+            font-weight: 300;
             line-height: 14px; /* 116.667% */
             letter-spacing: 0.03px;
           }
@@ -804,7 +812,7 @@
     width: 600px;
   }
   #fhm-intro .intro-content p {
-    width: 436px;
+    width: 430px;
   }
   #fhm-discover .discover-container .discover-container-content {
     p,
