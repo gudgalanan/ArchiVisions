@@ -215,6 +215,7 @@
   font-size: 12px;
   margin-bottom: 7px;
   letter-spacing: 2.4px;
+  font-weight: 200;
   margin-bottom: 12px;
 }
 #fhm-intro .intro-content h2 {
@@ -268,6 +269,7 @@
   font-size: 12px;
   letter-spacing: 2.4px;
   margin-bottom: 7px;
+  font-weight: 200;
 }
 #fhm-intro-2 .intro-content h2 {
   color: #ffffff;
@@ -313,6 +315,7 @@
   color: #ffffff;
   font-size: 12px;
   text-align: center;
+  font-weight: 200;
 }
 #fhm-discover .discover-banner .discover-banner-content-wrap h2 {
   color: #ffffff;
@@ -353,6 +356,7 @@
   font-size: 12px;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 8px;
+  font-weight: 200;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-content h3 {
   color: #ffffff;

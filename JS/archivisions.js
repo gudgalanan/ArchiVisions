@@ -63,11 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const walk = (x - feedbackStartX) * 1; // Adjust sensitivity as needed
     feedbackList.scrollLeft = feedbackScrollLeft - walk;
   });
-
-  // Prevent the default behavior of dragging elements
-  // feedbackList.addEventListener("dragover", (e) => {
-  //   e.preventDefault();
-  // });
 });
 
 // // SLIDE _ GALLERY
