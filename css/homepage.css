@@ -428,10 +428,10 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease-in;
+  transition: all 0.7s ease;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img img {
-  transition: all 0.3s ease-in;
+  transition: all 0.7s ease;
   height: 441px;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img .discover-container-img-content {
@@ -444,7 +444,7 @@
   height: 86px;
   padding: 25px 48px 18px;
   opacity: 0;
-  transition: all 0.7s ease-in;
+  transition: all 0.7s ease;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img .discover-container-img-content span {
   transition-duration: 0.2s;
@@ -457,8 +457,7 @@
   margin-bottom: 5px;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img .discover-container-img-content .overtext {
-  transition: all 0.2s ease-in;
-  transform: translateY(40px);
+  transition: all 0.7s ease;
 }
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img .discover-container-img-content .discover-container-img-content-detail {
   transition-duration: 0.2s;
@@ -481,12 +480,6 @@
 #fhm-discover .discover-container .discover-container-wrap .discover-container-img:hover .discover-container-img-content, #fhm-discover .discover-container .discover-container-wrap .discover-container-img:focus .discover-container-img-content {
   background-color: rgba(0, 0, 0, 0.8);
   opacity: 1;
-}
-#fhm-discover .discover-container .discover-container-wrap .discover-container-img:hover .discover-container-img-content .overtext, #fhm-discover .discover-container .discover-container-wrap .discover-container-img:focus .discover-container-img-content .overtext {
-  transform: translateY(0px);
-}
-#fhm-discover .discover-container .discover-container-wrap .discover-container-img:hover .discover-container-img-content .overtext.discover-container-img-content-detail, #fhm-discover .discover-container .discover-container-wrap .discover-container-img:focus .discover-container-img-content .overtext.discover-container-img-content-detail {
-  transform: translateX(0px);
 }
 
 #fhm-project {
@@ -633,7 +626,7 @@
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 28px; /* 175% */
   letter-spacing: 0.024px;
 }
@@ -766,7 +759,7 @@
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 10px;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 13px;
   letter-spacing: 0.025px;
   margin: 0;
@@ -788,7 +781,7 @@
   color: #bfbfbf;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 24px;
   letter-spacing: 0.07px;
 }
@@ -797,7 +790,7 @@
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 2.8px;
   text-decoration-line: underline;
   text-transform: uppercase;

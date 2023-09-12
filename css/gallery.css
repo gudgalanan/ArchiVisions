@@ -228,7 +228,7 @@
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 28px; /* 200% */
   letter-spacing: 0.021px;
   margin: 0;
@@ -266,7 +266,7 @@
 }
 #fhm-gallery .gallery-btn {
   margin-top: 65px;
-  border: 0.5px solid #616161;
+  border: 1px solid #232222;
 }
 #fhm-gallery .gallery-btn a {
   color: #ffffff;

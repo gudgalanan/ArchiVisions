@@ -298,11 +298,10 @@
         cursor: pointer;
         position: relative;
         overflow: hidden;
-        transition: all 0.3s ease-in;
+        transition: all 0.7s ease;
 
         img {
-          transition: all 0.3s ease-in;
-
+          transition: all 0.7s ease;
           height: 441px;
         }
         .discover-container-img-content {
@@ -315,8 +314,7 @@
           height: 86px;
           padding: 25px 48px 18px;
           opacity: 0;
-
-          transition: all 0.7s ease-in;
+          transition: all 0.7s ease;
           span {
             transition-duration: 0.2s;
             color: $text-dark-white;
@@ -328,8 +326,7 @@
             margin-bottom: 5px;
           }
           .overtext {
-            transition: all 0.2s ease-in;
-            transform: translateY(40px);
+            transition: all 0.7s ease;
           }
           .discover-container-img-content-detail {
             transition-duration: 0.2s;
@@ -354,16 +351,6 @@
           .discover-container-img-content {
             background-color: rgba(0, 0, 0, 0.8);
             opacity: 1;
-            .overtext {
-              transform: translateY(0px);
-
-              &span {
-              }
-
-              &.discover-container-img-content-detail {
-                transform: translateX(0px);
-              }
-            }
           }
         }
       }
@@ -530,7 +517,7 @@
             color: $text-white;
             font-family: $font-family;
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 400;
             line-height: 28px; /* 175% */
             letter-spacing: 0.024px;
           }
@@ -755,7 +742,7 @@
               color: $text-white;
               font-family: $font-family;
               font-size: 10px;
-              font-weight: 300;
+              font-weight: 200;
               line-height: 13px;
               letter-spacing: 0.025px;
               margin: 0;
@@ -780,7 +767,7 @@
             color: $text-dark-white;
             font-family: $font-family;
             font-size: 14px;
-            font-weight: 400;
+            font-weight: 300;
             line-height: 24px;
             letter-spacing: 0.07px;
           }
@@ -791,7 +778,7 @@
             text-align: center;
             font-family: $font-family;
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 400;
             letter-spacing: 2.8px;
             text-decoration-line: underline;
             text-transform: uppercase;

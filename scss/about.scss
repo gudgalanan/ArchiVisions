@@ -45,7 +45,7 @@
   }
   .intro-content {
     margin-top: 280px;
-    margin-bottom: 250px;
+    margin-bottom: 236px;
     h6 {
       @extend .h6-text;
       color: $text-white;
@@ -66,10 +66,10 @@
     }
     p {
       margin: 3px 0 21px;
-      color: $text-dark-white;
+      color: $text-white;
       font-family: $font-family;
       font-size: 14px;
-      font-weight: 400;
+      font-weight: 200;
       line-height: 24px; /* 171.429% */
       letter-spacing: 0.07px;
     }
@@ -81,7 +81,7 @@
           color: $text-white;
           font-family: $font-family;
           font-size: 14px;
-          font-weight: 300;
+          font-weight: 200;
           line-height: 24px; /* 171.429% */
           letter-spacing: 0.07px;
         }
@@ -124,7 +124,7 @@
       color: $text-white;
       font-family: $font-family;
       font-size: 14px;
-      font-weight: 400;
+      font-weight: 200;
       line-height: 24px; /* 171.429% */
       letter-spacing: 0.07px;
       margin: 21px 0;
@@ -137,7 +137,7 @@
           color: $text-white;
           font-family: $font-family;
           font-size: 14px;
-          font-weight: 300;
+          font-weight: 200;
           line-height: 24px; /* 171.429% */
           letter-spacing: 0.07px;
         }
@@ -231,25 +231,26 @@
         cursor: pointer;
         position: relative;
         overflow: hidden;
+        transition: all 0.7s ease;
 
         img {
-          transition: all 300ms ease-out;
+          transition: all 0.7s ease;
+
           height: 441px;
         }
         .discover-container-img-content {
-          background-color: $bg-body;
+          background-color: rgba(0, 0, 0, 0);
           position: absolute;
           bottom: 0;
           left: 0;
           z-index: 2;
-          opacity: 0;
           width: 100%;
           height: 86px;
-          padding: 25px 36px 18px;
+          padding: 25px 48px 18px;
+          opacity: 0;
 
-          transition: all 0.7s ease-out;
+          transition: all 0.7s ease;
           span {
-            transition-delay: 0.1s;
             transition-duration: 0.2s;
             color: $text-dark-white;
             font-family: $font-family;
@@ -260,12 +261,9 @@
             margin-bottom: 5px;
           }
           .overtext {
-            transition: all 300ms ease-out;
-            transform: translateY(40px);
+            transition: all 0.7s ease;
           }
           .discover-container-img-content-detail {
-            // opacity: 0;
-            transition-delay: 0.2s;
             transition-duration: 0.2s;
             h5 {
               white-space: nowrap;
@@ -281,22 +279,13 @@
 
         &:hover,
         &:focus {
+          img {
+            opacity: 0.8;
+          }
           width: 33.3333333%;
           .discover-container-img-content {
-            opacity: 0.8;
-
-            .overtext {
-              transform: translateY(0px);
-
-              &span {
-                opacity: 0.8;
-              }
-
-              &.discover-container-img-content-detail {
-                opacity: 0.8;
-                transform: translateX(0px);
-              }
-            }
+            background-color: rgba(0, 0, 0, 0.8);
+            opacity: 1;
           }
         }
       }
@@ -308,7 +297,7 @@
 // <!-- START AWARDS -->
 #fhm-award {
   background-color: $bg-element-gray;
-  padding: 80px 0 60px;
+  padding: 80px 0;
   .award-heading {
     margin-bottom: 35px;
     h3 {
@@ -328,7 +317,6 @@
     overflow-x: auto;
     scroll-behavior: smooth; /* Enable smooth scrolling */
     white-space: nowrap;
-    padding-bottom: 10px;
     .award-item {
       display: flex;
       align-items: center;

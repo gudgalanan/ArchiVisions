@@ -63,7 +63,7 @@
           color: $text-white;
           font-family: $font-family;
           font-size: 14px;
-          font-weight: 300;
+          font-weight: 200;
           line-height: 28px; /* 200% */
           letter-spacing: 0.021px;
           margin: 0;
@@ -111,7 +111,7 @@
             font-family: $font-family;
             font-size: 14px;
             font-style: normal;
-            font-weight: 300;
+            font-weight: 200;
             line-height: 14px; /* 100% */
             letter-spacing: 1.4px;
             text-transform: uppercase;
@@ -148,7 +148,7 @@
   }
   .project-btn {
     margin-top: 65px;
-    border: 0.5px solid #616161;
+    border: 1px solid #232222;
     a {
       color: $text-white;
       text-align: center;

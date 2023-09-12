@@ -48,26 +48,26 @@ document.addEventListener("DOMContentLoaded", function () {
   // FEEDBACK
   feedbackList.addEventListener("mousedown", (e) => {
     isFeedbackDragging = true;
-    feedbackStartX = e.clientX;
+    feedbackStartX = e.pageX - feedbackList.offsetLeft;
     feedbackScrollLeft = feedbackList.scrollLeft;
-    feedbackList.style.cursor = "grabbing";
   });
 
   feedbackList.addEventListener("mouseup", () => {
     isFeedbackDragging = false;
-    feedbackList.style.cursor = "grab";
   });
 
   feedbackList.addEventListener("mousemove", (e) => {
     if (!isFeedbackDragging) return;
-    const deltaX = e.clientX - feedbackStartX;
-    feedbackList.scrollLeft = feedbackScrollLeft - deltaX;
+    e.preventDefault();
+    const x = e.pageX - feedbackList.offsetLeft;
+    const walk = (x - feedbackStartX) * 1; // Adjust sensitivity as needed
+    feedbackList.scrollLeft = feedbackScrollLeft - walk;
   });
 
   // Prevent the default behavior of dragging elements
-  feedbackList.addEventListener("dragover", (e) => {
-    e.preventDefault();
-  });
+  // feedbackList.addEventListener("dragover", (e) => {
+  //   e.preventDefault();
+  // });
 });
 
 // // SLIDE _ GALLERY
