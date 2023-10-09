@@ -66,27 +66,60 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // // SLIDE _ GALLERY
-$(document).ready(function () {
-  const galleryList = $("#galleryList");
-  const slideWidth = 362 + 37;
-  const slidesToShow = 4;
+const galleryList = document.getElementById("galleryList");
+const slideWidthGallery =
+  document.querySelector(".galleryListItem").offsetWidth + 37;
+const slidesToShowGallery = 4;
+let currentSlideGallery = 0;
+let isGalleryDragging = false;
+let galleryStartX, galleryScrollLeft;
 
-  // Initialize a variable to keep track of the current slide index
-  let currentSlide = 0;
+// Function to update the slider position
+function updateGallerySlider() {
+  const scrollX = currentSlideGallery * (slideWidthGallery + 37);
+  galleryList.scrollLeft = scrollX;
+}
 
-  // Handle click on .slick-btn (previous button)
-  $(".slick-btn").on("click", function () {
+// Event listener for "mousedown" on igList
+galleryList.addEventListener("mousedown", (e) => {
+  isGalleryDragging = true;
+  galleryStartX = e.pageX - galleryList.offsetLeft;
+  galleryScrollLeft = galleryList.scrollLeft;
+});
+
+// Event listener for "mouseup" on igList
+galleryList.addEventListener("mouseup", () => {
+  isGalleryDragging = false;
+});
+
+// Event listener for "mousemove" on igList
+galleryList.addEventListener("mousemove", (e) => {
+  if (!isGalleryDragging) return;
+  e.preventDefault();
+  const x = e.pageX - galleryList.offsetLeft;
+  const walk = (x - galleryStartX) * 1; // Adjust sensitivity as needed
+  galleryList.scrollLeft = galleryScrollLeft - walk;
+});
+
+// Handle click on .slick-btn (previous button)
+const slickButtons = document.querySelectorAll(".slick-btn");
+slickButtons.forEach((slickBtn) => {
+  slickBtn.addEventListener("click", function () {
     // Calculate the new slide index in the opposite direction
-    currentSlide++;
-    if (currentSlide >= galleryList.children().length - slidesToShow + 1) {
-      currentSlide = 0;
+    currentSlideGallery++;
+    if (
+      currentSlideGallery >=
+      galleryList.children.length - slidesToShowGallery + 1
+    ) {
+      currentSlideGallery = 0;
     }
 
     // Calculate the new scroll position based on the current slide
-    const scrollPosition = currentSlide * slideWidth;
+    const scrollPosition = currentSlideGallery * slideWidthGallery;
 
-    galleryList.animate({ scrollLeft: scrollPosition }, 200, function () {
-      galleryList.scrollLeft(scrollPosition);
+    galleryList.scrollTo({
+      left: scrollPosition,
+      behavior: "smooth",
     });
   });
 });
