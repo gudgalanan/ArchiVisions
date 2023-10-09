@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const galleryList = document.getElementById("galleryList");
 const slideWidthGallery =
   document.querySelector(".galleryListItem").offsetWidth + 37;
-const slidesToShowGallery = 4;
+const slidesToShowGallery = 3.5;
 let currentSlideGallery = 0;
 let isGalleryDragging = false;
 let galleryStartX, galleryScrollLeft;
