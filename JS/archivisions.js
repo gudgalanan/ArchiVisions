@@ -93,44 +93,77 @@ $(document).ready(function () {
 
 // VIDEO _ REGISTER
 // Function to handle video popup click
-$(".video").on("click", function (e) {
-  e.preventDefault();
+const videoElements = document.querySelectorAll(".video");
+const videoPopupOverlay = document.getElementById("video-popup-overlay");
+const videoPopupIframeContainer = document.getElementById(
+  "video-popup-iframe-container"
+);
+const videoPopupContainer = document.getElementById("video-popup-container");
+const videoPopupClose = document.getElementById("video-popup-close");
+const videoPopupIframe = document.getElementById("video-popup-iframe");
 
+// Function to open the video popup
+function openVideoPopup(id, type) {
   // Show video popup elements
-  $(
-    "#video-popup-overlay, #video-popup-iframe-container, #video-popup-container, #video-popup-close"
-  ).show();
+  videoPopupOverlay.style.display = "block";
+  videoPopupIframeContainer.style.display = "block";
+  videoPopupContainer.style.display = "block";
+  videoPopupClose.style.display = "block";
 
-  var srchref = "",
-    autoplay = "",
-    id = $(this).data("id");
+  let srchref = "";
 
-  if ($(this).data("type") == "vimeo") {
+  if (type === "vimeo") {
     srchref = "//player.vimeo.com/video/";
-  } else if ($(this).data("type") == "youtube") {
-    srchref = "https://www.youtube.com/embed/";
-  }
-
-  if ($(this).data("autoplay")) {
-    autoplay = "?autoplay=1";
+  } else if (type === "youtube") {
+    srchref = "https://www.youtube.com/embed/" + id + "?autoplay=1&mute=1";
   }
 
   // Set the video source
-  $("#video-popup-iframe").attr("src", srchref + id + autoplay);
+  videoPopupIframe.setAttribute("src", srchref);
 
   // Show the video popup container when the iframe is loaded
-  $("#video-popup-iframe").on("load", function () {
-    $("#video-popup-container").show();
+  videoPopupIframe.addEventListener("load", function () {
+    videoPopupContainer.style.display = "block";
+  });
+}
+
+// Function to close video popup
+function closeVideoPopup() {
+  // Hide video popup elements and reset the iframe source
+  videoPopupIframeContainer.style.display = "none";
+  videoPopupContainer.style.display = "none";
+  videoPopupOverlay.style.display = "none";
+  videoPopupIframe.setAttribute("src", "");
+
+  // Pause the video when closing
+  if (
+    videoPopupIframe.contentWindow &&
+    typeof videoPopupIframe.contentWindow.postMessage === "function"
+  ) {
+    videoPopupIframe.contentWindow.postMessage(
+      '{"event":"command","func":"pauseVideo","args":""}',
+      "*"
+    );
+  }
+}
+
+videoElements.forEach((videoElement) => {
+  videoElement.addEventListener("click", function (e) {
+    e.preventDefault();
+    const id = videoElement.getAttribute("data-id");
+    const type = videoElement.getAttribute("data-type");
+    openVideoPopup(id, type);
   });
 });
 
-// Function to close video popup
-$("#video-popup-close, #video-popup-overlay").on("click", function (e) {
-  // Hide video popup elements and reset the iframe source
-  $(
-    "#video-popup-iframe-container, #video-popup-container, #video-popup-close, #video-popup-overlay"
-  ).hide();
-  $("#video-popup-iframe").attr("src", "");
+// Event listener to close video popup when clicking the overlay
+videoPopupOverlay.addEventListener("click", function () {
+  closeVideoPopup();
+});
+
+// Event listener to close video popup when clicking the close button
+videoPopupClose.addEventListener("click", function () {
+  closeVideoPopup();
 });
 
 // COUNT STATISTIC
